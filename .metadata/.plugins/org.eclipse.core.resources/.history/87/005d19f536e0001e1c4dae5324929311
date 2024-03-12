@@ -1,0 +1,10 @@
+package chapter02;
+
+public class UseVariable2 {
+
+	public static void main(String[] args) {
+		// ? 변수의 이름
+		
+	}
+
+}

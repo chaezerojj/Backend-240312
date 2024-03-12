@@ -1,0 +1,20 @@
+package chapter02; // package 이름
+
+public class UseVariable {
+
+	public static void main(String[] args) { //main method: main 입력 후 ctrl + space 단축키
+		// ** 변수의 이해와 활용
+		// ? 변수
+		// : 변하는 수
+		// - 메모리 공간의 활용을 위한 도구
+		// - 메모리 공간의 할당과 접근을 위해 필요한 도구
+		// - 변수 선언 시 앞에 데이터 타입 선언 먼저 함
+		
+		// 변수 num1의 선언
+		int num1; // int: 데이터 타입 선언, num1이라는 변수 이름 선언
+		
+		num1 = 10;
+		System.out.println(num1);
+	}
+
+}
