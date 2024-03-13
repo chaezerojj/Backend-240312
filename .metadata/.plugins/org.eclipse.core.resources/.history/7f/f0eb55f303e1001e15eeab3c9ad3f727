@@ -1,0 +1,30 @@
+package chapter03;
+
+public class Conversion {
+
+	public static void main(String[] args) {
+		int integer = 42;
+		integer = 45;
+//		integer = "42"; // error: 자바에서는 자료형에 맞는 자료만 대입 가능
+//		int n1 = "string"; // error: 위와 동일한 이유
+		
+//		int n2 = 3.14; // error: 실수형에 맞는 자료형을 넣어야 함 (정수만 가능)
+		double d1 = 3.14;
+		String s1 ="s";
+//		String s2 = 's'; // error: '' = char형에만 사용 가능, String은 ""
+		
+		//? 명시적 형 변환
+		double pi = 3.14159;
+		int wholeNumber = (int)pi; // 강제 형변환
+		System.out.println(wholeNumber);
+		
+		long num1 = 3000000000000007l;
+		int num2 = (int)num1;
+		System.out.println(num2);
+		
+		long num3 = 42;
+		int num4 = (int)num3;
+		System.out.println(num4);
+	}
+
+}

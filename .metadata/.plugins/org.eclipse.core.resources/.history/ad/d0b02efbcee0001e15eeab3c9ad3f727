@@ -1,0 +1,13 @@
+package chapter02;
+
+public class UseVariable5 {
+
+	public static void main(String[] args) {
+		//  변수
+		int number = 1;
+		System.out.println(number);
+		number = 2;
+		System.out.println(number);
+	}
+
+}

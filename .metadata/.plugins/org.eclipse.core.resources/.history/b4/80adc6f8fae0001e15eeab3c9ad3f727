@@ -1,0 +1,17 @@
+package chapter03;
+
+public class Constants {
+	
+	public static void main(String[] args) {
+		//? 상수 (Constants)
+		// - 변수에 값을 딱 한 번만 할당 가능
+		// - 한 번 할당된 값은 변경 불가능
+		// - 키워드 final 선언이 붙어있는 변수
+		// - 상수 이름은 모두 대문자로 하는 것이 관례
+		// - 띄어쓰기는 _(언더바)로 함
+		
+		final int MAX_SIZE = 100;
+		System.out.println(MAX_SIZE);
+		
+	}
+}
