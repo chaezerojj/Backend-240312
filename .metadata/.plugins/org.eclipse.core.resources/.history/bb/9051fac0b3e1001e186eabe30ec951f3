@@ -1,0 +1,22 @@
+package chapter04;
+
+public class DongBaekJeon {
+
+	public static void main(String[] args) {
+		// 부산은행 동백전 체크카드 후불교통 서비스를 이용하여
+		// 부산시 대중교통 월 45000원 초과하여 사용 시, 초과금액 최대 45000원 동백전으로 환급
+		// 동백전 후불교통 최대 9만원까지 사용 가능
+		
+		int card = 30000;
+		if (card > 45000) {
+			System.out.println("동백전 환급이 가능합니다.");
+			System.out.println("동백전은 최대 4만 5천원까지 환급이 됩니다.");
+		} else if (card <= 45000) {
+			System.out.println("동백전 환급이 불가능합니다.");
+			System.out.println("동백전 환급은 45000원 초과 사용 시 환급이 가능합니다.");
+		}
+		
+		
+	}
+
+}

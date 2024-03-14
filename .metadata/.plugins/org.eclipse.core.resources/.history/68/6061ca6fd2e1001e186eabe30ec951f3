@@ -1,0 +1,22 @@
+package chapter04;
+
+public class WhileExample {
+
+	public static void main(String[] args) {
+		//? while문
+		/*
+		 * while (조건식) {
+		 * 실행문
+		 * }
+		 * 
+		 * */
+		
+		int i = 1;
+		while (i <= 10) {
+			System.out.println(i);
+			break;
+		}
+		
+	}
+
+}

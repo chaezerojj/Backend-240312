@@ -1,0 +1,36 @@
+package chapter04;
+
+public class IfExample {
+
+	public static void main(String[] args) {
+		//? 조건문 if문
+		/*
+		 * if (조건식) {
+		 * 		실행문A
+		 * 		....
+		 * 		} else {
+		 * 실행문B
+		 * }
+		 * 1. 실행문A는 조건식이 true일때 실행됨
+		 * 2. 조건식이 False라면 실행문B가 실행됨
+		 * 
+		 * */
+		
+		boolean b = true;
+		if (b) {
+			System.out.println("b는 true입니다.");
+		} else {
+			System.out.println("b는 false입니다.");
+		}
+		// 만약 조건식이 true가 될 때 실행해야 할 문장이 하나밖에 없다면 생략 가능
+		if (true)
+			System.out.println("if 블록 안에 포함되는 문장");
+		System.out.println("블록 밖의 문장");
+		
+		if (true) System.out.println("블록 안의 문장");
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package chapter04;
+
+public class WhileExample {
+
+	public static void main(String[] args) {
+		//? while문
+		/*
+		 * while (조건식) {
+		 * 실행문
+		 * }
+		 * 
+		 * */
+		
+		int i = 1;
+		while (i <= 10) {
+			System.out.println(i);
+			i++;
+		}
+		//! while문은 무한루프에 빠질 위험이 많기 때문에 조심해야 함
+		
+	}
+
+}

@@ -1,0 +1,39 @@
+package chapter04;
+
+public class ForExample {
+
+	public static void main(String[] args) {
+		//? 반복문
+		// - for문, while문, do-while문
+		
+		//? for문
+		// 기본형태
+		/*
+		 * for (초기화식; 조건식; 증감식) {
+		 * 		실행문;
+		 * }
+		 * 
+		 * */
+		// 1부터 5까지 합을 구하세요
+		// for문 없이 코딩
+		int sum = 0;
+		sum = sum + 1;
+		sum += 2;
+		sum = sum + 3;
+		sum += 4;
+		sum = sum + 5;
+		System.out.println("sum 합: " + sum);
+		// >> 하드코딩
+		// for문 사용 코딩
+		int tot = 0;
+		for (int i = 0; i <= 5; i++) {
+			tot += i;
+		}
+		System.out.println("tot 합: " + tot);
+		
+		
+		
+		
+	}
+
+}
