@@ -1,0 +1,11 @@
+package chapter06;
+
+public class VarScope {
+
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}

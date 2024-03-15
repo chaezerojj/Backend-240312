@@ -1,0 +1,14 @@
+package chapter04;
+
+public class BreakExample002 {
+
+	public static void main(String[] args) {
+		// break 키워드, 예약어 문
+		for (int i = 0; i < 10; i++) {
+			System.out.println("￣へ￣");
+			System.out.println(i);
+			if (i == 3) {
+				System.out.println(i);
+				break;
+			}
+			System.out.println("ヽ(゜▽゜　)");

@@ -1,0 +1,19 @@
+package chapter04;
+
+public class BreakExample {
+
+	public static void main(String[] args) {
+		//? break문
+		// 반복문과 switch문에서 break문을 사용하여 종료시킴
+		/*
+		 * for(...) {
+		 * 		break; (종료)
+		 * 		>> for문 바로 종료됨
+		 * }
+		 * 
+		 * */
+		
+		
+	}
+
+}

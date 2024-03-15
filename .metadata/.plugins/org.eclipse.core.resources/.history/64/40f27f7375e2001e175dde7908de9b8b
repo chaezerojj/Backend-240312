@@ -1,0 +1,23 @@
+package chapter05;
+
+public class ArrayCreate002 {
+
+	public static void main(String[] args) {
+		//! new 연산자로 배열 생성
+		// 타입[] 변수 = new 타입[길이];
+		// - 길이 : 배열이 저장할 수 있는 값의 개수
+		// 길이가 5인 int[] 배열 생성
+		int[] intArray = new int[5];
+		int[] intArr = {0,0,0,0,0};
+		
+		// new 연산자로 배열을 처음 생성할 경우,
+		// 0이라는 기본값으로 초기화됨
+		
+		for (int i = 0; i < 5; i++) {
+			System.out.println(intArray[i]);
+		}
+		
+		
+	}
+
+}

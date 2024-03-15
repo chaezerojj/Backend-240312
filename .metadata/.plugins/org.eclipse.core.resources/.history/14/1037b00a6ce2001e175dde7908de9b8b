@@ -1,0 +1,19 @@
+package chapter05;
+
+public class ArrayCreate {
+
+	public static void main(String[] args) {
+		//? 배열
+		// 변수는 1개의 데이터만 저장
+		// 저장해야 할 데이터의 수가 많아지면 그만큼의 변수가 필요하여 코드가 길어짐
+		// >> 많은 양의 데이터를 적은 코드로 쉽게 처리할 수 있는 배열(array) 사용
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
