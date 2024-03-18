@@ -1,0 +1,21 @@
+package chapter07;
+
+// 가계부 프로그램
+public class AccountBook {
+	int balance;
+	
+	public int deposit(int amount) {
+		amount += balance;
+		return balance;
+	}
+	
+	public int withdraw(int amount) {
+		balance -= amount;
+		return balance;
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

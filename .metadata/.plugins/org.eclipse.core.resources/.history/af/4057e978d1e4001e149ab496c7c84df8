@@ -1,0 +1,10 @@
+package chapter07;
+
+//맛집 찾기 프로그램 
+public class FindRestaurant {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
