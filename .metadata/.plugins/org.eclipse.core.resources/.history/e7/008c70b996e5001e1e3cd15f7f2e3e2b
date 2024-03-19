@@ -1,0 +1,26 @@
+package chapter10;
+
+//? static 키워드
+// 사용을 거의 하지 않음
+// enum 나열 값
+
+public class InstCnt {
+	private int instNum = 1;
+	static int instStaticNum = 0; // static은 굳이 private을 붙이진 않음
+	
+	public InstCnt(int instNum) {
+		this.instNum = instNum;
+	}
+	
+	@Override
+	public String toString() {
+		return "Inst [instNum= " + instNum + "]";
+	}
+
+	public static void main(String[] args) {
+		// 인스턴스 변수 instNum 사용을 위해
+		// 인스턴스 생성- 클래스 틀을 이용하여 인스턴스를 생성하고 메모리에 올림
+		InstCnt instCnt = new InstCnt(42);
+		System.out.println(instCnt.toString());
+	}
+}

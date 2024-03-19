@@ -1,0 +1,13 @@
+package chapter10.lang;
+
+import chapter10.Sys;
+
+public class SysMain {
+
+	public static void main(String[] args) {
+		Sys.out.println("java");
+		
+		
+	}
+
+}

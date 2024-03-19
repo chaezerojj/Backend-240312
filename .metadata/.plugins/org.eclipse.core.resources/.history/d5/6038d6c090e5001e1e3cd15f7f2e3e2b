@@ -1,0 +1,10 @@
+package chapter09;
+import java.util.Arrays;
+class Solution {
+    public int[] solution(int[] num_list) {
+        int[] answer = {};
+        Arrays.sort(num_list);
+        
+        return answer;
+    }
+}
