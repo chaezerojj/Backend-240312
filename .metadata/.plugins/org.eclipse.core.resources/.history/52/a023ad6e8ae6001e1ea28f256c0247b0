@@ -1,0 +1,9 @@
+package chapter12.example2;
+
+public class Apple extends Fruits{
+
+	public Apple(int price, int amount) {
+		super(10000, 4);
+	}
+
+}

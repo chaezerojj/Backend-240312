@@ -1,0 +1,7 @@
+package chapter12.c27;
+
+import chapter12.Product;
+
+public class Computer extends Product {
+
+}

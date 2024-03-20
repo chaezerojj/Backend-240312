@@ -1,0 +1,5 @@
+package chapter12.example3;
+
+public abstract class IPhone extends Phone{
+	
+}

@@ -1,0 +1,15 @@
+package chapter12.example3;
+
+public class Phone {
+	String brand;
+	String series;
+	
+	public Phone(String brand, String series) {
+		this.brand = brand;
+		this.series = series;
+	}
+	
+	void info() {
+		System.out.println(brand + " " + series +"이 켜집니다.");
+	}
+}

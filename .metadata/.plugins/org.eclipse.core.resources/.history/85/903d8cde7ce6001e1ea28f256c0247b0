@@ -1,0 +1,8 @@
+package chapter12.c29;
+
+public class ArrIns {
+	public static void main(String[] args) {
+		String str = "string";
+		String[] strArr = {"s1","s2", "s3"};
+	}
+}

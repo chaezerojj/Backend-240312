@@ -1,0 +1,10 @@
+package chapter12.example3;
+
+public class PhoneMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

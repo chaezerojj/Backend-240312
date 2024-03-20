@@ -1,0 +1,8 @@
+package chapter12.c27;
+
+public class Tv {
+	public void who() {
+		System.out.println("tv입니다.");
+	}
+
+}
