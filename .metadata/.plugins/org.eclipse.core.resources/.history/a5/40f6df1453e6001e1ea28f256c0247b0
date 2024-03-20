@@ -1,0 +1,7 @@
+package chapter11;
+
+import chapter12.Tv;
+
+public class TvDvD extends Tv, DvD{
+
+}

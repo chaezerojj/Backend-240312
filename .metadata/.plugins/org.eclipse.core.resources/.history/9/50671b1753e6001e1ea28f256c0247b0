@@ -1,0 +1,14 @@
+package chapter11;
+
+import chapter12.Tv;
+
+public class SmartTv extends Tv{
+	// 자막 기능 추가
+	boolean caption;
+	
+	public void displayCaption(String text) {
+		if(caption) {
+			System.out.println(text);
+		}
+	}
+}

@@ -1,0 +1,9 @@
+package chapter12;
+
+public class Point3D extends Point {
+	private int z;
+	
+	public String getLocation() {
+		return "x: " + x + ", y: " + getY() + "z: " + z;
+	}
+}

@@ -1,0 +1,8 @@
+package chapter12;
+
+// super 참조변수
+// 하위 클래스에서 상위 클래스로부터 상속받은 멤버를 참조하는데 사용되는 참조 변수
+
+public class Ex7_2 {
+	
+}
