@@ -1,0 +1,33 @@
+package chapter17.printable2;
+
+public class PrintMain {
+
+	public static void main(String[] args) {
+		String myDoc = "This is a report about... ";
+		// Samsung Print 출력
+		Printable prn = new SPrinterDriver();
+		prn.print(myDoc);
+		
+		// LG Print 출력
+		prn = new LPrinterDriver();
+		prn.print(myDoc);
+		
+		// 웹 백엔드 프레임워크 Spring에서는 데이터베이스와 연결되는 부분에 인터페이스 활용
+		
+		// 상속   // inherit - customize - override
+		// 스프링-스프링시큐리티 사용 시,
+		// 라이브러리 활용할 때 작성 코드를 커스터마이징하게 연계해서 활용
+	
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

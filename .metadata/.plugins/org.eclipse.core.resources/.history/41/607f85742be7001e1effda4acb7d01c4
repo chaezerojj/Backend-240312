@@ -1,0 +1,14 @@
+package chapter17.scanner;
+
+import java.util.Scanner;
+
+public class ScannerTest2 {
+
+	public static void main(String[] args) {
+		// Scanner 클래스의 콘솔 입력 적용
+		Scanner sc = new Scanner(System.in);
+		
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package chapter17.Quiz2;
+
+public interface DataAccessObject {
+	public void dbWork();
+}

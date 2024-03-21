@@ -1,0 +1,9 @@
+package chapter17;
+
+// 인터페이스(interface)
+// - 추상(미완성)메소드만 담고 있음
+
+
+public interface Printable {
+	
+}

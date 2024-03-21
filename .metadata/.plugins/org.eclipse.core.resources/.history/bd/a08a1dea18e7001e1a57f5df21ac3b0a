@@ -1,0 +1,13 @@
+package chapter17;
+
+// 인터페이스를 구현(implements)하는 클래스
+// - 미완성의 메소드를 완성해야 함
+
+public class Printer implements Printable{
+	// 구현하는 메소드와 추상 메소드 사이에는 메소드 오버라이딩 관계가 성립됨
+	@Override
+	public void print(String doc) {
+		System.out.println(doc);
+	}
+	
+}

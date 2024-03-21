@@ -1,0 +1,11 @@
+package chapter17.printable;
+
+public class LPrinterDriver implements Printable {
+
+	@Override
+	public void print(String doc) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

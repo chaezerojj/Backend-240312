@@ -1,0 +1,13 @@
+package chapter17.printable;
+
+public class PrintMain {
+
+	public static void main(String[] args) {
+		
+		// Samsung print 출력
+		Printable prn = new SPrinterDriver();
+		prn.print(null);
+		
+	}
+
+}

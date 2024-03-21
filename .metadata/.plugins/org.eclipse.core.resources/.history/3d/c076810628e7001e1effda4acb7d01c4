@@ -1,0 +1,15 @@
+package chapter17.io;
+
+public class MultiPrinter extends SimplePrinter{
+	@Override
+	public void printLine(String str) {
+		System.out.println("start of multi...");
+		System.out.println(str);
+	}
+	
+	public static void main(String[] args) {
+		Printable prn1 = new SimplePrinter();
+		Printable prn2 = new MultiPrinter();
+	}
+	
+}

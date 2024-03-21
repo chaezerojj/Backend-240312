@@ -1,0 +1,11 @@
+package chapter18;
+
+// 예외 떠넘기기(던지기)
+
+public class ThrowsExample {
+	
+	public int divide(int num1, int num2) {
+		return num1 / num2;
+	}
+	
+}

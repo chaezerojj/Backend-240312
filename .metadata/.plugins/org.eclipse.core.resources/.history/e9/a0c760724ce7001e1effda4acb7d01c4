@@ -1,0 +1,14 @@
+package chapter18;
+
+public class TryCatchRuntimeException {
+	
+	public static void main(String[] args) {
+		String data1 = null;
+		try {
+			System.out.println(data1.toString());
+		} catch (NullPointerException e) {
+//			e.printStackTrace();
+		}
+		System.out.println("프로그램종료");
+	}
+}

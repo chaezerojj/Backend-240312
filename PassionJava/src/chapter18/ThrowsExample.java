@@ -1,0 +1,23 @@
+package chapter18;
+
+//? 예외 떠넘기기(던지기)
+// - 메소드 내 예외 발생할 수 있는 코드 작성 시, 경우에 따라 메소드 호출한 곳으로 예외 떠넘기기 가능
+// - throws 키워드를 메소드 선언부 끝에 작성하여 예외를 호출한 곳으로 떠넘기기
+
+public class ThrowsExample {
+	
+	public int divide(int num1, int num2) throws ArithmeticException{
+		return num1 / num2;
+	}
+	
+	public static void main(String[] args) {
+		ThrowsExample te = new ThrowsExample();
+		try {
+			te.divide(10, 0);
+		} catch (ArithmeticException e){
+			System.out.println("0으로 나눌 수 없습니다.");
+		}
+		te.divide(0, 0);
+	}
+	
+}

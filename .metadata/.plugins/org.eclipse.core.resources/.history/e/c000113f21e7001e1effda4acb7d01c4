@@ -1,0 +1,5 @@
+package chapter17.printable2;
+
+public interface ColorPrintable {
+
+}

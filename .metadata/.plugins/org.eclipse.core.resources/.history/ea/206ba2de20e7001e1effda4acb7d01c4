@@ -1,0 +1,6 @@
+package chapter17.printable2;
+
+
+public interface Printable {
+	public void print(String doc);
+}

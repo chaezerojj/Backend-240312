@@ -1,0 +1,15 @@
+package chapter17.scanner;
+
+import java.util.Scanner;
+
+//? 콘솔 입력
+public class ScannerTest {
+	
+	public static void main(String[] args) {
+		// Scanner 클래스 활용
+		String source = "1 3 5";
+		Scanner sc = new Scanner(source);
+		// 자동 import 단축키: ctrl + shift + o
+		
+	}
+}
