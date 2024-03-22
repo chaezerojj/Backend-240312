@@ -1,0 +1,49 @@
+package chapter19;
+
+//! 유용한 클래스
+
+// * Object 클래스
+// - 모든 클래스의 최고 상위 클래스
+// - Object 클래스의 멤버들은 모든 클래스에서 바로 사용 가능
+// - 인스턴스 변수(멤버변수)는 없고 메소드만 가지고 있음
+
+//? Object 클래스의 메소드 
+// 1. equals()
+/* public boolean equals(Object obj) {
+ 		return (this === obj);
+  }
+ */
+// - 매개변수로 객체의 참조변수를 받아서 비교하여 그 결과를 boolean값으로 알려주는 역할
+// 
+
+public class ObjectMethods extends Object {
+//	public class ObjectMethods extends Object {
+	// 모든 클래스는 Object를 상속받고 있음 (java.lang.Object)
+ 	private int value;
+ 	
+ 	public ObjectMethods(int value) {
+ 		this.value = value;
+ 	}
+ 	
+ 	public static void main(String[] args) {
+		ObjectMethods om1 = new ObjectMethods(10);
+		ObjectMethods om2 = new ObjectMethods(10);
+		
+		if(om1.equals(om2)) {
+			System.out.println("om1과 om2는 같습니다.");
+		}
+	
+		
+		
+		
+		
+	}
+ 	
+}
+
+
+
+
+
+
+

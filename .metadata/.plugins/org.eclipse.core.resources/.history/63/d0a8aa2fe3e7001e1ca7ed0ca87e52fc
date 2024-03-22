@@ -1,0 +1,13 @@
+package chapter19;
+
+//? Object 클래스의 메소드
+// 2. toString()
+// - 인스턴스에 대한 정보를 문자열로 제공할 목적으로 정의한 것
+// - >>인스터스 변수에 저장된 값들을 문자열로 표현한다는 뜻
+
+
+
+
+public class ObjectToString {
+
+}

@@ -1,0 +1,13 @@
+package chapter19;
+
+//? 유용한 클래스
+
+// * Object 클래스
+// - 모든 클래스의 최고 상위 클래스
+// - Object 클래스의 멤버들은 모든 클래스에서 바로 사용 가능
+// - 인스턴스 변수(멤버변수)는 없고 메소드만 가지고 있음
+
+public class ObjectMethods extends Object {
+	// 모든 클래스는 Object를 상속받고 있음 (java.lang.Object)
+
+}

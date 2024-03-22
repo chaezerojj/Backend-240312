@@ -1,0 +1,101 @@
+package chapter19;
+
+//? 빈 문자열(empty string)
+// - 길이가 0인 배열이 존재
+// - String 클래스로 되어있지만 내부적으로 char형 배열을 사용
+// - char형 배열 길이가 0인 배열을 내부적으로 가지고 있는 문자열이 빈 문자열임
+
+public class EmptyString {
+	
+	public static void main(String[] args) {
+		String str1 = null;
+		String str2 = ""; // 빈 문자열로 초기화
+		str2 += "문";
+		str2 += "자";
+		str2 += "열";
+		System.out.println(str2);
+		
+		// String 클래스의 다양한 메소드
+		// int compareTo(String str)
+		// 문자열(str)과 사전순서로 비교함
+		// 같으면 0을, 사전순으로 이전이면 음수를, 이후면 양수를 반환함
+		String str3 = "aaa";
+		String str4 = "bbb";
+		if(str3.compareTo(str4) == 0) {
+			System.out.println("사전순서가 서로 같습니다.");
+		} else if (str3.compareTo(str4) < 0) {
+			System.out.println("str3이 str4보다 사전순서가 빠릅니다.");
+		} else if (str3.compareTo(str4) > 0) {
+			System.out.println("str4가 str3보다 사전순서가 빠릅니다.");
+		}
+		
+		// boolean contains(CharSequence s)
+		// - 지정된 문자열이 포함되어 있는지 검사
+		String s = "abcdefg";
+		boolean b = s.contains("bc");
+		System.out.println(b);
+		
+		System.out.println();
+		// boolean equalsIgnoreCase(String str)
+		// - 문자열을 대소문자 구분없이 비교
+		String s1 = "Hello";
+		boolean b1 = s1.equalsIgnoreCase("hello");
+		System.out.println(b1); // true
+		b1 = s1.equals("hello");
+		System.out.println(b1); // false
+		System.out.println("World".equalsIgnoreCase("WORLD"));
+		
+		// int indexOf(char ch)
+		// - 주어진 문자의 문자열에 존재하는지 확인하여 위치를 알려줌
+		// - 못찾을 경우 -1 반환
+		s = "Hello";
+		int idx1 = s.indexOf("o");
+		int idx2 = s.indexOf("k");
+		System.out.println(idx1); // 4
+		System.out.println(idx2); // -1
+		
+		// String replace(String old, String new)
+		// - 문자열 중 문자열을 새로운 문자열로 모두 바꾼 문자열을 반환
+		s = "what the hell";
+		s1 = s.replace("hell", "heaven");
+		System.out.println(s1);
+		
+		// String[] split(String regex)
+		// - 문자열을 지정된 분리자(regex)로 나누어 문자열 배열에 담아 반환함
+		// - csv 파일은 , 로 데이터를 구분한 파일
+		String animals = "dog,cat,bear";
+		String[] arr = animals.split(",");
+		// arr = [dog,cat,bear]
+		String animals1 = arr[1];
+		System.out.println(animals1); // cat
+		System.out.println();
+		
+		// foreach문 
+		// - for(요소를 순차적으로 대입할 변수: 시퀀스형 자료) {
+		// 			}
+		for (String str : arr) {
+			// >> String str이 arr배열의 길이만큼 돈다
+			System.out.println(str);
+		}
+		
+		//한국: 년-월-일, 성-이름
+		//국외: 일-월-년, 이름-성
+		// 22-03-2024
+		String today ="22-03-2024";
+		String[] tArr = today.split("-");
+		String temp = tArr[0];
+		tArr[0] = tArr[2];
+		tArr[2] = temp;
+		String ymd = "";
+		for(String t : tArr) {
+			System.out.print(t);
+			ymd += t;
+		}
+		
+		
+		
+		
+		
+		
+	}
+}

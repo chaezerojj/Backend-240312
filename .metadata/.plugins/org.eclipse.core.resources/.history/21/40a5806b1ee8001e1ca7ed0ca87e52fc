@@ -1,0 +1,16 @@
+package chapter19;
+
+import java.util.Calendar;
+
+public class Exercise10_1 {
+
+	public static void SimpleDateFormat() {
+		
+	}
+	
+	public static void main(String[] args) {
+		Calendar date = Calendar.getInstance();
+		date.set(2020, 0, 0);
+	}
+
+}

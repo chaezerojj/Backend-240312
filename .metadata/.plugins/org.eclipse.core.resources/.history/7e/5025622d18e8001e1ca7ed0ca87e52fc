@@ -1,0 +1,16 @@
+package chapter19;
+
+import java.util.Calendar;
+
+public class Calendar002 {
+	
+	public static void main(String[] args) {
+		// 특정 날짜 설정하기
+		// 2019년 4월 29일로 날짜 설정
+		Calendar date1 = Calendar.getInstance();
+		// month의 경우 0부터 시작하기 때문에 4월인 경우, 3으로 지정해야 함
+//		date1.set(2019, 3, 29);
+		date1.set(2019, Calendar.APRIL, Calendar.DATE);
+		System.out.println(date1);
+	}
+}

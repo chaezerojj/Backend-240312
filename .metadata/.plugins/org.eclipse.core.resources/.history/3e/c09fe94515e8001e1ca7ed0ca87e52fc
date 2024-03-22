@@ -1,0 +1,16 @@
+package chapter19;
+
+import java.util.Calendar;
+
+public class Calendar001 {
+
+	public static void main(String[] args) {
+		// 기본적으로 현재 날짜와 시간으로 설정됨
+		Calendar today = Calendar.getInstance();
+		System.out.println("올해 연도: " + today.get(Calendar.YEAR));
+		System.out.println("월(출력값에서 1을 더하면 해당 월의 값입니다.): " + today.get(Calendar.MONTH));
+		System.out.println("해당 연도의 주: " + today.get(Calendar.WEEK_OF_YEAR));
+		System.out.println("해당 달의 주: " + today.get(Calendar.WEEK_OF_MONTH));
+		System.out.println("해당 월의 일: " + today.get(Calendar.DATE) );
+	}
+}

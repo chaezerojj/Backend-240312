@@ -1,0 +1,19 @@
+package chapter19;
+
+import java.util.Calendar;
+
+public class Calendar003 {
+
+	public static void main(String[] args) {
+		Calendar date = Calendar.getInstance();
+//		date.set(2024, 2, 22);
+		System.out.println("100일 후..");
+		date.add(Calendar.DATE, 100);
+		System.out.println(toString(date));
+	}
+	public static String toString(Calendar date) {
+		return (date.get(Calendar.YEAR)) + "년 " 
+					+ ((date.get(Calendar.MONTH) + 1) + "월 ") 
+					+ (date.get(Calendar.DATE) + "일 ");
+	}
+}

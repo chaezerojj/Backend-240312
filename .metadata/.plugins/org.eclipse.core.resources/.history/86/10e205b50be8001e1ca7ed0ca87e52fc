@@ -1,0 +1,32 @@
+package chapter19;
+
+//? Math 클래스
+// - 기본적인 수학 계산에 유용한 메서드로 구성됨
+// - Math클래스의 생성자는 private이기 때문에 인스턴스 생성 불가능
+// - 메소드는 모두 static
+
+public class MathClass {
+	public static void main(String[] args) {
+		//? Math 메소드
+		// static double abs(double a)
+		// static int abs(int f)
+		// >> 주어진 값의 절대값을 반환
+		int i = Math.abs(-10);
+		System.out.println(i);
+		i = Math.abs(10);
+		System.out.println(i);
+		// static double ceil(double a)
+		// >> 주어진 값의 소수점을 올림하여 반환
+		double d = Math.ceil(10.1);
+		System.out.println(d); // 11.0
+		double d2 = Math.ceil(-10.1);
+		System.out.println(d2); // -10.0
+		double d3 = Math.ceil(10.000015);
+		System.out.println(d3); // 11.0
+		// static double floor(double a)
+		// >> 주어진 값의 소수점을 버림하여 반환
+		d = Math.floor(10.8);
+		System.out.println(d); // 10.0
+		d = Math.floor(-11.3)
+	}
+}

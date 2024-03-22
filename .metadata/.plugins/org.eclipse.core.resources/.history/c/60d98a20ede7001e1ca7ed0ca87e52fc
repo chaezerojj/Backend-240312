@@ -1,0 +1,26 @@
+package chapter19;
+
+//? 빈 문자열(empty string)
+// - 길이가 0인 배열이 존재
+// - String 클래스로 되어있지만 내부적으로 char형 배열을 사용
+// - char형 배열 길이가 0인 배열을 내부적으로 가지고 있는 문자열이 빈 문자열임
+
+public class EmptyString {
+	
+	public static void main(String[] args) {
+		String str1 = null;
+		String str2 = ""; // 빈 문자열로 초기화
+		str2 += "문";
+		str2 += "자";
+		str2 += "열";
+		System.out.println(str2);
+		
+		// String 클래스의 다양한 메소드
+		// int compareTo(String str)
+		// 문자열(str)과 사전순서로 비교함
+		// 같으면 0을, 사전순으로 이전이면 음수를, 이후면 양수를 반환함
+		String str3 = "aaa";
+		String str4 = "bbb";
+		
+	}
+}
