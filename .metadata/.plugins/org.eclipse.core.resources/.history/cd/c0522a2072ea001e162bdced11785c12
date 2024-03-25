@@ -1,0 +1,26 @@
+package chapter22;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+
+//? 성능 향상 보조 스트림
+// - 메모리 버퍼와 작업함으로써 실행 성능 향상
+
+public class AboutBuffer {
+	
+	public static void main(String[] args) {
+		String ofp = 
+				AboutBuffer.class.getResource("apple.jpg").getPath();
+		System.out.println(ofp);
+		try(FileInputStream fis = new FileInputStream("apple.jpg")){
+			BufferedInputStream bis = new BufferedInputStream(fis);
+			int data = -1;
+			while(true) {
+				data = bis.read();
+				if (data == -1) break;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

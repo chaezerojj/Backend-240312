@@ -1,0 +1,26 @@
+package chapter22;
+
+import java.io.File;
+
+// File 클래스
+
+public class FileClass {
+	public static void main(String[] args) {
+		// File 인스턴스 생성
+		File file1 = new File("file1.txt");
+		// 파일 또는 폴더가 존재하지 않으면 생성
+		// exists(): 파일이나 폴더가 존재한다면 true 리턴, 아니면 false 리턴
+//		if (file1.exists() == false) {
+		if (!file1.exists()) {
+			// createNewFile(): 새로운 파일 생성
+			try {
+				file1.createNewFile();
+				System.out.println("파일 생성 완료!!");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			System.out.println("파일이 이미 존재합니다.");
+		}
+	}
+}

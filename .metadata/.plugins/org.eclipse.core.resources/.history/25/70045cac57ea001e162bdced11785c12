@@ -1,0 +1,14 @@
+package chapter21;
+
+import java.util.*;
+
+import chapter21.Quiz1.Board;
+
+public class BoardDao {
+	
+	public List<Board> getBoardList() {
+		
+		return null;
+	}
+	
+}

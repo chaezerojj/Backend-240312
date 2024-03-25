@@ -1,0 +1,10 @@
+package chapter21;
+
+import java.util.*;
+
+public class ArrayListCollections {
+	
+	public static void main(String[] args) {
+		ArrayList list1 = new ArrayList(10);
+	}
+}

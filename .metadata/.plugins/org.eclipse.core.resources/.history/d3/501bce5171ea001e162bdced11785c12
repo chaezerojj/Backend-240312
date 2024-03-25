@@ -1,0 +1,21 @@
+package chapter22;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+//? 성능 향상 보조 스트림
+// - 메모리 버퍼와 작업함으로써 실행 성능 향상
+
+public class AboutBuffer {
+	
+	public static void main(String[] args) {
+		String ofp = 
+				AboutBuffer.class.getResource("./apple.jpg").getPath();
+		System.out.println(ofp);
+//		try(FileInputStream fis = new FileInputStream(ofp)){
+//			
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		}
+	}
+}

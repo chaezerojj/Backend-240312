@@ -1,0 +1,35 @@
+package chapter21;
+
+import java.util.*;
+
+public class ArrayListCollections {
+	
+	public static void main(String[] args) {
+		// 제네릭타입<>
+		// - <>안에 저장하고 싶은 클래스 타입 넣음
+		// - 길이가 가변
+		// - List 컬렉션을 구현하는 클래스
+		// - >> ArrayList, LinkedList
+		
+		ArrayList<Integer> list1 = new ArrayList<Integer>(10);
+		ArrayList<Integer> list2 = new ArrayList<>(10); // 뒤에는 <>안 타입 생략 가능
+		List<String> sList = new ArrayList<>();
+		
+		// 객체 저장
+		sList.add("JAVA");
+		sList.add("Python");
+		sList.add("C++");
+		sList.add("Java Script");
+		
+		// 저장된 총 객체수 얻기 - size()
+//		sList.size();
+		System.out.println(sList.size());
+		
+		for (String str : sList) {
+			System.out.println(str);
+		}
+		
+		
+		
+	}
+}
