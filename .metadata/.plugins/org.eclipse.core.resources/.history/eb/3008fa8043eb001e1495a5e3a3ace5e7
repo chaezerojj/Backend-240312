@@ -1,0 +1,6 @@
+package chapter27;
+
+public class Company {
+	private String cName;
+	private ContInfo cInfo;
+}

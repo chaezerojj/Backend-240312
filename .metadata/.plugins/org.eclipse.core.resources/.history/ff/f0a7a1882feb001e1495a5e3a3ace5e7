@@ -1,0 +1,11 @@
+package chapter25;
+
+//? 열거형(Enum)
+// - 여러 상수를 편리하게 선언할 수 있는 방법
+
+public class AboutEnum {
+	// 열거형 kind를 정의
+	enum Kind{
+		
+	}
+}

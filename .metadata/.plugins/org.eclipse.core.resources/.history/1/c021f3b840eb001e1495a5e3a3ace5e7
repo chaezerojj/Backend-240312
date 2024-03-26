@@ -1,0 +1,10 @@
+package chapter27;
+
+public class Friend {
+	private String name;
+	private Company cmp;
+	
+	public Friend() {
+		
+	}
+}

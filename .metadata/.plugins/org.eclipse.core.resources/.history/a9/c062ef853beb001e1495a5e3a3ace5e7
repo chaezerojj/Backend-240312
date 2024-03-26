@@ -1,0 +1,21 @@
+package chapter26;
+
+public class IBox {
+	private int n;
+	public IBox(int i) {
+		n = i;
+	}
+	public int larger(IBox b) {
+		if (n > b.n) 
+			return n;
+		 else 
+			 return b.n;
+	}
+	
+	public static void main(String[] args) {
+		IBox ib1 = new IBox(5);
+		IBox ib2 = new IBox(7);
+		int bigger = ib1.larger(ib2);
+		System.out.println(bigger);
+	}
+}

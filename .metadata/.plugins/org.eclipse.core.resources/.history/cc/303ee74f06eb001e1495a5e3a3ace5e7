@@ -1,0 +1,8 @@
+package chapter23;
+
+//? 람다(Lambda)
+// * 인터페이스를 구현하는 방법
+// - 1. class 생성
+public class AboutLambda {
+	
+}

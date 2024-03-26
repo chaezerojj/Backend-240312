@@ -1,0 +1,19 @@
+package chapter23;
+
+//? 람다(Lambda)
+// * 인터페이스를 구현하는 방법
+// - 1. class 생성
+// - 2. 익명클래스 사용
+
+public class AboutLambda {
+	public static void main(String[] args) {
+		// 익명클래스 사용 - 익명클래스로 인스턴스 생성(자동완성으로 클래스 생성됨)
+		Printable prn = new Printable() {
+			@Override
+			public void print(String s) {
+				
+			}
+		};
+		prn.print("Hello World!");
+	}
+}

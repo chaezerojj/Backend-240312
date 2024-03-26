@@ -1,0 +1,22 @@
+package chapter23;
+
+import java.util.Random;
+
+// 매개변수가 없고 리턴만 있는 람다식
+
+public interface Generator {
+	int rand();
+	
+	public static void main(String[] args) {
+		
+		Generator gen = () -> {
+		// 매개변수 없는 경우, 소괄호 반드시 써야 함	
+			Random rand = new Random();
+			// 정수를 랜덤으로 생성해주는 Random
+			// - Ramdom 라이브러리에는 랜덤으로 생성해주는 간단한 메소드들이 많음
+			return 0;
+		};
+		
+	}
+	
+}

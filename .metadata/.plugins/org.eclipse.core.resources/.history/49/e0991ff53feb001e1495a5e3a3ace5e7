@@ -1,0 +1,17 @@
+package chapter26;
+
+import java.util.function.Function;
+
+// 메소드 참조 4가지 종류
+// 4. 생성자에서 메소드 참조
+
+public class StringMaker {
+	public static void main(String[] args) {
+		Function<char[], String> f = ar -> {
+			return new String(ar);
+		};
+		char[] src = {'R', 'o', 'b', 'o', 't'};
+		String str = f.apply(src);
+		System.out.println(str);
+	}
+}

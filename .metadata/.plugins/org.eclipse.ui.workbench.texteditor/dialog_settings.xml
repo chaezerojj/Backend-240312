@@ -11,6 +11,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="package chapter24;"/>
 			<item value="package chapter12;"/>
 		</list>
 		<list key="replacehistory">
