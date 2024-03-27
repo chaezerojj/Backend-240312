@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>js 기본 자료형</h2>
+  <!--
+
+    ! js 기본 자료형
+    
+    - 자료 (data)
+      : 프로그래밍에서 프로그램이 처리할 수 있는 모든 것
+    - 자료형 (data type)
+      : 자료 형태에 따라 나눠둔 것
+    - 많이 사용하면서 가장 기본적인 자료형
+      >> 숫자(number), 문자열(string), 불(boolean) 자료형
+
+    ? 문자열 자료형
+    - 문자들의 집합을 문자열이라고 함
+    - 문자가 1개이던 여러 개이던 모두 문자열 자료형
+
+    * 문자열 만들기
+    - 자바스크립트에서는 2가지 방법으로 문자열 생성
+    - 1. 큰 따옴표 사용
+    - 2. 작은 따옴표 사용
+    - 내부에 작은 따옴표를 사용하고 싶다면 큰 따옴표 안에 작은 따옴표 사용
+    - 반대로 큰 따옴표를 사용하고 싶다면 작은 따옴표 안에 큰 따옴표 사용
+
+    * 이스케이프 문자(\)를 사용하여 따옴표 문자 그대로 출력 가능
+    - \n: 줄바꿈
+    - \t: 탭을 의미
+    - \\: 역슬래시 그 자체를 의미
+    
+  -->
+  <script>
+    // 문자열 만들기
+    // 큰 따옴표
+    console.log("큰 따옴표 문자열");
+    
+    // 작은 따옴표
+    console.log('작은 따옴표 문자열');
+    // 작은따옴표까지 출력
+    console.log("문자열 '작은따옴표' 출력");
+    // 큰 따옴표까지 출력
+    console.log('문자열 "큰 따옴표" 출력');
+    
+    console.log("<img src='apple.jpg'>");
+    
+    // 역슬래시 사용하여 여러 특수 기능 출력
+    console.log('This is \'string\'');
+    console.log("This is \"string\"");
+    
+    // 이스케이프 문자(\)를 사용하여 따옴표를 문자 그대로 사용 가능
+    // \n 부분에서 줄바꿈이 일어남
+    console.log("동해물과 백두산이 \n마르고 닳도록");
+    // \t 부분에 탭
+    console.log("이름\t나이\t지역");
+  </script>
+</body>
+</html>
