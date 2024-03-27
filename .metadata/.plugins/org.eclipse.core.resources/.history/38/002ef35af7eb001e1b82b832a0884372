@@ -179,8 +179,6 @@ public class StreamMethodRef {
 			.sequential()
 			.forEach(System.out::println);
 		
-		System.out.println("===================");
-		
 		// 17. concat()
 		// - 두 스트림을 연결하여 하나의 스트림으로 만듦
 		

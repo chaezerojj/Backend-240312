@@ -162,24 +162,10 @@ public class StreamMethodRef {
 		
 		// 15. parallel()
 		// - 병렬 스트림으로 변환. 요소를 병렬로 처리하여 성능을 향상시킬 수 있음 
-		String[] wordsParallel = {"apple", "banana", "cherry", "date", "elderberry"};
-		// 배열을 병렬 스트림으로 변환하여 요소를 대문자로 출력
-		System.out.printf("parallel(): ");
-		Arrays.stream(wordsParallel)
-			.parallel()
-			.map(String::toUpperCase)
-			.forEach(System.out::println);
+		
 		
 		// 16. sequential()
 		// - 병렬 스트림을 순차 스트림으로 변환함
-		System.out.printf("sequential(): ");
-		Arrays.stream(wordsParallel)
-			.parallel()
-			.map(String::toUpperCase)
-			.sequential()
-			.forEach(System.out::println);
-		
-		System.out.println("===================");
 		
 		// 17. concat()
 		// - 두 스트림을 연결하여 하나의 스트림으로 만듦

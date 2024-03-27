@@ -119,20 +119,9 @@ public class StreamMethodRef {
 		if (result2) System.out.println("리스트에 'z'를 포함하는 단어는 존재하지 않습니다.");
 		else System.out.println("리스트에 'z'를 포함하는 단어가 존재합니다.");
 		
+		
 		// 12. findFirst(), findAny()
 		// - 스트림에서 첫번째 요소 혹은 임의의 요소를 찾아서 optional 객체로 반환
-		// findFirst()
-		List<Integer> numFind = Arrays.asList(1, 2, 3, 4, 5);
-		Optional<Integer> first = numFind.stream().findFirst();
-		System.out.printf("findFirst(): ");
-		if(first.isPresent()) System.out.println("첫번째 요소: " + first.get());
-		else System.out.println("리스트가 비어있습니다.");
-		
-		// findAny()
-		Optional<Integer> any = numFind.stream().findAny();
-		System.out.printf("findAny(): ");
-		if (any.isPresent()) System.out.println("임의의 요소: " + any.get());
-		else System.out.println("리스트가 비어있습니다.");
 		
 		// 13. min(), max()
 		// - 스트림에서 최솟값 or 최댓값을 찾아서 optional 객체로 반환
@@ -162,24 +151,9 @@ public class StreamMethodRef {
 		
 		// 15. parallel()
 		// - 병렬 스트림으로 변환. 요소를 병렬로 처리하여 성능을 향상시킬 수 있음 
-		String[] wordsParallel = {"apple", "banana", "cherry", "date", "elderberry"};
-		// 배열을 병렬 스트림으로 변환하여 요소를 대문자로 출력
-		System.out.printf("parallel(): ");
-		Arrays.stream(wordsParallel)
-			.parallel()
-			.map(String::toUpperCase)
-			.forEach(System.out::println);
 		
 		// 16. sequential()
 		// - 병렬 스트림을 순차 스트림으로 변환함
-		System.out.printf("sequential(): ");
-		Arrays.stream(wordsParallel)
-			.parallel()
-			.map(String::toUpperCase)
-			.sequential()
-			.forEach(System.out::println);
-		
-		System.out.println("===================");
 		
 		// 17. concat()
 		// - 두 스트림을 연결하여 하나의 스트림으로 만듦
