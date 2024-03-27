@@ -3,11 +3,11 @@ package chapter27;
 // 회사 정보에 속하는 회사 연락처
 public class ContInfo {
 	private String phone;
-	private String addr;
+	private String addrs;
 	
-	public ContInfo(String phone, String addr) {
+	public ContInfo(String phone, String addrs) {
 		this.phone = phone;
-		this.addr = addr;
+		this.addrs = addrs;
 	}
 
 	public String getPhone() {
@@ -15,7 +15,7 @@ public class ContInfo {
 	}
 
 	public String getAdrs() {
-		return addr;
+		return addrs;
 	}
 	
 	
