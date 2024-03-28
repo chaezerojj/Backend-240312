@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03-02.html</title>
+</head>
+<body>
+  <h1>js switch 조건문</h1>
+  <!-- 
+    ! switch 조건문
+    - 형태
+    switch(자료) {
+      case A:
+        break;
+      case B:
+        break;
+        ...
+      default: (default는 생략 가능)
+        break;
+    }
+
+    ! 삼항 연산자
+    - 조건부 연산자라고도 함
+    - 형태:
+    (boolean 표현식) ? (참일때의 결과) : (거짓일때의 결과)
+
+    ? 짧은 조건문
+    - 논리 연산자의 특성을 조건문으로 사용
+    - 논리합 연산자(||)를 사용한 짧은 조건문
+    - true || () => 결과는 무조건 true
+      >> 좌변이 참인 경우 우변이 실행되지 않음
+    - false || ()
+      >> 우변의 결과에 따라 결과가 도출
+         좌변이 거짓일 경우에는 우변도 실행됨
+
+    ?  논리합 연산자(||)의 짧은 조건문
+    - boolean식 || boolean식 이 거짓일 때 실행되는 문장
+    
+    ? 논리곱 연산자(&&)를 사용한 짧은 조건문
+    - 양 변이 모두 참일때만 참
+    - false && () -> 뒤에 어떤 값이나 내용이 있든 false 반환
+    - 좌변이 거짓이면 우변은 실행되지 않음
+    - 표현식 && boolean표현식이 참일 때 실행할 문장
+
+
+
+
+   -->
+  <script>
+    // switch 조건문
+    // -홀수와 짝수를 구분하는 코드
+    // const input = Number(prompt("숫자를 입력하세요."));
+    // switch (input % 2) {
+    //   case 0:
+    //     console.log("짝수입니다");
+    //     break;
+    //   case 1:
+    //     console.log("홀수입니다.");
+    //     break;
+    //   default:
+    //     console.log("숫자가 아닙니다.");
+    //     break;
+    // }
+
+    // // 삼항연산자
+    // const input = prompt("숫자를 입력하세요.");
+    // const number = Number(input);
+    // const result = (number >= 0) ? "0 이상의 숫자" : "0보다 작은 숫자";
+    // console.log(result);
+
+    // 짧은 조건문
+    // - 논리합 연산자(||)를 사용한 짧은 조건문
+    // true || () => 결과는 무조건 true
+    // >> 좌변이 참인 경우 우변이 실행되지 않음
+    console.log(true || console.log("Is it work?")); // true
+    // false || ()
+    // >> 우변의 결과에 따라 결과가 도출
+    //     좌변이 거짓일 경우에는 우변도 실행됨
+    console.log(false || console.log("Is it work?")); // false값 - 우변도 출력됨
+
+    // 논리합 연산자의 짧은 조건문
+    // - boolean식 || boolean식이 거짓일 때 실행할 문장
+    let a = NaN;
+    a === NaN || (a = 11); // undefined
+    console.log(a); // 11
+
+    // 논리곱 연산자의 짧은 조건문
+    // - 분 구하기
+    const date = new Date();
+    const hour = date.getHours();
+    const min = date.getMinutes();
+    console.log(hour);
+    console.log(min);
+    while (true) {
+      (hour === 16 && min >= 50) && console.log("퇴실시간입니다.");
+    }
+    
+
+  </script>
+</body>
+</html>

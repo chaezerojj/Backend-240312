@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz1</title>
+</head>
+<body>
+  <script>
+    // 확인문제
+    // 1
+    const result = (100 > 200);
+    // ? prompt('값을 입력해주세요', ''); // unexpected token Syntax error
+    // : confirm('버튼을 클릭해주세요'); // unexpected token Syntax error
+    // alert(result); // false
+
+    // 2
+    const rawInput = prompt('태어난 해를 입력해주세요', '');
+    const year = Number(rawInput);
+    const e = year % 12;
+    // 쥐 소 호랑이 토끼 용 뱀 말 양 원숭이 닭 개 돼지
+    let result1;
+    console.log(e);
+    switch (e) {
+      case 0:
+        console.log("원숭이띠");
+        break;
+      case 1:
+        console.log("닭띠");
+        break;
+      case 2:
+        console.log("개띠");
+        break;
+      case 3:
+        console.log("돼지띠");
+        break;
+      case 4:
+        console.log("쥐띠");
+        break;
+      case 5:
+        console.log("소띠");
+        break;
+      case 6:
+        console.log("호랑이띠");
+        break;
+      case 7:
+        console.log("토끼띠");
+        break;
+      case 8:
+        console.log("용띠");
+        break;
+      case 9:
+        console.log("뱀띠");
+        break;
+      case 10:
+        console.log("말띠");
+        break;
+      case 11:
+        console.log("양띠");
+        break;
+    }
+
+    const rawInput1 = prompt('태어난 해를 입력해주세요', '');
+    const year1 = Number(rawInput1);
+    const gan = year1 % 10;
+    switch (gan) {
+      case 0:
+        console.log("");
+    }
+    let ddi;
+  </script>
+</body>
+</html>
