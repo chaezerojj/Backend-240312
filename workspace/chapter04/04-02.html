@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04-02.html</title>
+</head>
+<body>
+  <h1>js 반복문</h1>
+  <!-- 
+    ! 반복문
+
+    ? for 반복문
+
+    1. for in 반복문
+     for(const 반복변수 in 배열 또는 객체) {
+      ...
+     }
+     - for 반복문의 반복변수에는 요소의 인덱스들이 들어옴
+
+    2. for of 반복문
+     for (const 반복변수 of 배열 또는 객체) {
+      ...
+     }
+    - 반복변수에는 요소의 값이 들어감
+
+    3. for 반복문
+    for (let i = 0; i < 반복횟수; i++) {
+      (반복될 문장)
+    }
+
+    ? while 반복문
+    while (boolean 표현식) {
+      문장
+    }
+    - 조건을 거짓으로 만들 수 있는 내용이 문장에 포함되는 것을 주의
+    - 무한 루프(infinite loop) 빠지지 않도록 주의
+
+    ? break 키워드
+    - 조건문이나 반복문을 벗어날 때 사용하는 키워드
+
+    ? continue 키워드
+    - 반복문 안의 반복 작업을 멈추고 반복문의 처음으로 돌아가 다음 반복 작업을 진행
+
+    ? 중첩 반복문
+    - 반복문을 여러 겹 중첩하여 사용
+
+
+
+   -->
+  <script>
+    // for in 반복문
+    const todos = ["우유 구매", "업무 메일 확인하기", "필라테스 수업"];
+    for (const i in todos) { // i가 todos 길이만큼 돌아감
+      console.log(`${i}번째 할일: ${todos[i]}`);
+    }
+
+    // for of 반복문
+    for (const todo of todos) {
+      console.log(`오늘의 할 일 : ${todos}`);
+    } // 오늘의 할 일 : 우유 구매,업무 메일 확인하기,필라테스 수업
+
+    // for 반복문 (기본형)
+    for (let i = 0; i < 5; i++) {
+      console.log(`${i}번째 반복입니다.`);
+    }
+    // 1 ~ N까지 더하기
+    let output = 0;
+    for (let i = 1; i <= 100; i++) {
+      output += i;
+    }
+    console.log(`1부터 100까지 더한 값은 ${output}입니다.`); // 5050
+
+    // for 반복문과 함께 배열 사용
+    for (let i = 0; i < todos.length; i++) {
+     console.log(`${i}번째 할 일: ${todos[i]}`); 
+    }
+    todos.push("자바스크립트 공부하기");
+    console.log("===========================");
+    for (let i = 0; i < todos.length; i++) {
+      console.log(`${i}번째 할 일: ${todos[i]}`);
+    }
+
+    // for 반복문으로 배열 반대로 출력
+    for (let i = todos.length - 1; i >=0; i--) {
+      console.log(`${i}번째 할 일: ${todos[i]}`);
+    }
+
+    // while 반복문
+    let i = 0;
+    // while (confirm("계속 진행하시겠습니까?")) {
+    while (false) {
+      console.log(`${i}번째 반복입니다.`);
+      i++;
+    }
+    // while 반복문과 함께 배열 사용하기
+    let index = 0;
+    const array = [1, 2, 3, 4, 5];
+    while (i < array.length) {
+      console.log(`${i}: ${array[i]}`);
+      i++;
+    }
+
+    // break 키워드
+    // for (let i = 0; true; i++) {
+    //   alert(`${i}번째 반복문 입니다.`);
+    //   const isContinue = confirm("계속 하시겠습니까?");
+    //   if (!isContinue) break;
+    // }
+    // alert("프로그램 종료.");
+
+    // continue 키워드
+    for (let i = 0; i < 5; i++) {
+      continue;
+      alert(i); // continue 아래 코드는 실행 안됨 >> alert창은 영원히 못봄..
+    }
+
+    // 0부터 10까지 짝수의 합을 구하는 코드
+    let even = 0;
+    for (let i = 1; i <= 10; i++){
+      if (i % 2 == 1) {
+        continue;
+      } else if (i % 2 == 0) {
+        even += i;
+      }
+    } console.log(even); // 30
+
+    // 중첩 반복문 
+    let star = "";
+    for (let i = 1; i < 10; i++) {
+      for (let j = 0; j < i; j++) {
+        star += "*";
+      }
+      // 줄바꿈
+      star += "\n";
+    }
+    console.log(star);
+    
+
+
+  </script>
+</body>
+</html>

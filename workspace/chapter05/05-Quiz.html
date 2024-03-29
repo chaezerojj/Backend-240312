@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // min()함수 만들기
+    // - 배열 또는 숫자 나열을 매개변수로 넣어도 다 동작하게 만들고 싶음
+    // min(배열) 배열 내부에서 최솟값을 찾아주는 함수
+    // min(숫자, 숫자, ...) 형태로 매개변수를 넣으면 숫자들 중 최솟값을 찾아주는 함수
+    // 매개변수로 들어온 자료형이 숫자 또는 배열인지 확인하고,
+    // 숫자 자료형은 typeof 연산자를 활용
+    // 배열에 typeof연산자를 사용하면 object(객체)라는 결과가 나옴
+    // Array.isArray() 메소드 활용, 배열이면 true 아니면 false 반환 
+
+    // function min(...numList) {
+    //   const num = 0;
+    //   let numList = [...String(num).map(Number)];
+    //   numList == Array.isArray() ? true : false;
+    //   return numList;
+    // }
+    // console.log(min());
+
+
+    // 1. 
+    function multiplyAll(a, b) {
+      let result = 0;
+      for (let i = a; i <= b; i++) {
+        result += i;
+      }
+      return result;
+    }
+    console.log(multiplyAll(1, 2));
+    console.log(multiplyAll(1, 3));
+
+    // 2.
+    const max = function(...array) {
+      let output = array[0];
+      for (const item of array) {
+        if (output < item) {
+          output = item;
+        }
+      }
+      return output;
+  }
+  console.log(max(1, 2, 3, 4));
+
+  // 3. 매개변수로 max(1, 2, 3, 4)와 같이 숫자를 배열을 받는 max()함수
+  const max1 = function (...array) {
+    let output = array[0];
+    for (let i = 1; i < array.length; i++) {
+
+    }
+
+    return output;
+  }
+  console.log(max(1, 2, 3, 4));
+
+  // 4. max([1, 2, 3, 4]) 형태와 max(1, 2, 3, 4) 형태 모두 입력할 수 있는 max()함수 
+  const max2 = function() {
+    let output = 0;
+    let items = 0;
+
+    return output;
+  }
+  console.log(`max(배열): ${max([1, 2, 3, 4])}`);
+  console.log(`max(숫자, ...): ${max(1, 2, 3, 4)}`);
+
+  </script>
+</body>
+</html>

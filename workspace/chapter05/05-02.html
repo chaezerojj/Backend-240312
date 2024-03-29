@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05-02.html</title>
+</head>
+<body>
+  <h2>나머지 매개변수</h2>
+  <script>
+    /*
+    * 나머지 매개변수
+    - ? 가변 매개변수 함수
+    - : 호출할 때 매개변수의 개수가 고정적이지 않은 함수
+    - >> 해당 함수 구현 시 나머지 매개변수라는 특이한 형태의 문법을 사용
+    >> 함수의 매개변수 앞에 마침표 3개(...)로 나머지 매개변수 호출하여
+        나머지 매개변수들이 배열로 들어옴
+
+    - 형식: function 함수이름(...나머지 매개변수) {}
+
+    */
+    function sample (...items){
+      console.log(items);
+    }
+    sample(1, 2); // items = [1, 2]
+    sample(1, 2, 3);
+    sample(1, 2, 3 ,4);
+
+    //* 나머지 매개변수를 사용한 min 함수
+    function min(...items) {
+      let output = items[0];
+      for (const item of items) {
+        if (output > item) {
+          output = item;
+        }
+      }
+      return output;
+    }
+    console.log(min(6, 3, 4, 5, 7, 8, 10));
+    console.log(min(56, 10, 23, 34, 22, 8));
+
+    //* 나머지 매개변수와 일반 매개변수를 갖는 함수
+    function sample1 (a, b, ...c) {
+      console.log(a, b, c);
+    }
+    sample1(1, 2);
+    sample1(2, 3, 4, 5, 6, 7);
+    sample1(1, 2, 3, 4);
+
+    // min()함수 만들기
+    // - 배열 또는 숫자 나열을 매개변수로 넣어도 다 동작하게 만들고 싶음
+    // min(배열) 배열 내부에서 최솟값을 찾아주는 함수
+    // min(숫자, 숫자, ...) 형태로 매개변수를 넣으면 숫자들 중 최솟값을 찾아주는 함수
+    // 매개변수로 들어온 자료형이 숫자 또는 배열인지 확인하고,
+    // 숫자 자료형은 typeof 연산자를 활용
+    // 배열에 typeof연산자를 사용하면 object(객체)라는 결과가 나옴
+    // Array.isArray() 메소드 활용, 배열이면 true 아니면 false 반환 
+
+    //* 전개 연산자
+    // 배열 만들 때 [] 사용
+    // 배열을 숫자로 만들때는 => ...배열이름
+    const arr = [1, 2, 3, 4];
+    console.log(...arr); // 1 2 3 4
+
+    function s1(...items) {
+      console.log(items);
+    }
+    s1(...arr); // -> s1(1, 2, 3, 4)를 호출한 것과 같은 결과
+    // 나머지 연산자 -> [1, 2, 3, 4]
+    s1(arr); // 이중 배열
+    // 매개변수로 배열을 입력할 수 없고 숫자를 입력해야 하는 함수에 전개연산자 사용 가능
+    
+
+  </script>
+</body>
+</html>
