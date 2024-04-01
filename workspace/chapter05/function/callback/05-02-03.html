@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05-02-03.html</title>
+</head>
+<body>
+
+  <script>
+    // 코드가 여러 곳에서 사용되면 변수 이름이 충돌할 가능성 높아짐
+    // 이름 충돌 문제 발생
+    // let pi = 3.14;
+    // console.log(`파이 값은 ${pi}입니다.`);
+
+    // >> 스크립트가 2개여도 문제 발생 X
+
+  </script>
+
+  <script>
+    // let pi = 3.14159;
+    // 변수가 존재하는 범위를 스코프(scope)라고 부름
+    // 이 스코프는 같은 단계에 있을 때만 충돌 발생
+    // 함수 생성하여 블록 만드는 방법
+
+    // 즉시 호출 함수
+    // (function(){}) ()
+    function sample() {
+      let pi = 3.14159;
+      console.log(`파이 값은 ${pi}입니다.`);
+    }
+    sample();
+
+    // 즉시 호출 함수
+    // (function(){}) ()
+    (function() { // 함수 이름 없어도 됨
+      let pi = 3.14159;
+      console.log(`파이 값은 ${pi}입니다.`);
+    })();
+    
+    // 블록을 사용한 스코프 생성
+    {
+      let pi = 3.141592;
+      console.log(`파이 값은 ${pi}입니다.`);
+    }
+
+
+  </script>
+</body>
+</html>

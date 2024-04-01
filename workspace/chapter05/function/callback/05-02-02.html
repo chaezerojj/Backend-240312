@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05-02-02.html</title>
+</head>
+<body>
+  <h2>js 콜백 함수 2</h2>
+  <!--
+    ! 자바스크립트 콜백 함수 
+
+    ? 타이머 함수
+    - 특정 시간마다 또는 특정 시간 이후에 콜백 함수를 호출
+    - 타이머 함수의 시간 단위: 밀리초
+    - 1초 = 1000밀리초 m/s
+
+    - 타이머 ID는 setTimeout()함수와 setInterval()함수를 호출할 대 리턴값으로 나오는 숫자
+    
+    1. setTimeout(함수, 시간)
+    - 특정 시간 후에 함수를 한번 호출
+    - 함수 종료시 clearTimeout(타이머_ID)로 설정한 타이머 제거
+
+    2. setInterval(함수, 시간)
+    - 특정 시간마다 함수 호출
+    - 함수 종료 시 clearInterval(타이머_ID)로 설정한 타이머 
+    
+    즉시 호출 함수
+
+   -->
+
+  <script>
+    //setTimeout 함수
+    setTimeout(() => {
+      console.log("5초 후 실행됩니다.");
+    }, 5000)
+
+    // setInterval 함수
+    let count = 0;
+    let id = setInterval(() => {
+      console.log(`2초마다 실행됩니다. ${count}번째`);
+      count++;
+    }, 2000)
+    console.log("id: ", id);
+    setTimeout(() => {
+      console.log("타이머 종료.");
+      clearInterval(id)
+    })
+    
+
+  </script>
+</body>
+</html>
