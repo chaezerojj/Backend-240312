@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>자바스크립트 배열 기반의 다중 할당</h2>
+  <script>
+    // 자바스크립트 배열 기반의 다중 할당
+
+    // [식별자, 식별자, 식별자, ...] = 배열
+    // 한 번에 여러 개의 변수에 값을 할당하는 다중 할당 가능
+    const arr = [1, 2];
+    let e1 = arr[0]; 
+    let e2 = arr[1]; 
+    console.log(e1); console.log(e2);
+    let [a, b] = [1, 2];
+    console.log(a, b); // 1 2
+    [a, b] = [b, a];
+    console.log(a, b); // 2 1
+
+    let arrayA = [1, 2, 3, 4, 5];
+    const [a1, b1, c1] = arrayA;
+    console.log(a1, b1, c1); // 1 2 3
+
+    
+    // 객체 기반의 다중 할당
+
+    // {속성이름, 속성이름} = 객체
+    // >> 객체 내의 속성 이름과 대입할 변수 이름이 같을 때
+    // {식별자 = 속성이름, 식별자=속성이름}
+    // >> 객체 내의 속성 이름과 대입할 변수 이름이 다를 때
+    const object = {
+      name: "혼자 공부하는 파이썬",
+      price: 18000,
+      publisher: "한빛미디어"
+    }
+    console.log(object.name);
+    const {name, price} = object;
+    // const로 상수로 선언
+    console.log(name); // 혼자 공부하는 파이썬
+    console.log(price); // 18000
+
+    const{n=name, p=price} = object;
+    // n과 p에 name값과 price값을 할당
+    console.log(n, p);
+
+    // 배열 전개 연산자
+    // - 깊은 복사
+    // - 전개 연산자를 사용한 배열 복사
+    // - 배열을 다른 이름으로 대입하면 다른 이름이 붙는 복사 == 얕은 복사
+    // - 두 배열이 독립적으로 온전히 작동하게 배열 전개 연산자를 사용하여 복사 == 깊은 복사
+    
+    // 얕은 복사
+    const product1 = ["우유", "식빵"];
+    const product2 = product1;
+    product2.push("밤양갱")
+    console.log(product1); // ['우유', '식빵', '밤양갱']
+    console.log(product2); // ['우유', '식빵', '밤양갱']
+
+    // 깊은 복사
+    const product3 = ["우유", "식빵"];
+    const product4 = [...product3];
+    product3.push("밤양갱")
+    console.log(product3); // ['우유', '식빵', '밤양갱']
+    console.log(product4); // ['우유', '식빵']
+
+
+    // 객체 전개 연산자
+    // - 객체도 깊은 복사를 할 때 전개 연산자를 사용할 수 있음
+    // 얕은 복사
+    const cloud = {
+      name: "cloud",
+      age: 6,
+      species: "dog"
+    }
+    const star = cloud;
+    star.name = "star";
+    console.log(cloud); // {name: 'star', age: 6, species: 'dog'}
+    console.log(star); // {name: 'star', age: 6, species: 'dog'}
+    
+    // 깊은 복사: {...객체}
+    const sky = {...cloud};
+    sky.name = "sky";
+    console.log(sky); // {name: 'sky', age: 6, species: 'dog'}
+
+    // 전개 연산자를 사용한 배열 요소 추가
+    // [...배열, 요소, 요소]
+    const p3 = ["우유", "식빵", "잼"]
+    const p4 = ["고구마", ...p3, "토마토"]
+    console.log(p4); // ['고구마', '우유', '식빵', '잼', '토마토']
+
+    // 다른 2개 이상의 배열을 붙일 때도 활용 가능
+    const p5 = ["우유", "식빵"];
+    const p6 = ["고구마", "토마토"];
+    console.log([...p5, ...p6]); // ['우유', '식빵', '고구마', '토마토']
+    console.log([...p6, ...p5]); // ['고구마', '토마토', '우유', '식빵']
+
+    // 전개연산자를 사용한 객체 요소 추가
+    // {...객체, 자료, 자료, 자료}
+    const cloud1 = {
+      name: "구름",
+      age: 6,
+      species: "강아지"
+    }
+    const star1 = {
+      ...cloud1,
+      name: "별", // 키값의 이름이 같을 경우 기존 속성을 덮어쓰기
+      vaccination: true
+    }
+    console.log(star1); // {name: '별', age: 6, species: '강아지', vaccination: true}
+    const star2 = {
+      name: "별",
+      vaccination: true,
+      ...cloud1
+    }
+    console.log(star2); // {name: '구름', vaccination: true, age: 6, species: '강아지'}
+    // >> 뒤에 덮어쓰기를 넣었기 때문에 name 값 변경 안됨
+    
+
+
+
+
+
+
+  </script>
+</body>
+</html>

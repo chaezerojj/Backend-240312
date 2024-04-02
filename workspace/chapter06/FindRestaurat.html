@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <button id="button">Button</button>
+  </div>
+  <script>
+    document.getElementById('button').addEventListener('click', function () {
+      let restaurants =
+        ["이재모피자", "반핀", "파스타빌라",
+          "미림양장", "딤타오", "바오하우스",
+          "카츠", "두끼떡볶이", "청년다방",
+          "수림식당", "칠국관", "라이옥",
+          "도우개러지", "하람스시", "굿모닝홍콩",
+          "소연옥", "원조할매낙지", "후발대",
+          "수영본가돼지국밥", "항아리보쌈", "본가밀면"
+        ];
+
+      let randomList = [];
+
+      // 리스트에서 랜덤으로 하나 뽑기
+      let random = function (array) {
+        const r = Math.floor(Math.random() * array.length);
+        return array[r];
+      }
+
+      console.log("-----오늘의 맛집 추천 3곳-----");
+
+      // 중복 제거
+      const diffRestaurants = restaurants
+        .filter((value, index, self) => self.indexOf(value) === index);
+
+      // 랜덤으로 3곳 뽑기
+      for (let i = 0; i < 3; i++) {
+        let value = random(diffRestaurants);
+        console.log(value);
+      }
+
+    });
+
+
+  </script>
+</body>
+</html>
