@@ -32,13 +32,20 @@
       console.log("-----오늘의 맛집 추천 3곳-----");
 
       // 중복 제거
-      const diffRestaurants = restaurants
-        .filter((value, index, self) => self.indexOf(value) === index);
+      
+      let diffRestaurants = [];
+      restaurants.forEach(function(restaurant) {
+        if (!diffRestaurants.includes(restaurant)) {
+          diffRestaurants.push(restaurant)
+        }
+      });
 
       // 랜덤으로 3곳 뽑기
       for (let i = 0; i < 3; i++) {
         let value = random(diffRestaurants);
         console.log(value);
+        // 이미 뽑은 곳은 제거
+        diffRestaurants = diffRestaurants.filter(i => i !== value);
       }
 
     });
