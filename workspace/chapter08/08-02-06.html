@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-02-06.html</title>
+</head>
+<body>
+  <script>
+    // 자바스크립트 게더 세터
+    // - 속성을 읽고 쓸 수 있는 메소드 생성
+    class Square {
+
+      #length
+      
+      constructor(length) {
+        this.setLength(length);
+      }
+
+      setLength(value) {
+        if (length <= 0) {
+          throw "길이는 0보다 커야 합니다.";
+        }
+        this.#length = value;
+      }
+      getLength() {
+        return this.#length;
+      }
+
+      // 정사각형 둘레
+      getPerimeter() {
+        return 4 * this.#length;
+      }
+      // 정사각형 넓이
+      getArea() {
+        return this.#length * this.#length;
+      }
+    }
+  </script>
+</body>
+</html>

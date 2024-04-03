@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Parent {
+      test() {
+        console.log("Parent.test() 메소드");
+      }
+    }
+    class ChildA extends Parent {
+      test () {
+        super.test()
+        console.log("ChildA.test() 메소드");
+      }
+    }
+
+    class ChildB extends Parent {
+      test() {
+        console.log("ChildB.test() 메소드");
+      }
+    }
+    new ChildA().test();
+    new ChildB().test();
+    // Parent.test() 메소드
+    // ChildA.test() 메소드
+    // ChildB.test() 메소드
+    
+  </script>
+</body>
+</html>

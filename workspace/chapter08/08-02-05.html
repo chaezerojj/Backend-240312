@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-02-05.html</title>
+</head>
+<body>
+  <script>
+    // private 속성 메소드 사용 예제
+
+    class Square {
+      #length
+      constructor(length) {
+        if (length <= 0) {
+          throw "길이는 0보다 커야 합니다."
+        }
+        this.#length = length;
+      }
+      // 정사각형 둘레
+      getPerimeter() {
+        return 4 * this.#length;
+      }
+      // 정사각형 넓이
+      getArea() {
+        return this.#length * this.#length;
+      }
+    }
+    // private 속성은 클래스 외부에서는 접근 불가능
+    const s = new Square(10);
+    // s.#length = -10;
+    // >> Property '#length' is not accessible 
+    //    outside class 'Square' because it has a private identifier.
+    console.log(`정사각형의 둘레: ${s.getPerimeter()}`);
+    console.log(`정사각형의 넓이: ${s.getArea()}`);
+
+    // >> private 속성은 클래스 외부에서는 접근할 수 없으므로
+    //    클래스 사용자가 클래스를 잘못 사용하는 문제를 줄일 수 있음
+    
+
+
+
+
+
+  </script>
+</body>
+</html>

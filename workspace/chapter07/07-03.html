@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07-03.html</title>
+</head>
+<body>
+  <script>
+    // 자바스크립트 예외 고급 처리
+
+    // * 예외 객체
+    // - 자바스크립트 안에는 예외 객체 속성들이 있음
+    // name : 예외 이름
+    // message : 예외 메시지
+    try {
+
+    } catch (exception) {
+      // catch의 괄호 안 입력하는 식별자가 예외 객체
+      // 식별자 이름은 규칙에만 맞으면 됨
+      // 일반적으로 e나 exception 식별자를 사용
+    }
+
+    // 예외 정보 출력하기
+    // - 자바스크립트는 배열크기가 한정되어 있음
+    // - 배열의 최대 크기는 4,294,967,295까지 가능함
+    try {
+      const array = new Array(999999999999999999)
+    } catch (exception) {
+      console.log(exception);
+      console.log(`예외 이름: ${exception.name}`);
+      // 예외 이름: RangeError
+      console.log(`예외 메시지: ${exception.message}`);
+      // 예외 메시지: Invalid array length
+    }
+
+    // 예외 강제 발생
+    // - 예외를 강제로 발생시킬 때는 throw키워드 사용
+    // - 나만의 예외를 규정해서 강제로 예외 발생시킴
+    // 1. 단순하게 예외 발생시키기
+    // - throw 문자열
+
+    // 2. 자세하게 예외 발생시키기
+    // - throw new Error(문자열)
+
+    // 예외 강제로 발생시키고 잡기
+    function divide(a, b) {
+      if (b==0) {
+        throw "0으로는 나눌 수 없습니다."
+      }
+      return a / b;
+    }
+    // console.log(divide(10, 2)); // 5
+    // console.log(divide(10, 0)); // Uncaught 0으로는 나눌 수 없습니다.
+    // console.log("프로그램 종료");
+    
+    try {
+      console.log(divide(10, 2)); // 5
+      console.log(divide(10, 0)); 
+    } catch (e) {
+      console.log(e); // 0으로는 나눌 수 없습니다.
+    }
+    console.log("프로그램 종료");
+
+
+
+
+  </script>
+</body>
+</html>

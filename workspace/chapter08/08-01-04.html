@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-01-04.html</title>
+</head>
+<body>
+  <script>
+    // 객체의 기능을 메소드로 추가하기
+    // - 객체의 수가 늘어나면 함수 이름 충돌 발생 우려
+    // - 자바스크립트는 매개변수에 어떤 종류의 객체를 넣을지 모르기 때문에
+    //   함수 사용에 혼동 발생 우려
+    // >> 함수를 메소드로써 객체 내부에 넣어 활용
+
+    const students = [];
+    students.push(
+      {이름: "홍길동", 국어: 87, 영어: 98, 수학: 88, 과학: 90}
+      );
+    students.push(
+      {이름: "김길동", 국어: 86, 영어: 68, 수학: 98, 과학: 85}
+      );
+    students.push(
+      {이름: "박길동", 국어: 89, 영어: 90, 수학: 92, 과학: 89}
+      );
+    students.push(
+      {이름: "이길동", 국어: 92, 영어: 95, 수학: 90, 과학: 85}
+      );
+
+    // for문으로 students 배열 내부의 객체 모두에 메소드 추가함
+    for (const s of students) {
+      s.getSum = function() {
+        return s["국어"] + s["영어"] + s["수학"] + s["과학"];
+      }
+
+      s.getAverage = function() {
+        return this.getSum() / 4;
+      }
+    }
+    let output = "이름\t\t총점\t\t평균\n";
+    for (const s of students) {
+      output += `${s["이름"]}\t${s.getSum()}점\t${s.getAverage()}점\n`;
+    }
+    console.log(output);
+
+    // >> 함수 이름 충돌 발생 없고 함수 잘못 사용할 경우도 거의 발생하기 어려운 코드
+
+    
+
+
+  </script>
+</body>
+</html>
