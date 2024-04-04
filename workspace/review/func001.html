@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>func001.html</title>
+</head>
+<body>
+  <script>
+    // 자바스크립트 함수
+
+    // 할일 목록 프로그램
+    const todos = ["우유 구매", "업무 메일 확인하기", "필라테스 수업"];
+    // 할일 목록 출력
+    for (const todo of todos) {
+      console.log(todo);
+    }
+    console.log("----------------------");
+    // 할일 추가하기(create)
+    todos.push("다이소 가기");
+    for (const todo of todos) {
+      console.log(todo);
+    }
+    console.log("----------------------");
+    // 할일 삭제(delete)
+    todos.splice(1, 1);
+    for (const todo of todos) {
+      console.log(todo);
+    }
+    console.log("----------------------");
+    // 할일 수정하기(update)
+    todos[0] = "바나나우유 구매";
+    for (const todo of todos) {
+      console.log(todo);
+    }
+    
+    // >> 출력할때마다 할일목록 함수를 사용하여 출력하기
+    function getTodos() {
+      for (const todo of todos) {
+        console.log(todo);
+      }
+    };
+
+    console.log("----------------------");
+    
+    // 함수는 반복하는 코드를 블록에 정리하여 필요할때마다 호출 가능
+    getTodos();
+    
+    console.log("----------------------");
+    
+    // 할일 추가 함수
+    function pushTodos(todo) {
+      todos.push(todo);
+    }
+    
+    // 할일 3개 추가하기
+    pushTodos("방청소 하기")
+    pushTodos("카페 가기")
+    pushTodos("산책하기")
+    getTodos();
+    
+    console.log("----------------------");
+
+    // 할일 삭제 함수
+    function deleteTodos(index) {
+      const start = todos.length;
+      todos.splice(index, 1);
+      const end = todos.length;
+      return end < start;
+    }
+    if (deleteTodos(0)) {
+      console.log("삭제되었습니다.");
+    } else {
+      console.log("error");
+    }
+    getTodos();
+
+    
+
+
+
+  </script>
+</body>
+</html>

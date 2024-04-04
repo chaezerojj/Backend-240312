@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 자바스크립트 for문
+
+    // todo 프로그램을 만든다면
+    // todo list: 우유 구매, 업무 메일 확인하기, 필라테스 수업
+    const todos = ["우유 구매", "업무 메일 확인하기", "필라테스 수업"];
+    // console.log(todos[0]);
+    // console.log(todos[1]);
+    // console.log(todos[2]);
+    // // 할일 제거
+    // todos.splice(2, 1);
+    // console.log(todos[0]);
+    // console.log(todos[1]);
+    // 할일 전체 출력
+    console.log("=======for문 사용=======");
+    for (let i = 0; i < todos.length; i++) {
+      console.log(todos[i]);
+    }
+    // >> 배열에 요소 추가/제거가 되어도 전체 배열 출력 코드 부분은 수정할 필요가 없음
+    
+    console.log("=======for of 문 사용=======");
+    
+    // 자바스크립트에서 for문 더 편하게 사용하는 법
+    // - for of 문
+    //   : 앞에 선언하는 변수에 요소가 순차적으로 대입
+    for (let todo of todos) {
+      console.log(todo);
+    }
+
+    // 할일 목록 앞에 번호 붙여서 함께 출력하기
+    
+    console.log("=======for of 문 + 앞에 번호 붙임=======");
+    let num = 1;
+    for (let todo of todos) {
+      console.log(`${num++}. ${todo}`);
+    }
+    
+    // - for in문
+    //   : 앞에 인덱스 값 붙여서 출력 가능
+    console.log("=======for in 문 + 앞에 번호 붙임=======");
+    for (let num in todos) {
+      console.log(`${num}. ${todos[num]}`);
+    }
+
+
+  </script>
+</body>
+</html>
