@@ -24,14 +24,14 @@
     #length
 
     constructor(length) {
-      this.#length(length);
+      this.length = length;
     }
 
     set length(value) {
       if (length <= 0) {
         throw "길이는 0보다 커야 합니다.";
       }
-      this.length = value;
+      this.#length = value;
     }
     get length() {
       return this.#length;
