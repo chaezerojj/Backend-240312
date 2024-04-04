@@ -1,0 +1,27 @@
+package review.phoneBook;
+
+import java.util.*;
+
+// 전화번호부에 사람을 추가/출력
+
+public class PersonController {
+	// 전화번호부 
+//	ArrayList<Person> pArr = new ArrayList<Person>();
+	List<Person> pArr = new ArrayList<Person>();
+	private List<Person> persons;
+	
+	// 사람 추가
+	public void putPerson(String name, String phone) {
+		Person person = new Person();
+		person.setName(name);
+		person.setPhone(phone);
+		persons.add(person);
+		
+	}
+	
+	public void getPersons() {
+		for (Person person : persons) {
+			System.out.println(person);
+		}
+	}
+}

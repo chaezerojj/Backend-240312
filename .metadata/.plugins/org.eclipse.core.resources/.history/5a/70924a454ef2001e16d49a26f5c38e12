@@ -1,0 +1,20 @@
+package review.phoneBook;
+
+public class CustomController extends PersonController{
+	
+	// 커스텀한 출력 만들기
+	// 상속을 통한 메소드 오버라이딩
+	@Override
+	public void getPersons() {
+		for (Person person: persons) {
+			System.out.println("_._._._._._._._._.");
+			System.out.println("이름: ");
+			System.out.println(person.getName());
+			System.out.println("이름: ");
+			System.out.println(person.getPhone());
+			System.out.println("_._._._._._._._._.");
+			
+		}
+	}
+	
+}

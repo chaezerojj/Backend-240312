@@ -1,0 +1,27 @@
+package review;
+
+import java.util.*;
+
+// 랜덤으로 로또 번호 생성
+
+public class LottoController {
+	private LottoDto lottoDto = new LottoDto();
+	
+	public void getLottoNums() {
+		Random random = new Random();
+		ArrayList<Integer> lottoDtos = lottoDto.getLottoNums();
+		for (int i = 0; i < 6; i++) {
+			lottoDtos.add(random.nextInt(45));
+		}
+	}
+	
+	// 로또 번호 한 세트 출력
+	public void printLottoNums() {
+		for (int num:LottoDto.getLottoNums()) {
+			System.out.println(num + " ");
+		}
+		System.out.println();
+	}
+	
+
+}
