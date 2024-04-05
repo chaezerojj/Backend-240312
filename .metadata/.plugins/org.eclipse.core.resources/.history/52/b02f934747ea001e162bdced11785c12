@@ -1,9 +1,0 @@
-package chapter21;
-
-// List<> 인터페이스를 구현하는 클래스
-// ArrayList, LinkedList
-// ArrayList - 
-
-public class LinkedListClass {
-
-}

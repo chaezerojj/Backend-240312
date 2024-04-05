@@ -1,9 +1,0 @@
-package chapter18;
-
-public class TryCatchRuntimeException {
-	
-	public static void main(String[] args) {
-		String data1 = null;
-		System.out.println(data1.toString());
-	}
-}

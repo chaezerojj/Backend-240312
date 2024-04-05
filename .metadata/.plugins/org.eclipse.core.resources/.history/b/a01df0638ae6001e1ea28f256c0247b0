@@ -1,9 +1,0 @@
-package chapter12.example2;
-
-public class Banana extends Fruits{
-
-	public Banana(int price, int amount) {
-		super(9000, 1);
-	}
-
-}

@@ -1,7 +1,0 @@
-package chapter12;
-
-public class Product {
-	private int price;
-	private int bonusPoint;
-
-}

@@ -1,7 +1,0 @@
-package chapter18;
-
-//? 다중 catch
-// try블록 내부는 다양한 예외가 발생할 수 있음
-public class CatchByExceptionKind {
-	
-}

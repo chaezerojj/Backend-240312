@@ -1,9 +1,0 @@
-package chapter12.example;
-
-// 고객, 물건 사는 사람
-public class Buyer {
-	// 소유 금액
-	private int money = 1000;
-	private int bonusPoint;
-	
-}

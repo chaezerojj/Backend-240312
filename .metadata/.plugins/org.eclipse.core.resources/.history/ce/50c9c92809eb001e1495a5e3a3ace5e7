@@ -1,9 +1,0 @@
-package chapter23;
-
-// 매개변수가 있고 반환하지 않는 람다식
-
-public class OneParamNoReturn {
-	public static void main(String[] args) {
-		
-	}
-}

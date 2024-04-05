@@ -1,9 +1,0 @@
-package chapter18;
-
-public class TryCatchRuntimeException2 {
-	
-	public static void main(String[] args) {
-		int value1 = Integer.parseInt("a100");
-		System.out.println(value1);
-	}
-}

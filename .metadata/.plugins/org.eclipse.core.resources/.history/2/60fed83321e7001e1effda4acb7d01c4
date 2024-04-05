@@ -1,9 +1,0 @@
-package chapter17.printable2;
-
-// 인터페이스 내 상속
-// 문제 상황의 제시
-public interface Printable {
-	public void print(String doc);
-	// 컬러 출력을 위한 메소드가 추가되는 상황
-	public void printCMYK(String doc);
-}

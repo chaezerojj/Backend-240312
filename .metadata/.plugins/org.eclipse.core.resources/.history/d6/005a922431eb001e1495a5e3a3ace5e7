@@ -1,9 +1,0 @@
-package chapter25;
-
-public class EnumClass {
-	static final int DOG = 1;
-	static final int CAT = 1;
-	static final int MAN = 1;
-	static final int WOMAN = 1;
-	
-}
