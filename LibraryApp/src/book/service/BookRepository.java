@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import book.controller.BookController;
 import book.dto.BookDto;
+import book.dto.BookDto2;
 
 public class BookRepository implements BookService {
 	private List<BookDto> bookDtos = new ArrayList<>();
@@ -41,11 +42,11 @@ public class BookRepository implements BookService {
 		}
 	}
 
+	
 	// 기존 리스트 책 추가 메소드
-
 	@Override
 	public void addBook(BookDto newBook) {
-//		bookDtos.add(1, "a", "a", "a", "a", "a", "a");
+		bookDtos.add(newBook);
 	}
 
 }

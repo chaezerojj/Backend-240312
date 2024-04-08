@@ -8,6 +8,7 @@ import book.dto.BookDto;
 public class BookView {
 	private Scanner sc = new Scanner(System.in);
 	
+	// 사용자에게 메뉴를 표시하고, 사용자가 선택한 메뉴의 번호를 반환
 	public int getMenu() {
 		System.out.println("===========================");
 		System.out.println("도서관리 프로그램입니다.");
@@ -31,7 +32,7 @@ public class BookView {
 		}
 	}
 	
-	// 입력된 도서 정보 저장
+	// 사용자로부터 새로운 도서 정보를 입력받아서 BookDto 객체를 생성하여 반환
 	public BookDto putBook() {
 		System.out.println("== 도서 정보를 입력해주세요. ==");
 		while (true) {
@@ -50,10 +51,12 @@ public class BookView {
 		}
 	}
 
+	// 메시지 출력 메소드
 	public void getMessage(String message) {
 		System.out.println(message);
 	}
 	
+	// 사용자로부터 수정할 도서의 인덱스 값을 입력받음
 	public int getUpdateIndex() {
 		System.out.println("도서 정보를 수정합니다. =====");
 		System.out.println("수정할 도서의 인덱스를 입력하세요. =====");
@@ -62,6 +65,7 @@ public class BookView {
 		return index;
 	}
 	
+	// 사용자로부터 삭제할 도서의 인덱스 값을 입력받음
 	public int getDeleteIndex() {
 		System.out.println("도서 정보를 삭제합니다. =====");
 		System.out.println("삭제할 도서의 인덱스를 입력하세요. =====");
@@ -70,6 +74,7 @@ public class BookView {
 		return index;
 	}
 	
+	// 도서 검색 메소드 - 사용자로부터 도서 제목을 입력받음
 	public String searchBook() {
 		System.out.println("도서 정보를 검색합니다.====");
 		System.out.println("도서 제목을 입력해주세요. =====");

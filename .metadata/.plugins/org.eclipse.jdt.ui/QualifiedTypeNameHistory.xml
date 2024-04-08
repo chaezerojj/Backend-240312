@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.nio.file.StandardCopyOption"/>
-    <fullyQualifiedTypeName name="java.nio.file.Files"/>
-    <fullyQualifiedTypeName name="java.io.Serializable"/>
-    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-    <fullyQualifiedTypeName name="java.io.ObjectOutput"/>
-    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
     <fullyQualifiedTypeName name="chapter23.Printable"/>
@@ -53,11 +45,19 @@
     <fullyQualifiedTypeName name="service.FRepoFile"/>
     <fullyQualifiedTypeName name="controller.FortuneController"/>
     <fullyQualifiedTypeName name="view.FortuneView"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="dto.FortuneDto"/>
     <fullyQualifiedTypeName name="service.FortuneRepository"/>
     <fullyQualifiedTypeName name="service.FortuneService"/>
+    <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="book.view.BookView"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="book.controller.BookController"/>
+    <fullyQualifiedTypeName name="book.service.BookRepository"/>
+    <fullyQualifiedTypeName name="book.service.BookService"/>
+    <fullyQualifiedTypeName name="book.dto.BookDto"/>
+    <fullyQualifiedTypeName name="book.dto.BookDto2"/>
 </qualifiedTypeNameHistroy>
