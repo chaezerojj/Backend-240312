@@ -2,11 +2,8 @@ package book.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-import book.controller.BookController;
 import book.dto.BookDto;
-import book.dto.BookDto2;
 
 public class BookRepository implements BookService {
 	private List<BookDto> bookDtos = new ArrayList<>();
@@ -41,12 +38,16 @@ public class BookRepository implements BookService {
 			System.out.println("유효하지 않은 인덱스입니다.");
 		}
 	}
-
 	
-	// 기존 리스트 책 추가 메소드
 	@Override
-	public void addBook(BookDto newBook) {
-		bookDtos.add(newBook);
+	public List<BookDto> searchBook(String name) {
+		List<BookDto> searchBook = new ArrayList<BookDto>();
+		for (BookDto book : bookDtos) {
+			if (book.getName().equalsIgnoreCase(name)) {
+				searchBook.add(book);
+			}
+		}
+		return searchBook;
 	}
-
+	
 }

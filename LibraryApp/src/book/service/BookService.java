@@ -9,7 +9,7 @@ public interface BookService {
 	// 도서 정보 저정 배열을 가져오는 메소드
 	List<BookDto> getBookDtos();
 
-	void createBook(BookDto newBook); // 도서 등록
+	void createBook(BookDto newBook); // 기존 목록에서 도서 추가
 
 	void updateBook(int bookIndex, BookDto updatedBook); // 도서 정보 수정
 
@@ -17,6 +17,8 @@ public interface BookService {
 
 	boolean isValidIndex(int index); // deleteBook - 유효한 인덱스인지 확인
 
-	void addBook(BookDto newBook);
+	List<BookDto> searchBook(String name);// 도서 검색
+	
+	
 
 }

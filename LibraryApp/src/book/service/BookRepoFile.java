@@ -31,9 +31,11 @@ public class BookRepoFile implements BookService {
 
 	}
 
-	@Override
-	public void addBook(BookDto newBook) {
 
+	@Override
+	public List<BookDto> searchBook(String name) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

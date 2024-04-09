@@ -1,13 +1,17 @@
 package book.dto;
 
+import java.util.List;
+
 // 도서 정보 저장 클래스
 public class BookDto {
 	private int index; // 도서 index
-	String name; // 책이름 
-	String author; // 저자
-	String publisher; // 출판사
-	String isRental; // 대여 가능 여부
-	String category; // 카테고리 (분야)
+	private String name; // 책이름 
+	private String author; // 저자
+	private String publisher; // 출판사
+	private String isRental; // 대여 가능 여부
+	private String category; // 카테고리 (분야)
+	
+	private List<BookDto> bookList;
 		
 	public BookDto(int index, String name, String author, String publisher, String isRental, String category) {
 		this.index = index;
@@ -21,6 +25,18 @@ public class BookDto {
 	// 생성자 초기화!!
 	public BookDto() {
 
+	}
+	
+	public BookDto(List<BookDto> bookList) {
+		
+	}
+	
+	public List<BookDto> getBookList() {
+		return bookList;
+	}
+
+	public void setBookList(List<BookDto> bookList) {
+		this.bookList = bookList;
 	}
 
 	public int getIndex() {
@@ -62,8 +78,8 @@ public class BookDto {
 	
 	@Override
 	public String toString() {
-		return "Book [index=" + index + ", name=" + name + ", author=" + author + ", publisher=" + publisher
-				+ ", isRental=" + isRental + ", category=" + category + "]";
+		return "Book [번호=" + index + ", 도서명=" + name + ", 저자=" + author + ", 출판사=" + publisher
+				+ ", 대여=" + isRental + ", 카테고리=" + category + "]";
 	}
 	
 	
