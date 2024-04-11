@@ -1,7 +1,0 @@
-package review;
-
-// 랜덤으로 로또 번호 생성
-
-public class LottoController {
-
-}

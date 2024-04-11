@@ -1,24 +1,23 @@
 package book.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 import book.dto.BookDto;
+import book.service.BookRepository;
 import book.service.BookService;
 import book.view.BookView;
 
 public class BookController {
 	private BookView bookView;
 	private BookService bookService;
-	private List<BookDto> bookList;
 	private Scanner sc;
+	private BookRepository bookRepository;
 
-	public BookController(BookService bookService) {
-		this.bookView = new BookView();
+	public BookController(BookService bookService, BookView bookView) {
+		this.sc = new Scanner(System.in);
+		this.bookView = bookView;
 		this.bookService = bookService;
-		this.sc = new Scanner(System.in); // 숫자 입력(인덱스)
-		this.bookList = new ArrayList<>();
 	}
 
 	// 앱 실행
@@ -48,6 +47,7 @@ public class BookController {
 				break;
 			case 6:
 				// 종료
+				System.out.println("= 프로그램 종료 =");
 				return;
 			default:
 				bookView.getMessage("잘못된 입력입니다. 숫자를 입력해주세요.");
@@ -59,17 +59,15 @@ public class BookController {
 	// 도서 목록
 	public void getBookList() {
 		List<BookDto> bookList = bookService.getBookDtos();
-		System.out.println("현재 도서 목록입니다. =======");
-		bookView.getBookList(bookList);
+		bookView.getBooks(bookList);
 	}
 
 	// 도서 등록 - create
 	public void createBook() {
 		BookDto newBook = bookView.putBook();
 		bookService.createBook(newBook);
-		bookView.getMessage("도서 정보가 등록되었습니다. ===");
-	}
 
+	}
 
 	// 도서 수정 - update
 	public void updateBook() {
@@ -90,9 +88,7 @@ public class BookController {
 	// 도서 삭제 - delete (인덱스 입력 시 도서 삭제)
 	public void deleteBook() {
 		getBookList();
-		bookView.getMessage("삭제할 도서의 인덱스를 입력하세요. >>");
-		int bookIndex = sc.nextInt();
-		sc.nextLine();
+		int bookIndex = bookView.getDeleteIndex();
 
 		if (bookService.isValidIndex(bookIndex)) {
 			bookService.deleteBook(bookIndex);
@@ -101,22 +97,17 @@ public class BookController {
 		}
 	}
 
-
 	// 도서 검색
 	private void searchBook() {
 		getBookList();
-		bookView.getMessage("검색할 도서명을 입력하세요. >>");
-		String name = bookView.getBookName(); 
+		String name = bookView.getBookName();
 
 		List<BookDto> searchBookName = bookService.searchBook(name);
 
-		if (searchBookName == null || searchBookName.isEmpty()) {
+		if (searchBookName.isEmpty()) {
 			bookView.getMessage("검색결과가 없습니다.");
 		} else {
-			bookView.getBookList(searchBookName); // 검색 결과 출력
+			bookView.getBooks(searchBookName);
 		}
 	}
-
-
-
 }

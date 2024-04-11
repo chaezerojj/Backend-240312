@@ -6,7 +6,11 @@ import book.dto.BookDto;
 
 // 콘솔 view 클래스
 public class BookView {
-	private Scanner sc = new Scanner(System.in);
+	private Scanner sc;
+	
+	public BookView() {
+		this.sc = new Scanner(System.in);
+	};
 
 	// 사용자에게 메뉴를 표시하고, 사용자가 선택한 메뉴의 번호를 반환
 	public int getMenu() {
@@ -28,19 +32,15 @@ public class BookView {
 			if (choice < 1 || choice > 6) {
 				throw new IllegalArgumentException("메뉴 번호(1~6)를 입력해주세요.");
 			}
-		} catch (InputMismatchException e) {
+		} catch (Exception e) {
 			System.out.println("잘못된 입력입니다. 숫자를 입력해주세요.");
 			sc.nextLine(); // 입력 버퍼 비우기
-		} catch (IllegalArgumentException e) {
-			System.out.println(e.getMessage());
-			sc.nextLine(); // 입력 버퍼 비우기
-		}
-
+		} 
 		return choice;
 	}
 
 	// 전체 도서 목록 출력
-	public void getBookList(List<BookDto> bookList) {
+	public void getBooks(List<BookDto> bookList) {
 		System.out.println("=== 전체 도서 목록 ===");
 		for (BookDto book : bookList) {
 			System.out.println(book);
@@ -60,10 +60,12 @@ public class BookView {
 			String bookAuthor = sc.nextLine();
 			System.out.println(">> 도서 출판사 입력: ");
 			String bookPublisher = sc.nextLine();
+			System.out.println(">> 도서 대여 여부: ");
+			String bookRental = sc.nextLine();
 			System.out.println(">> 도서 카테고리 입력: ");
 			String bookCategory = sc.nextLine();
 
-			return new BookDto(bookIndex, bookName, bookAuthor, bookPublisher, bookPublisher, bookCategory);
+			return new BookDto(bookIndex, bookName, bookAuthor, bookPublisher, bookRental, bookCategory); 
 		}
 	}
 
@@ -107,9 +109,11 @@ public class BookView {
 
 	// 도서 검색 메소드 - 사용자로부터 도서 제목을 입력받음
 	public String getBookName() {
+		System.out.println("도서 정보를 검색합니다. =====");
+		System.out.println("검색할 도서명을 입력하세요. >>");
 		String bookName = sc.nextLine();
+		sc.nextLine();
 		return bookName;
 	}
 
-	//
 }
