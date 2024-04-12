@@ -12,12 +12,6 @@ public class LibraryApp {
 		BookController bController = new BookController(bookRepository, bookView);
 
 		bController.runApp();
-		// controller에서 도서 검색 (searchBook) 수정 필요!
-		
-//		System.out.println(bookList.getBookList());
-
-		
-		
 		
 	}
 

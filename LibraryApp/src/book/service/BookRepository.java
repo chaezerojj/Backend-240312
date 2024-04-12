@@ -1,18 +1,20 @@
 package book.service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 import book.dto.BookDto;
 
 public class BookRepository implements BookService {
 	private List<BookDto> bookDtos;
-	
+
 	public BookRepository() {
 		this.bookDtos = new ArrayList<>();
 		bookData();
 	}
 
+	// 현재 도서 리스트
 	public void bookData() {
 		bookDtos.add(new BookDto(0, "도서명", "저자", "출판사", "대여여부", "카테고리"));
 		bookDtos.add(new BookDto(1, "모순", "양귀자", "쓰다", "가능", "한국소설"));
@@ -46,27 +48,31 @@ public class BookRepository implements BookService {
 		bookDtos.add(new BookDto(29, "세상을 만드는 글자, 코딩", "박준석", "동아시아", "불가", "과학"));
 		bookDtos.add(new BookDto(30, "퍼펙트 게스", "이인아", "21세기 북스", "가능", "과학"));
 	}
-	
+
 	@Override
 	public List<BookDto> getBookDtos() {
 		return bookDtos;
 	}
 
+	// 도서 등록
 	@Override
 	public void createBook(BookDto newBook) {
 		bookDtos.add(newBook);
 	}
 
+	// 도서 삭제
 	@Override
 	public void deleteBook(int index) {
 		bookDtos.remove(index);
 	}
 
+	// 유효한 인덱스 확인
 	@Override
 	public boolean isValidIndex(int index) {
 		return index >= 0 && index < bookDtos.size();
 	}
 
+	// 도서 수정
 	@Override
 	public void updateBook(int bookIndex, BookDto updatedBook) {
 		if (isValidIndex(bookIndex)) {
@@ -75,16 +81,121 @@ public class BookRepository implements BookService {
 			System.out.println("유효하지 않은 인덱스입니다.");
 		}
 	}
-	
+
+	// 도서 검색
 	@Override
-	public List<BookDto> searchBook(String name) {
-		List<BookDto> searchBook = new ArrayList<>();
+	public List<BookDto> searchBook(String searchStr, int searchType) {
+		List<BookDto> searchResult = new ArrayList<>();
+		switch (searchType) {
+		case 1:
+			for (BookDto book : bookDtos) {
+				if (book.getName().contains(searchStr)) {
+					searchResult.add(book);
+				}
+			}
+			break;
+		case 2:
+			for (BookDto book : bookDtos) {
+				if (book.getAuthor().contains(searchStr)) {
+					searchResult.add(book);
+				}
+			}
+			break;
+		case 3:
+			for (BookDto book : bookDtos) {
+				if (book.getPublisher().contains(searchStr)) {
+					searchResult.add(book);
+				}
+			}
+			break;
+		case 4:
+			for (BookDto book : bookDtos) {
+				if (book.getCategory().contains(searchStr)) {
+					searchResult.add(book);
+				}
+			}
+			break;
+		default:
+			break;
+		}
+		return searchResult;
+	}
+
+	// 도서 검색 세부
+	// : 도서명, 저자, 출판사, 카테고리 검색
+	@Override
+	public List<BookDto> searchBookByName(String searchStr) {
+		List<BookDto> searchResult = new ArrayList<>();
 		for (BookDto book : bookDtos) {
-			if (book.getName().equals(name)) {
-				searchBook.add(book);
+			if (book.getName().equalsIgnoreCase(searchStr)) {
+				searchResult.add(book);
 			}
 		}
-		return searchBook;
+		return searchResult;
+	}
+
+	@Override
+	public List<BookDto> searchBookByAuthor(String searchStr) {
+		List<BookDto> searchResult = new ArrayList<>();
+		for (BookDto book : bookDtos) {
+			if (book.getAuthor().equalsIgnoreCase(searchStr)) {
+				searchResult.add(book);
+			}
+		}
+		return searchResult;
+	}
+
+	@Override
+	public List<BookDto> searchBookByPublisher(String searchStr) {
+		List<BookDto> searchResult = new ArrayList<>();
+		for (BookDto book : bookDtos) {
+			if (book.getPublisher().equalsIgnoreCase(searchStr)) {
+				searchResult.add(book);
+			}
+		}
+		return searchResult;
+	}
+
+	@Override
+	public List<BookDto> searchBookByCategory(String searchStr) {
+		List<BookDto> searchResult = new ArrayList<>();
+		for (BookDto book : bookDtos) {
+			if (book.getCategory().equalsIgnoreCase(searchStr)) {
+				searchResult.add(book);
+			}
+		}
+		return searchResult;
+	}
+
+	@Override
+	public boolean isIndexExists(int index) {
+		for (BookDto book : bookDtos) {
+			if (book.getIndex() == index) {
+				return true; // 이미 존재하는 인덱스 번호
+			}
+		}
+		return false; // 존재하지 않는 인덱스 번호
+	}
+
+	@Override
+	public void saveFile() {
+		try (BufferedWriter writer = new BufferedWriter(new FileWriter("BookList.txt"))){
+			Date date = new Date();
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			writer.write("저장된 날짜: " + sdf.format(date) + "\n");
+			writer.write("☆★ 도서 목록 ☆★" + "\n");
+			for (BookDto book : bookDtos) {
+				writer.write("Book [인덱스=" + book.getIndex() + 
+				", 도서명=" + book.getName() + ", 저자=" + book.getAuthor() + 
+				", 출판사=" + book.getPublisher() + ", 대여=" + book.isRental() + 
+				", 카테고리=" + book.getCategory() + "]" + "\n");
+			}
+			System.out.println("도서 정보가 파일에 저장되었습니다.");
+		} catch (Exception e) {
+			System.out.println("오류로 인해 저장에 실패하였습니다." + e.getMessage());
+		}
 	}
 	
+	
+
 }

@@ -17,7 +17,20 @@ public interface BookService {
 
 	boolean isValidIndex(int index); // deleteBook - 유효한 인덱스인지 확인
 
-	List<BookDto> searchBook(String name);// 도서 검색
+	List<BookDto> searchBookByName(String searchStr); 
+
+	public List<BookDto> searchBookByAuthor(String searchStr);
+
+	List<BookDto> searchBookByPublisher(String searchStr);
+
+	List<BookDto> searchBookByCategory(String searchStr);
+
+	List<BookDto> searchBook(String searchStr, int searchType);
+
+	boolean isIndexExists(int index);
+
+	void saveFile();
+
 	
 	
 

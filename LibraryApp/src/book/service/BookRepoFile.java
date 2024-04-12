@@ -22,19 +22,48 @@ public class BookRepoFile implements BookService {
 	}
 
 	@Override
+	public void updateBook(int bookIndex, BookDto updatedBook) {
+
+	}
+
+	@Override
 	public boolean isValidIndex(int index) {
 		return false;
 	}
 
 	@Override
-	public void updateBook(int bookIndex, BookDto updatedBook) {
-
+	public List<BookDto> searchBook(String searchStr, int searchType) {
+		return null;
 	}
 
+	@Override
+	public List<BookDto> searchBookByName(String searchStr) {
+		return null;
+	}
 
 	@Override
-	public List<BookDto> searchBook(String name) {
+	public List<BookDto> searchBookByAuthor(String searchStr) {
 		return null;
+	}
+
+	@Override
+	public List<BookDto> searchBookByPublisher(String searchStr) {
+		return null;
+	}
+
+	@Override
+	public List<BookDto> searchBookByCategory(String searchStr) {
+		return null;
+	}
+
+	@Override
+	public boolean isIndexExists(int index) {
+		return false;
+	}
+
+	@Override
+	public void saveFile() {
+
 	}
 
 }
