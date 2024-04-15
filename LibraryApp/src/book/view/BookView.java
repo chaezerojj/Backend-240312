@@ -39,7 +39,7 @@ public class BookView {
 	}
 
 	// 전체 도서 목록 출력
-	public void getBooks(List<BookDto> bookList) {
+	public void printBooks(List<BookDto> bookList) {
 		System.out.println("☆★☆★ 전체 도서 목록 ☆★☆★");
 		for (BookDto book : bookList) {
 			System.out.println(book);
@@ -50,21 +50,33 @@ public class BookView {
 	public BookDto putBook() {
 		System.out.println("도서 정보를 입력해주세요.");
 		while (true) {
-			System.out.println(">> 도서 번호 입력: ");
-			int bookIndex = sc.nextInt();
-			sc.nextLine();
-			System.out.println(">> 도서명 입력: ");
-			String bookName = sc.nextLine();
-			System.out.println(">> 도서 저자 입력: ");
-			String bookAuthor = sc.nextLine();
-			System.out.println(">> 도서 출판사 입력: ");
-			String bookPublisher = sc.nextLine();
-			System.out.println(">> 도서 대여 여부: ");
-			String bookRental = sc.nextLine();
-			System.out.println(">> 도서 카테고리 입력: ");
-			String bookCategory = sc.nextLine();
+			try {
+				System.out.println(">> 도서 번호 입력: ");
+				int bookIndex = sc.nextInt();
+				sc.nextLine();
+				if (bookIndex <= 0) {
+					throw new IllegalArgumentException("도서 인덱스는 1이상의 정수부터 시작합니다.");
+				}
+				System.out.println(">> 도서명 입력: ");
+				String bookName = sc.nextLine();
+				System.out.println(">> 도서 저자 입력: ");
+				String bookAuthor = sc.nextLine();
+				System.out.println(">> 도서 출판사 입력: ");
+				String bookPublisher = sc.nextLine();
+				System.out.println(">> 도서 대여 여부: ");
+				String bookRental = sc.nextLine();
+				System.out.println(">> 도서 카테고리 입력: ");
+				String bookCategory = sc.nextLine();
 
-			return new BookDto(bookIndex, bookName, bookAuthor, bookPublisher, bookRental, bookCategory);
+				return new BookDto(bookIndex, bookName, bookAuthor, bookPublisher, bookRental, bookCategory);
+			} catch (InputMismatchException e) {
+				getMessage(e.getMessage());
+				sc.nextLine();
+			} catch (IllegalArgumentException e) {
+				getMessage(e.getMessage());
+			} catch (Exception e) {
+				getMessage("예상하지 못한 오류가 발생했습니다." + e.getMessage());
+			}
 		}
 	}
 
@@ -84,6 +96,9 @@ public class BookView {
 
 	public BookDto getUpdateBook() {
 		System.out.println("수정할 도서 정보를 입력하세요.");
+		System.out.println("인덱스: ");
+		int index = sc.nextInt();
+		sc.nextLine();
 		System.out.println("도서명: ");
 		String name = sc.nextLine();
 		System.out.println("저자: ");
@@ -94,8 +109,24 @@ public class BookView {
 		String isRental = sc.nextLine();
 		System.out.println("카테고리: ");
 		String category = sc.nextLine();
-		return new BookDto(0, name, author, publisher, isRental, category);
+		return new BookDto(index, name, author, publisher, isRental, category);
 	}
+	
+	// 수정 내용에 대한 저장 여부를 확인하는 메소드
+	public boolean askForUpdateBook() {
+		boolean isValidInput = false;
+		System.out.println("수정된 도서 정보를 저장하시겠습니까? (y / n)");
+		String input = sc.nextLine().trim().toLowerCase();
+		if (input.equals("y")) {
+			isValidInput = true;
+		} else if (input.equals("n")) {
+			isValidInput = false;
+		} else {
+			System.out.println("잘못된 입력입니다.");
+		}
+		return isValidInput;
+	}
+	
 
 	// 사용자로부터 삭제할 도서의 인덱스 값을 입력받음
 	public int getDeleteIndex() {
@@ -109,7 +140,7 @@ public class BookView {
 	// 사용자로부터 검색할 도서 타입을 입력받음
 	public int getSearchType() {
 		System.out.println("검색할 타입을 선택하세요.");
-		System.out.println("1:도서명 | 2:저자 | 3:출판사 | 4:카테고리");
+		System.out.println("1:도서명 | 2:저자 ");
 		int searchType = sc.nextInt();
 		sc.nextLine();
 		return searchType;
@@ -142,5 +173,7 @@ public class BookView {
 		}
 		return saveFile;
 	}
+
+
 
 }

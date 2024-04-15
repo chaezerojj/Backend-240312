@@ -10,7 +10,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+		<item key="selection" value="양귀자"/>
 		<list key="findhistory">
+			<item value="양귀자"/>
 			<item value="package chapter24;"/>
 			<item value="package chapter12;"/>
 		</list>

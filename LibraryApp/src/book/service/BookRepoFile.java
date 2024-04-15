@@ -47,16 +47,6 @@ public class BookRepoFile implements BookService {
 	}
 
 	@Override
-	public List<BookDto> searchBookByPublisher(String searchStr) {
-		return null;
-	}
-
-	@Override
-	public List<BookDto> searchBookByCategory(String searchStr) {
-		return null;
-	}
-
-	@Override
 	public boolean isIndexExists(int index) {
 		return false;
 	}

@@ -3,6 +3,7 @@ package book.service;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import book.dto.BookDto;
 
@@ -14,9 +15,9 @@ public class BookRepository implements BookService {
 		bookData();
 	}
 
-	// 현재 도서 리스트
+	// 초기 도서 목록
 	public void bookData() {
-		bookDtos.add(new BookDto(0, "도서명", "저자", "출판사", "대여여부", "카테고리"));
+//		bookDtos.add(new BookDto(0, "도서명", "저자", "출판사", "대여여부", "카테고리"));
 		bookDtos.add(new BookDto(1, "모순", "양귀자", "쓰다", "가능", "한국소설"));
 		bookDtos.add(new BookDto(2, "이처럼 사소한 것들", "클레어 키건", "다산책방", "가능", "외국소설"));
 		bookDtos.add(new BookDto(3, "데미안", "헤르만 헤세", "민음사", "불가", "외국소설"));
@@ -26,9 +27,9 @@ public class BookRepository implements BookService {
 		bookDtos.add(new BookDto(7, "도파민네이션", "애나 렘키", "흐름출판", "가능", "인문"));
 		bookDtos.add(new BookDto(8, "생각중독", "닉 드렌턴", "갤리온", "가능", "인문"));
 		bookDtos.add(new BookDto(9, "귀신들의 땅", "천쓰홍", "민음사", "불가", "외국소설"));
-		bookDtos.add(new BookDto(10, "이방인", "알베르 카뮈", "민음사", "불가", "외국소설"));
+		bookDtos.add(new BookDto(10, "혼자 공부하는 자바", "신용권", "한빛미디어", "불가", "컴퓨터/IT"));
 		bookDtos.add(new BookDto(11, "종의 기원", "정유정", "은행나무", "가능", "한국소설"));
-		bookDtos.add(new BookDto(12, "불안", "알랭 드 보통", "은행나무", "가능", "에세이"));
+		bookDtos.add(new BookDto(12, "개밥바라기별", "황석영", "문학동네", "가능", "한국소설"));
 		bookDtos.add(new BookDto(13, "불변의 법칙", "모건 하우절", "서삼독", "불가", "정치사회"));
 		bookDtos.add(new BookDto(14, "돈의 속성", "김승호", "스노우폭스북스", "불가", "정치사회"));
 		bookDtos.add(new BookDto(15, "물고기는 존재하지 않는다", "룰루 밀러", "곰출판", "가능", "과학"));
@@ -41,7 +42,7 @@ public class BookRepository implements BookService {
 		bookDtos.add(new BookDto(22, "시장학개론", "김승호", "스노우폭스북스", "가능", "경제"));
 		bookDtos.add(new BookDto(23, "메리골드 마음 사진관", "윤정은", "북로망스", "가능", "한국소설"));
 		bookDtos.add(new BookDto(24, "1984", "조지 오웰", "민음사", "가능", "외국소설"));
-		bookDtos.add(new BookDto(25, "달과 6펜스", "서머싯 몸", "민음사", "불가", "외국소설"));
+		bookDtos.add(new BookDto(25, "Do it! 점프 투 파이썬", "박응용", "이지스퍼블리싱", "불가", "컴퓨터/IT"));
 		bookDtos.add(new BookDto(26, "젊은 베르테르의 슬픔", "요햔 볼프강 폰 괴테", "민음사", "불가", "외국소설"));
 		bookDtos.add(new BookDto(27, "광인", "이혁진", "민음사", "가능", "한국소설"));
 		bookDtos.add(new BookDto(28, "22세기 민주주의", "나리타 유스케", "틔움출판", "가능", "정치사회"));
@@ -49,9 +50,15 @@ public class BookRepository implements BookService {
 		bookDtos.add(new BookDto(30, "퍼펙트 게스", "이인아", "21세기 북스", "가능", "과학"));
 	}
 
+	// 현재 도서 목록 반환
 	@Override
 	public List<BookDto> getBookDtos() {
-		return bookDtos;
+		// 도서 목록을 2차원 배열로 변환하여 반환함
+		List<BookDto> bookList = new ArrayList<>();
+		for (BookDto book : bookDtos) {
+			bookList.add(book);
+		}
+		return bookList;
 	}
 
 	// 도서 등록
@@ -89,28 +96,14 @@ public class BookRepository implements BookService {
 		switch (searchType) {
 		case 1:
 			for (BookDto book : bookDtos) {
-				if (book.getName().contains(searchStr)) {
+				if (book.getName().equalsIgnoreCase(searchStr)) {
 					searchResult.add(book);
 				}
 			}
 			break;
 		case 2:
 			for (BookDto book : bookDtos) {
-				if (book.getAuthor().contains(searchStr)) {
-					searchResult.add(book);
-				}
-			}
-			break;
-		case 3:
-			for (BookDto book : bookDtos) {
-				if (book.getPublisher().contains(searchStr)) {
-					searchResult.add(book);
-				}
-			}
-			break;
-		case 4:
-			for (BookDto book : bookDtos) {
-				if (book.getCategory().contains(searchStr)) {
+				if (book.getAuthor().equalsIgnoreCase(searchStr)) {
 					searchResult.add(book);
 				}
 			}
@@ -143,29 +136,19 @@ public class BookRepository implements BookService {
 			}
 		}
 		return searchResult;
+				
 	}
 
-	@Override
-	public List<BookDto> searchBookByPublisher(String searchStr) {
-		List<BookDto> searchResult = new ArrayList<>();
-		for (BookDto book : bookDtos) {
-			if (book.getPublisher().equalsIgnoreCase(searchStr)) {
-				searchResult.add(book);
-			}
-		}
-		return searchResult;
-	}
-
-	@Override
-	public List<BookDto> searchBookByCategory(String searchStr) {
-		List<BookDto> searchResult = new ArrayList<>();
-		for (BookDto book : bookDtos) {
-			if (book.getCategory().equalsIgnoreCase(searchStr)) {
-				searchResult.add(book);
-			}
-		}
-		return searchResult;
-	}
+//	@Override
+//	public List<BookDto> searchBookByPublisher(String searchStr) {
+//		List<BookDto> searchResult = new ArrayList<>();
+//		for (BookDto book : bookDtos) {
+//			if (book.getPublisher().equalsIgnoreCase(searchStr)) {
+//				searchResult.add(book);
+//			}
+//		}
+//		return searchResult;
+//	}
 
 	@Override
 	public boolean isIndexExists(int index) {

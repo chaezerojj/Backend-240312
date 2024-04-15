@@ -1,10 +1,13 @@
 package book.controller;
 
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 import book.dto.BookDto;
+import book.dto.BookList;
 import book.service.BookService;
 import book.view.BookView;
 
@@ -12,6 +15,7 @@ public class BookController {
 	private Scanner sc;
 	private BookView bookView;
 	private BookService bookService;
+	private BookDto originalBook; // updateBook - 수정 전 도서 정보를 저장하는 변수
 
 	public BookController(BookService bookService, BookView bookView) {
 		this.sc = new Scanner(System.in);
@@ -62,22 +66,29 @@ public class BookController {
 	// 도서 목록
 	public void getBookList() {
 		List<BookDto> bookList = bookService.getBookDtos();
-		bookView.getBooks(bookList);
+		bookView.printBooks(bookList);
 	}
 
 	// 도서 등록 - create
 	public void createBook() {
 		try {
 			BookDto newBook = bookView.putBook();
-			int index = newBook.getIndex() + 1; // 사용자 입력값과 목록 인덱스 값을 맞춤
-			// 이미 있는 인덱스번호인지 확인
-			if (bookService.isIndexExists(index)) {
-				throw new IllegalArgumentException("이미 존재하는 인덱스입니다.");
+			int index = newBook.getIndex(); // 사용자 입력값과 목록 인덱스값을 맞춤
+			// 중복된 인덱스인지 확인
+			for (BookDto existingBook : bookService.getBookDtos()) {
+				if (existingBook.getIndex() == index) {
+					bookView.getMessage("이미 존재하는 인덱스는 등록할 수 없습니다.");
+					return;
+				}
 			}
 			// 도서 등록
 			bookService.createBook(newBook);
+			bookView.getMessage("도서가 등록되었습니다.");
+		} catch (InputMismatchException e) {
+			bookView.getMessage("잘못된 입력입니다. 숫자를 입력해주세요.");
+			sc.nextLine();
 		} catch (Exception e) {
-			bookView.getMessage("잘못된 입력입니다. 다시 입력해주세요.");
+			bookView.getMessage("예상하지 못한 오류가 발생했습니다: " + e.getMessage());
 		}
 
 	}
@@ -87,8 +98,17 @@ public class BookController {
 		try {
 			getBookList();
 			int updateIndex = bookView.getUpdateIndex();
-			int index = updateIndex + 1; // 사용자 입력값과 목록 인덱스 값을 맞춤
+			int index = updateIndex - 1; // 사용자가 보는 인덱스값과 실제 리스트 인덱스값을 맞춤
+			originalBook = bookService.getBookDtos().get(index);
+			
 			BookDto updateBook = bookView.getUpdateBook();
+			
+			// 수정한 내용에 대한 저장 여부 확인
+			boolean saveChanges = bookView.askForUpdateBook();
+			if (!saveChanges) {
+				bookView.getMessage("도서 정보 수정이 취소되었습니다.");
+				return;
+			}
 			
 			if (bookService.isValidIndex(index)) {
 				// 유효한 인덱스 값일때만 수정
@@ -100,15 +120,14 @@ public class BookController {
 		} catch (Exception e) {
 			bookView.getMessage("인덱스 숫자를 입력해주세요.");
 		}
-
 	}
-
+	
 	// 도서 삭제 - delete (인덱스 입력 시 도서 삭제)
 	public void deleteBook() {
 		try {
 			getBookList();
 			int bookIndex = bookView.getDeleteIndex();
-			int index = bookIndex + 1; // 사용자 입력값과 목록 인덱스 값을 맞춤
+			int index = bookIndex - 1; // 사용자 입력값과 목록 인덱스 값을 맞춤
 			
 			if (bookService.isValidIndex(index)) {
 				bookService.deleteBook(index);
@@ -135,12 +154,6 @@ public class BookController {
 		case 2: // 저자 검색
 			searchResult = bookService.searchBookByAuthor(searchStr);
 			break;
-		case 3: // 출판사 검색
-			searchResult = bookService.searchBookByPublisher(searchStr);
-			break;
-		case 4: // 카테고리 선택
-			searchResult = bookService.searchBookByCategory(searchStr);
-			break;
 		default:
 			bookView.getMessage("잘못된 입력입니다.");
 			return;
@@ -150,7 +163,8 @@ public class BookController {
 			boolean b = false;
 			for (BookDto book : searchResult) {
 				if (book != null) {
-					bookView.getBooks(Collections.singletonList(book));
+					List<BookDto> bookList = Arrays.asList(book);
+					bookView.printBooks(bookList);
 					b = true;
 					break;
 				}
