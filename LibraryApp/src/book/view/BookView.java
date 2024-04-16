@@ -7,7 +7,7 @@ import book.dto.BookDto;
 // 콘솔 view 클래스
 public class BookView {
 	private Scanner sc;
-	
+
 	public BookView() {
 		this.sc = new Scanner(System.in);
 	};
@@ -25,16 +25,18 @@ public class BookView {
 		System.out.println("메뉴 선택 >> ");
 		int choice = -1;
 
+		// 정해진 정수 이외의 값이 들어왔을 때 예외 처리
 		try {
 			choice = sc.nextInt();
 
 			if (choice < 1 || choice > 7) {
-				throw new IllegalArgumentException("메뉴 번호(1~7)를 입력해주세요.");
+				throw new IllegalArgumentException
+				("메뉴 번호(1~7)를 입력해주세요.");
 			}
 		} catch (Exception e) {
 			System.out.println("잘못된 입력입니다. 숫자를 입력해주세요.");
 			sc.nextLine(); // 입력 버퍼 비우기
-		} 
+		}
 		return choice;
 	}
 
@@ -55,7 +57,8 @@ public class BookView {
 				int bookIndex = sc.nextInt();
 				sc.nextLine();
 				if (bookIndex <= 0) {
-					throw new IllegalArgumentException("도서 인덱스는 1이상의 정수부터 시작합니다.");
+					throw new IllegalArgumentException
+					("도서 인덱스는 1이상의 정수부터 시작합니다.");
 				}
 				System.out.println(">> 도서명 입력: ");
 				String bookName = sc.nextLine();
@@ -68,7 +71,8 @@ public class BookView {
 				System.out.println(">> 도서 카테고리 입력: ");
 				String bookCategory = sc.nextLine();
 
-				return new BookDto(bookIndex, bookName, bookAuthor, bookPublisher, bookRental, bookCategory);
+				return new BookDto(bookIndex, bookName, bookAuthor, 
+						bookPublisher, bookRental, bookCategory);
 			} catch (InputMismatchException e) {
 				getMessage(e.getMessage());
 				sc.nextLine();
@@ -94,6 +98,7 @@ public class BookView {
 		return index;
 	}
 
+	// 수정할 도서 정보를 받는 메소드
 	public BookDto getUpdateBook() {
 		System.out.println("수정할 도서 정보를 입력하세요.");
 		System.out.println("인덱스: ");
@@ -109,9 +114,10 @@ public class BookView {
 		String isRental = sc.nextLine();
 		System.out.println("카테고리: ");
 		String category = sc.nextLine();
-		return new BookDto(index, name, author, publisher, isRental, category);
+		return new BookDto(index, name, author, 
+				publisher, isRental, category);
 	}
-	
+
 	// 수정 내용에 대한 저장 여부를 확인하는 메소드
 	public boolean askForUpdateBook() {
 		boolean isValidInput = false;
@@ -126,7 +132,6 @@ public class BookView {
 		}
 		return isValidInput;
 	}
-	
 
 	// 사용자로부터 삭제할 도서의 인덱스 값을 입력받음
 	public int getDeleteIndex() {
@@ -151,16 +156,17 @@ public class BookView {
 		System.out.println("검색어를 입력하세요.");
 		return sc.nextLine();
 	}
-	
+
 	// 작성된 도서 정보를 파일로 저장
 	public boolean getSaveFile() {
 		// 사용자가 y 입력: true 반환, n 입력: false 반환
-		boolean isValidInput = false; //  y/n 입력값
+		boolean isValidInput = false; // y/n 입력값
 		boolean saveFile = false; // 파일 저장
-		while (!isValidInput) { 
+		while (!isValidInput) {
 			System.out.println("작성된 도서 목록 전체를 파일로 저장하시겠습니까? (y / n)");
 			sc.nextLine();
-			String input = sc.nextLine().trim().toLowerCase(); // trim() : 입력값 앞뒤 공백 제거
+			String input = sc.nextLine().trim().toLowerCase(); 
+			// trim() : 입력값 앞뒤 공백 제거
 			if (input.equals("y")) {
 				saveFile = true; // 파일 저장
 				isValidInput = true; // 입력값 제대로 받음
@@ -173,7 +179,5 @@ public class BookView {
 		}
 		return saveFile;
 	}
-
-
 
 }

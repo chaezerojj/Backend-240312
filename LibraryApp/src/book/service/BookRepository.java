@@ -136,19 +136,8 @@ public class BookRepository implements BookService {
 			}
 		}
 		return searchResult;
-				
-	}
 
-//	@Override
-//	public List<BookDto> searchBookByPublisher(String searchStr) {
-//		List<BookDto> searchResult = new ArrayList<>();
-//		for (BookDto book : bookDtos) {
-//			if (book.getPublisher().equalsIgnoreCase(searchStr)) {
-//				searchResult.add(book);
-//			}
-//		}
-//		return searchResult;
-//	}
+	}
 
 	@Override
 	public boolean isIndexExists(int index) {
@@ -160,25 +149,29 @@ public class BookRepository implements BookService {
 		return false; // 존재하지 않는 인덱스 번호
 	}
 
+	// 작성된 도서 정보 목록 파일로 저장(txt)
 	@Override
 	public void saveFile() {
-		try (BufferedWriter writer = new BufferedWriter(new FileWriter("BookList.txt"))){
+		try (BufferedWriter writer = new BufferedWriter
+				(new FileWriter("BookList.txt"))) 
+		{
 			Date date = new Date();
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			SimpleDateFormat sdf = 
+					new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 			writer.write("저장된 날짜: " + sdf.format(date) + "\n");
 			writer.write("☆★ 도서 목록 ☆★" + "\n");
 			for (BookDto book : bookDtos) {
 				writer.write("Book [인덱스=" + book.getIndex() + 
-				", 도서명=" + book.getName() + ", 저자=" + book.getAuthor() + 
-				", 출판사=" + book.getPublisher() + ", 대여=" + book.isRental() + 
-				", 카테고리=" + book.getCategory() + "]" + "\n");
+						", 도서명=" + book.getName() + ", 저자=" 
+						+ book.getAuthor() + ", 출판사=" + book.getPublisher() 
+						+ ", 대여=" + book.isRental() + 
+						", 카테고리=" + book.getCategory()
+						+ "]" + "\n");
 			}
 			System.out.println("도서 정보가 파일에 저장되었습니다.");
 		} catch (Exception e) {
 			System.out.println("오류로 인해 저장에 실패하였습니다." + e.getMessage());
 		}
 	}
-	
-	
 
 }

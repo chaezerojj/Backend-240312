@@ -17,15 +17,15 @@ public interface BookService {
 
 	boolean isValidIndex(int index); // deleteBook - 유효한 인덱스인지 확인
 
-	List<BookDto> searchBookByName(String searchStr); 
+	List<BookDto> searchBookByName(String searchStr); // 도서명으로 검색
 
-	List<BookDto> searchBookByAuthor(String searchStr);
+	List<BookDto> searchBookByAuthor(String searchStr); // 저자로 검색
 
-	List<BookDto> searchBook(String searchStr, int searchType);
+	List<BookDto> searchBook(String searchStr, int searchType); // 도서 검색
 
-	boolean isIndexExists(int index);
+	boolean isIndexExists(int index); // 존재하는 인덱스인지 확인
 
-	void saveFile();
+	void saveFile(); // 파일 저장
 
 	
 	

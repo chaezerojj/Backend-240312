@@ -100,16 +100,16 @@ public class BookController {
 			int updateIndex = bookView.getUpdateIndex();
 			int index = updateIndex - 1; // 사용자가 보는 인덱스값과 실제 리스트 인덱스값을 맞춤
 			originalBook = bookService.getBookDtos().get(index);
-			
+
 			BookDto updateBook = bookView.getUpdateBook();
-			
+
 			// 수정한 내용에 대한 저장 여부 확인
 			boolean saveChanges = bookView.askForUpdateBook();
 			if (!saveChanges) {
 				bookView.getMessage("도서 정보 수정이 취소되었습니다.");
 				return;
 			}
-			
+
 			if (bookService.isValidIndex(index)) {
 				// 유효한 인덱스 값일때만 수정
 				bookService.updateBook(index, updateBook);
@@ -121,14 +121,14 @@ public class BookController {
 			bookView.getMessage("인덱스 숫자를 입력해주세요.");
 		}
 	}
-	
+
 	// 도서 삭제 - delete (인덱스 입력 시 도서 삭제)
 	public void deleteBook() {
 		try {
 			getBookList();
 			int bookIndex = bookView.getDeleteIndex();
 			int index = bookIndex - 1; // 사용자 입력값과 목록 인덱스 값을 맞춤
-			
+
 			if (bookService.isValidIndex(index)) {
 				bookService.deleteBook(index);
 				bookView.getMessage("도서 정보가 삭제되었습니다.");
@@ -144,10 +144,10 @@ public class BookController {
 	private void searchBook() {
 		int searchType = bookView.getSearchType();
 		String searchStr = bookView.getSearchStr();
-		
+
 		List<BookDto> searchResult = null;
-		
-		switch(searchType) {
+
+		switch (searchType) {
 		case 1: // 도서명 검색
 			searchResult = bookService.searchBookByName(searchStr);
 			break;
@@ -158,7 +158,7 @@ public class BookController {
 			bookView.getMessage("잘못된 입력입니다.");
 			return;
 		}
-		
+
 		if (searchResult != null) {
 			boolean b = false;
 			for (BookDto book : searchResult) {
@@ -176,13 +176,13 @@ public class BookController {
 			bookView.getMessage("검색결과가 없습니다.");
 		}
 	}
-	
+
 	// 현재까지 작성된 도서 정보들을 담아서 txt 파일로 만들기
 	public void saveBookListFile() {
 		try {
 			boolean newFile = bookView.getSaveFile();
 			if (newFile) {
-				bookService.saveFile();	
+				bookService.saveFile();
 				bookView.getMessage("도서목록을 파일로 저장하였습니다.");
 			} else {
 				bookView.getMessage("파일 저장에 실패하였습니다.");
@@ -191,15 +191,5 @@ public class BookController {
 			bookView.getMessage("파일 저장에 실패하였습니다.");
 		}
 	}
-	
+
 }
-
-
-
-
-
-
-
-
-
-
