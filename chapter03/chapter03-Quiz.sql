@@ -50,10 +50,10 @@ from customer;
 -- (4) 2020년 7월 3일 ~ 7월 7일 사이에 주문받은 도서의 주문번호
 select bookid
 from orders
-where orderdate between '2020/0703' and '2020/07/07';
+where orderdate between '2020/07/03' and '2020/07/07';
 
 -- (5) 2020년 7월 4일 ~ 7월 7일 사이에 주문받은 도서를 제외한 도서의 주문번호
-select distinct bookid
+select bookid
 from orders
 where orderdate not between '2020/0703' and '2020/07/07';
 
