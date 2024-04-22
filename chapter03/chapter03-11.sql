@@ -49,10 +49,10 @@ drop table newbook;
 
 -- newcustomer 테이블을 삭제하시오.
 --drop table newcustomer;
--- neworders 테이블이 newcustomer를 참조하고 있는 상태로
--- neworders 테이블부터 삭제해야 함
+-- >> neworders 테이블이 newcustomer를 참조하고 있는 상태로
+--    neworders 테이블부터 삭제해야 함
 drop table neworders;
-drop table newcustomers;
+drop table newcustomer;
 
 
 
