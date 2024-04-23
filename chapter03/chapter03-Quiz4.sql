@@ -1,4 +1,4 @@
--- D:\dev\database\workspace\chapter03\chapter03-Quiz-Theater.sql
+-- D:\dev\database\workspace\chapter03\chapter03-Quiz4.sql
 
 -- 극장 데이터베이스
 create database movietheater;
@@ -47,10 +47,10 @@ create table salesperson (
 create table customer (
     name varchar2(20) primary key,
     city varchar2(20),
-    industorytype varchar2(20)
+    industrytype varchar2(20)
 );
 create table order (
-    number number,
+    onumber number,
     custname varchar2(20) not null,
     salesperson varchar(20) not null,
     amount number,
