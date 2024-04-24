@@ -144,7 +144,18 @@ select * from reservation;
 
 --(5) DML
 -- 1. 각 테이블에 데이터를 삽입하는 INSERT문을 하나씩 실행시켜 보시오.
-
+--   상영관 데이터 삽입
+insert into cinema values(1, 11, '범죄도시4', 15000, 58);
+--   고객 데이터 삽입
+insert into movie_customer values(22, '김고객', '마포');
+--   예약 데이터 삽입
+insert into reservation values (1, 10, 22, 7, '2024-04-24');
+--   극장 데이터 삽입
+insert into theater values (33, '롯데', '마포');
 
 -- 2. 영화의 가격을 10%씩 인상하시오.
+update cinema set movieprice = movieprice * 1.1;
+
+
+
 
