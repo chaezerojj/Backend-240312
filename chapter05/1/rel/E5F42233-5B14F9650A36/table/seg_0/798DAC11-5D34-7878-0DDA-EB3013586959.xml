@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="798DAC11-5D34-7878-0DDA-EB3013586959" name="투숙">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:04:27 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="투숙 도착일" id="A9A4AEA8-9BEE-A8CA-6731-EF71F83DE3CB">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:05:31 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="투숙 출발일" id="6F692B7C-A19C-BCBF-F0C7-DACC5D7C101B">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:05:31 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="선급금" id="48030CE8-ED78-5607-CDAF-4988D0490738">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:05:31 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="지불방법" id="CF283B1F-42ED-8E69-3D64-DACDE76586B9">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:05:31 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B9CA682F-0A7C-5CC6-986E-D20A01EFF57C" name="투숙_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:09:36 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A9A4AEA8-9BEE-A8CA-6731-EF71F83DE3CB"/>
+<colUsage columnID="6F692B7C-A19C-BCBF-F0C7-DACC5D7C101B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C5E9EBA1-4DE7-E6EC-E558-F88A32C29488" name="출판사">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 02:21:23 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="출판사이름" id="D2016A30-7F6D-9BFE-C2A9-96CB1DC01E3C">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 02:23:18 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="담당자이름" id="0B5FF2C2-2326-87E5-26C5-17E512AF1F67">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 02:25:50 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="전화번호" id="68F23DC9-64EC-51B9-9FAC-46AA1C0CE9B5">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 02:25:50 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="도서_도서번호" id="07158DA2-5AA9-CCA2-DEB4-F6A515795D93">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 02:36:47 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>100</dataTypePrecision>
+<ownDataTypeParameters>,100,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2A0B00C3-861E-8ADE-B98C-AC4C3F5426CB" name="출판사_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 02:23:18 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D2016A30-7F6D-9BFE-C2A9-96CB1DC01E3C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

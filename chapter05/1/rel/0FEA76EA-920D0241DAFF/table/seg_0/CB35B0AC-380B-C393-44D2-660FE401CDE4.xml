@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CB35B0AC-380B-C393-44D2-660FE401CDE4" name="NewOrder">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:24:23 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="orderid" id="3B2E565E-46B6-93C7-A95E-34ABEA8AD959">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:25:21 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="orderdate" id="088EAE62-F93E-88CA-BF1B-75A4FC065167">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:25:21 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="saleprice" id="0E9DFA02-D56B-8C21-C2CE-83384CE062FD">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:25:21 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NewBook_bookid" id="AF71A407-5010-C6CF-F401-084BC54975C4">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:27:26 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2A97F815-529F-EE9C-B992-23AAA392F822" referredColumn="EA326E6A-35CE-4683-4308-9E249D5365D4"/>
+</associations>
+</Column>
+<Column name="NewCustomer_custid" id="30847EA6-588C-17A0-ACB5-C303064425A0">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:27:40 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="49B41B75-9FB3-AEF1-1828-9A61BD9D5EC2" referredColumn="881D1592-AC87-465C-E740-F9BA1C945C26"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E048DD9A-8362-42A8-0B43-4333BABF759B" name="NewOrder_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:25:21 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B2E565E-46B6-93C7-A95E-34ABEA8AD959"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0BA3BC93-590C-6284-2607-732B77DB00BB" name="NewOrder_NewBook_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:27:26 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF71A407-5010-C6CF-F401-084BC54975C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EC9BD49C-A09D-7393-84CE-CAAF50BC57D9" name="NewOrder_NewCustomer_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:27:40 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="30847EA6-588C-17A0-ACB5-C303064425A0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CFD49562-99CB-693C-D148-E62E9DC6464E" name="Graduate">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:10:33 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ssn" id="8CD5AF93-BE54-81C6-15CC-0B7BBC5C46B1">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:12:09 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C3ED57C6-24B8-951B-23DB-CC4CDBB9E880" referredColumn="8CD5AF93-BE54-81C6-15CC-0B7BBC5C46B1"/>
+</associations>
+</Column>
+<Column name="name" id="A12FD25F-1CA3-4DDC-B3B0-577177FA8C2E">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:12:09 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="age" id="9E481C1A-2606-5E1F-40BA-F752491A44C7">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:12:09 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="deg_prog" id="31E3198A-AC2D-68BE-EFD3-F693E4CE11CC">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:12:09 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Dept_dno" id="EA2FE8FC-DF14-AF0A-5BAC-390697BACC7E">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:12:17 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4311E685-9EDA-3C25-478E-1FC3E723BC41" referredColumn="2C9BE2E0-F4AF-C71F-C333-9425BEC704DA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E65CBFEC-BACC-617F-B24C-9279B1899019" name="Graduate_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:12:09 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8CD5AF93-BE54-81C6-15CC-0B7BBC5C46B1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="39B8A8E9-8C6A-48B6-E41B-B81B4AB249DF" name="dno">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:12:17 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA2FE8FC-DF14-AF0A-5BAC-390697BACC7E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0FAEFEF2-86FB-43F0-F56B-4B1AE12824CB" name="Graduate_Graduate_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:13:51 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8CD5AF93-BE54-81C6-15CC-0B7BBC5C46B1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

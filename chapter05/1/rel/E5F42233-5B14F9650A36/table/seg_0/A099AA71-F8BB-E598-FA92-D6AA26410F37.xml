@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A099AA71-F8BB-E598-FA92-D6AA26410F37" name="호텔지점">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:59:48 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="이름" id="2B1D5B37-8BFF-0293-F9DA-766C70145E5A">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:00:40 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="주소" id="067016FF-2B2A-9AC5-8FC1-BF55B15E1DFB">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:00:40 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="도시" id="27AD0A13-5AD4-D51B-10A2-9C84857EFA3B">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:00:40 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="방_방 타입" id="DCFDE7DB-5355-AEB1-A168-70E3704EF3AD">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:08:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="84C65AF0-89E7-A6A8-45C6-83061B90B568" referredColumn="096037D0-AD96-B751-4543-89CE21D7DA41"/>
+</associations>
+</Column>
+<Column name="방_방 가격" id="F8FB79B6-3CF8-A8BB-C1F2-FB43CD24C12E">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:08:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="84C65AF0-89E7-A6A8-45C6-83061B90B568" referredColumn="CA2FEE7C-E1DC-0DEA-8471-F7063476CC7B"/>
+</associations>
+</Column>
+<Column name="방_방 수" id="2AF060B4-30A7-A8EA-6A82-5D3D868E403E">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:08:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="84C65AF0-89E7-A6A8-45C6-83061B90B568" referredColumn="181A2A68-7721-379C-FBD7-D9F2109C1E56"/>
+</associations>
+</Column>
+<Column name="고객_이름" id="5B2E97CE-2DE7-8C44-9212-9F5C9038C6BB">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:09:12 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D8CFD14B-C546-557D-EA73-587C060BE10F" referredColumn="FCC5D96B-D1A6-E01B-1AED-D92186FB48D4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3365CC2A-53BA-F057-63C9-55BC50C65ABF" name="호텔지점_방_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:08:22 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DCFDE7DB-5355-AEB1-A168-70E3704EF3AD"/>
+<colUsage columnID="F8FB79B6-3CF8-A8BB-C1F2-FB43CD24C12E"/>
+<colUsage columnID="2AF060B4-30A7-A8EA-6A82-5D3D868E403E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DF78DFF1-50C7-4329-FDF2-3A87785FD633" name="호텔지점_고객이름">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:09:12 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B2E97CE-2DE7-8C44-9212-9F5C9038C6BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

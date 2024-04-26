@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CB5E315F-E95D-AD54-6559-EA1FD27F1854" name="NewBook">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:21:24 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="bookid" id="EA326E6A-35CE-4683-4308-9E249D5365D4">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:23:58 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bookname" id="DCAA673B-9D29-5AE6-2150-F38C82C11681">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:23:58 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="05041AA5-5CE0-6A5B-5333-45547D2E0C0E">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:23:58 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NewPublisher_pubname" id="1816CD73-672D-D314-42BB-A094C0A27305">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:24:07 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="43DE1C64-BAC9-E006-F123-18B98BC54396" referredColumn="46B7B3A4-4473-3EB0-47AC-0FD078F6B53D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B24D856D-7767-2457-9A63-9C3DC71035CC" name="NewBook_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:23:58 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA326E6A-35CE-4683-4308-9E249D5365D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="79993B50-082A-9C0D-010C-3B8DE0A0AE0B" name="NewBook_NewPublisher_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:24:07 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1816CD73-672D-D314-42BB-A094C0A27305"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

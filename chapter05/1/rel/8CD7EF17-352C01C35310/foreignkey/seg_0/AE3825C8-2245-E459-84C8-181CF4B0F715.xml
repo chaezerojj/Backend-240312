@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AE3825C8-2245-E459-84C8-181CF4B0F715" containerWithKeyObject="1B9CB5EC-5A57-647A-96A7-CFF9ACE1C219" localFKIndex="56BA121D-AC43-CBF6-D04E-DAEBA67FB273" name="주문_고객_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 02:43:19 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<referredTableLongName>고객</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>67873043-7E93-B861-921E-BDF85D293203</referredTableID>
+<keyObject>245158E2-2FE9-2D5B-7534-1B161E7F3744</keyObject>
+<referredKeyID>245158E2-2FE9-2D5B-7534-1B161E7F3744</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>고객번호</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

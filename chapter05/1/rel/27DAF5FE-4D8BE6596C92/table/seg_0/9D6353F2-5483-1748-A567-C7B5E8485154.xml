@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9D6353F2-5483-1748-A567-C7B5E8485154" name="work-dept">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:18:27 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="pct_time" id="5B2813AE-4706-92AC-DF87-F2B05E5A5194">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:19:10 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Professer_ssn" id="0BC46325-6BBD-3E20-0BCF-63AAC54D51D7">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:20:06 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="55C42D93-06CA-FA0E-99D9-D0591948707C" referredColumn="94DD62BC-139C-5F00-AC25-D3A54FBBF7DC"/>
+</associations>
+</Column>
+<Column name="Dept_dno" id="6BB6C3A5-59F0-D32D-56E8-BE2B9DB4D994">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:20:35 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A5C0F1D2-55DD-D79F-902E-CEDA5334FD40" referredColumn="2C9BE2E0-F4AF-C71F-C333-9425BEC704DA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AE0A568A-E3F6-4851-CCBF-1CA89A9510E5" name="professorssn">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:20:06 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BC46325-6BBD-3E20-0BCF-63AAC54D51D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BCD452F9-10FE-E60A-2AE4-35299C7DB299" name="dnov1">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:20:35 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BB6C3A5-59F0-D32D-56E8-BE2B9DB4D994"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

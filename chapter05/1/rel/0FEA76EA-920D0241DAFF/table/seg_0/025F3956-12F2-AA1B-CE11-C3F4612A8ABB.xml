@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="025F3956-12F2-AA1B-CE11-C3F4612A8ABB" name="NewPublisher">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:19:04 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="pubname" id="46B7B3A4-4473-3EB0-47AC-0FD078F6B53D">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:21:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stname" id="89ADF724-E287-E8AA-A09F-39FEA180E71F">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:21:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="officephone" id="9814E04E-14C7-9BC1-533D-46A3EC2C7417">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:21:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3612B8E7-97A8-1698-2570-D8FBB369044A" name="출판사_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 03:21:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="46B7B3A4-4473-3EB0-47AC-0FD078F6B53D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

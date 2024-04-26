@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="37E20C35-855E-8118-E240-44E29455A623" name="Project">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:14:03 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="pid" id="FC17C221-98AB-6595-C525-206052163746">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:16:25 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6B9210B5-3D5B-1216-171C-34C981C3C8C1" referredColumn="94DD62BC-139C-5F00-AC25-D3A54FBBF7DC"/>
+</associations>
+</Column>
+<Column name="sponsor" id="084099F4-6D96-AD6F-C14A-58075B759E05">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:16:25 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="start_date" id="3D77A365-6BC7-DD61-4187-77F53B9B4A40">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:16:25 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="end_date" id="F5B5C496-F348-B311-8035-D92C7E9B5D4D">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:16:25 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="budget" id="A5B50501-20FB-1AD8-0A78-813DA103578A">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:16:25 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="408F0FB2-C352-E3BE-1167-14BB8653B0FD" name="Project_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:16:25 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC17C221-98AB-6595-C525-206052163746"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="37A96C05-314E-A0EE-C595-413B7CD8D4FD" name="Project_Professer_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:16:25 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC17C221-98AB-6595-C525-206052163746"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
