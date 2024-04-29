@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9EEE642E-CBAF-98E6-C7A0-EE477594EF4A" name="bookdata">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:35:42 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="booktype" id="2B42971C-4433-98C4-63D9-61010E84775B">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:36:01 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="book_booktitle" id="942C941B-0069-52B4-FE92-C1CD1B36797E">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:36:04 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="756B3D6A-44E7-6801-142A-EDF84D191A00" referredColumn="D8990ADA-261E-80C4-91D7-D92446461F1F"/>
+</associations>
+</Column>
+<Column name="book_authorname" id="66024319-06E0-CE2E-9DE5-1CEC4AF5B63D">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:37:45 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="756B3D6A-44E7-6801-142A-EDF84D191A00" referredColumn="42656124-7D37-8AEF-9482-36989D8C234B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="630126BA-976D-B6EF-BDA6-E029E3992135" name="bookdata_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:37:05 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B42971C-4433-98C4-63D9-61010E84775B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8F2EB836-9787-6412-32C9-A1D8F0214AB8" name="bookdata_book_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:36:04 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="942C941B-0069-52B4-FE92-C1CD1B36797E"/>
+<colUsage columnID="66024319-06E0-CE2E-9DE5-1CEC4AF5B63D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

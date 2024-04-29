@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="82BCB661-95E7-5607-8E9E-9E9E1F122D4F" name="property">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 03:15:32 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="pid" id="630B5A3A-E974-D2C7-2F60-8BBFF266B1A0">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 03:18:20 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="addr" id="9DA2CB1B-4B57-AF58-ED72-139D87F2B4F2">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 03:19:32 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pub_price" id="C45AA74E-F678-B8F7-9F00-E45ECBAC8C87">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 03:21:26 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1ECF556B-AF35-2225-D3A8-9D4D0992E207" name="property_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 03:18:38 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="630B5A3A-E974-D2C7-2F60-8BBFF266B1A0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

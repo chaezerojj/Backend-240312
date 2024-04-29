@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="330E8035-93A6-688A-3B04-C7FE84270608" name="voyage">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:11:45 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="voyageID" id="7FAA19A1-63EB-7D2E-709E-BB1C2800CB14">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:12:25 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cargo" id="0479E1B2-35CA-39E0-E4EF-A6855DD6997F">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:12:25 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Shipping_shipname" id="5F6D5CA6-3E14-08E4-6330-EA16922345FC">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:14:33 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="937D7EEF-C0A5-204E-9705-8F40BDAE0346" referredColumn="6F8E7E76-039E-7333-34AB-605AFFBB021F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="561BDEAA-6ED8-F6F0-7492-9AB9191C076F" name="voyage_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:12:25 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7FAA19A1-63EB-7D2E-709E-BB1C2800CB14"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="91D7DACA-95D5-8E78-00B9-9C2176FAB17D" name="voyage_Shipping_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:14:33 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5F6D5CA6-3E14-08E4-6330-EA16922345FC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
