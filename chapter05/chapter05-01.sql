@@ -1,4 +1,4 @@
--- D:\dev\database\workspace\chapter04\chapter05-01.sql
+-- D:\dev\database\workspace\chapter05\chapter05-01.sql
 
 -- 데이터 모델링
 -- : 현실 세계의 복잡한 개념(현실 객체)을 단순화하고 추상화시켜 데이터베이스화하는 과정
