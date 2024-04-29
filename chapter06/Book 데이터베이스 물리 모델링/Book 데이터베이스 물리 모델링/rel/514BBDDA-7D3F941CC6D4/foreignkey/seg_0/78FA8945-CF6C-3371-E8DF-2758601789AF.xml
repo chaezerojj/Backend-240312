@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="78FA8945-CF6C-3371-E8DF-2758601789AF" containerWithKeyObject="E41A982C-9C12-5174-04CF-BE71EB963BC4" localFKIndex="C78D71B3-E605-BCDC-800B-B51D79E37D60" name="price_book_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:37:51 UTC</createdTime>
+<ownerDesignName>Book 데이터베이스 물리 모델링</ownerDesignName>
+<referredTableLongName>book</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>67BEAD77-D7E4-5248-7120-6CD97C45E273</referredTableID>
+<keyObject>3BB11333-B428-64A1-83DB-D03507665B24</keyObject>
+<referredKeyID>3BB11333-B428-64A1-83DB-D03507665B24</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>booktitle,authorname</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
