@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D752C4DE-4B1B-FCA3-247D-040B91BA965F" name="partprice">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:46:58 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="price" id="DCA4CB06-8090-0D03-7F7C-B1966A436A9A">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:47:21 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="part_partnumber" id="59CBD4A8-E936-4A43-314B-D6D83070F41C">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:47:25 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="204BADAF-DC44-946A-B04C-3F83CDF58256" referredColumn="707D8D4E-269F-6405-0DAC-12456EE973B1"/>
+</associations>
+</Column>
+<Column name="supply_supplier" id="D653929A-45DB-3DC6-F545-725ACE7E9EC1">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:47:47 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="391CE542-F143-CA1E-FC23-DDAD57D85ED1" referredColumn="25459105-47A1-185E-AE6A-D9D0AB67C413"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3562E0DD-AD24-901D-ACE6-DD2743FC67F9" name="partprice_part_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:47:25 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59CBD4A8-E936-4A43-314B-D6D83070F41C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2FBB4C00-16D6-6E9E-C260-02CA3891BE65" name="partprice_supply_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:47:47 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D653929A-45DB-3DC6-F545-725ACE7E9EC1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

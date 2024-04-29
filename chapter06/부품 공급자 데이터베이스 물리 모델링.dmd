@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="부품 공급자 데이터베이스 물리 모델링" id="19F9977A-C551-9DC5-01AC-602E5E1698F2" version="3.5">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 00:15:35 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>19F9977A-C551-9DC5-01AC-602E5E1698F2</designId>
+</OSDM_Design>
