@@ -18,6 +18,18 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="menutype" id="FD6427DE-A7AE-0DED-6561-E72A08C9C796">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 06:12:21 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="menuname" id="4A7A813A-C73B-29BF-5196-C950DEF7997A">
 <createdBy>ITPS</createdBy>
 <createdTime>2024-04-30 03:27:04 UTC</createdTime>
@@ -26,6 +38,18 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="menuprice" id="430F5D72-8D82-9414-83AF-AB7374C8A2AD">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 06:12:52 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>

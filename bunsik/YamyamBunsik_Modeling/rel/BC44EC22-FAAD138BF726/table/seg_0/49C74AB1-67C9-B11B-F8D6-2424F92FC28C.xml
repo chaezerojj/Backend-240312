@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="49C74AB1-67C9-B11B-F8D6-2424F92FC28C" name="order">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="49C74AB1-67C9-B11B-F8D6-2424F92FC28C" name="orders">
 <createdBy>ITPS</createdBy>
 <createdTime>2024-04-30 03:13:03 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="orderid" id="99A49E16-599C-A568-CD57-E8E548C0B080">
+<Column name="ordersid" id="99A49E16-599C-A568-CD57-E8E548C0B080">
 <createdBy>ITPS</createdBy>
 <createdTime>2024-04-30 03:21:19 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
@@ -18,29 +18,19 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="toeatinid" id="95F220DF-46DB-CB7E-9FB3-E0D74D51FE60">
-<createdBy>ITPS</createdBy>
-<createdTime>2024-04-30 03:21:19 UTC</createdTime>
-<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="togoid" id="097F2A5E-E929-601A-F366-0BDDF25212B3">
+<Column name="takein" id="097F2A5E-E929-601A-F366-0BDDF25212B3">
 <createdBy>ITPS</createdBy>
 <createdTime>2024-04-30 03:21:19 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="menu_menuid" id="5AC57CED-DBD2-039A-AFAB-CF914EDBF773">
+<Column name="menuid" id="5AC57CED-DBD2-039A-AFAB-CF914EDBF773">
 <createdBy>ITPS</createdBy>
 <createdTime>2024-04-30 03:30:10 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
@@ -54,6 +44,31 @@
 <colAssociation fkAssociation="E6CB1F71-A4AA-2C5D-09C4-105DD913B70A" referredColumn="F17F546A-35B1-0E50-A905-7B4DFDDF4460"/>
 </associations>
 </Column>
+<Column name="orderdate" id="DED50C88-BEF6-21CB-48C3-A65B18CBAF32">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 04:52:18 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="custid" id="DF00A7D6-07B0-7004-34D3-0B8407C53944">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 06:22:12 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="29AF8406-0FA8-7CE0-C4A7-C475A660FDD3" referredColumn="E7A126D7-3810-BCE4-942B-5733B49923EE"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="E32C1B6D-4FA5-9776-D9F1-BF2040688003" name="order_PK">
@@ -65,9 +80,10 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="99A49E16-599C-A568-CD57-E8E548C0B080"/>
+<colUsage columnID="DF00A7D6-07B0-7004-34D3-0B8407C53944"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="BA62D5D2-BE64-463C-85A0-B3496E76BA66" name="order_menu_FK">
+<ind_PK_UK id="BA62D5D2-BE64-463C-85A0-B3496E76BA66" name="orders_menu_FK">
 <createdBy>ITPS</createdBy>
 <createdTime>2024-04-30 03:30:10 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
@@ -75,6 +91,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="5AC57CED-DBD2-039A-AFAB-CF914EDBF773"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D1D90A8C-E287-2DB7-5FC9-081B3733F078" name="orders_customer_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 06:22:12 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF00A7D6-07B0-7004-34D3-0B8407C53944"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
