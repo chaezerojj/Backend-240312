@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8A886168-D71D-4B5E-B39C-63C0094A0D7A" name="menu">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 03:26:17 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="menuid" id="F17F546A-35B1-0E50-A905-7B4DFDDF4460">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 03:27:04 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="menuname" id="4A7A813A-C73B-29BF-5196-C950DEF7997A">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 03:27:04 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FDC487D2-AFDE-CC0B-326F-EBAFC3AAC908" name="menu_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 03:27:04 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F17F546A-35B1-0E50-A905-7B4DFDDF4460"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

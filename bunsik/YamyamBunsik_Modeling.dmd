@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="YamyamBunsik_Modeling" id="0455B455-1BF9-9DA5-0A39-D2608BCFB133" version="3.5">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 02:29:30 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>0455B455-1BF9-9DA5-0A39-D2608BCFB133</designId>
+</OSDM_Design>
