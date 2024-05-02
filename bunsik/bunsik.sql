@@ -70,12 +70,12 @@ insert into menu values (2, 'ºĞ½Ä·ù', '·ÎÁ¦¶±ººÀÌ', 6500);
 insert into menu values (3, 'ºĞ½Ä·ù', '»ç¸®Ãß°¡', 1000);
 insert into menu values (4, 'ºĞ½Ä·ù', 'Ä¡ÁîÃß°¡', 1000);
 
-insert into menu values (, '¹ä·ù', '±âº»±è¹ä', 3000);
-insert into menu values (1, '¹ä·ù', 'Ä¡Áî±è¹ä', 3500);
-insert into menu values (1, '¹ä·ù', '½ºÆÔ¸¶¿ä ÄÅ¹ä', 4000);
-insert into menu values (1, '¹ä·ù', 'ÂüÄ¡¸¶¿ä ÄÅ¹ä', 4000);
+insert into menu values (5, '¹ä·ù', '±âº»±è¹ä', 3000);
+insert into menu values (6, '¹ä·ù', 'Ä¡Áî±è¹ä', 3500);
+insert into menu values (7, '¹ä·ù', '½ºÆÔ¸¶¿ä ÄÅ¹ä', 4000);
+insert into menu values (8, '¹ä·ù', 'ÂüÄ¡¸¶¿ä ÄÅ¹ä', 4000);
 
-insert into menu values (1, 'Æ¢±è·ù', '¸¸µÎ(3°³)', 3000);
+insert into menu values (9, 'Æ¢±è·ù', '¸¸µÎ(3°³)', 3000);
 insert into menu values (1, 'Æ¢±è·ù', 'Ä¡Áî½ºÆ½(3°³)', 3000);
 insert into menu values (1, 'Æ¢±è·ù', '¿ÀÂ¡¾îÆ¢±è(2°³)', 3000);
 insert into menu values (1, 'Æ¢±è·ù', '±è¸»ÀÌ(3°³)', 2500);
