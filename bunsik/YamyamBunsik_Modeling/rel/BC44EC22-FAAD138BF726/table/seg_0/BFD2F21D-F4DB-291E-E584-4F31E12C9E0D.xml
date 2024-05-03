@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BFD2F21D-F4DB-291E-E584-4F31E12C9E0D" name="menutype">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-05-03 06:29:22 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="typeid" id="863DD1C5-5AA6-F495-1CEA-06788FE6C21A">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-05-03 06:29:42 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="typename" id="F7207A98-A633-662C-86E2-BE17C200B7DA">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-05-03 06:29:42 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D87AD323-2377-4566-48E9-ADC5D9DC6D27" name="menutype_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-05-03 06:31:19 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="863DD1C5-5AA6-F495-1CEA-06788FE6C21A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

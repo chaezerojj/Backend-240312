@@ -1,76 +1,77 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3420EE28-6501-C852-9955-902C217DC848" name="delivery">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E1FDA9DB-819F-E4DC-C425-E9D428F5D5FA" name="ordersmenu">
 <createdBy>ITPS</createdBy>
-<createdTime>2024-04-30 06:22:40 UTC</createdTime>
+<createdTime>2024-05-03 06:30:08 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
-<ordsAlias>table_13</ordsAlias>
+<ordsAlias>table_6</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="deliveryid" id="2809BC9B-EEC2-2858-EBBA-AEA501AE3AFE">
+<Column name="ordersmenuid" id="A90E471F-99DE-19E2-6D7A-638656CF1DF9">
 <createdBy>ITPS</createdBy>
-<createdTime>2024-05-03 06:35:29 UTC</createdTime>
+<createdTime>2024-05-03 06:31:03 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="status" id="E12B5F94-A51C-9A0D-BBCC-945EEC6D2AA0">
+<Column name="ordersid" id="9E8572F9-C498-25AD-6D20-2172A289654A">
 <createdBy>ITPS</createdBy>
-<createdTime>2024-04-30 06:24:19 UTC</createdTime>
-<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="ordersid" id="D840396D-D032-EE20-BB46-6B36803B4CB1">
-<createdBy>ITPS</createdBy>
-<createdTime>2024-04-30 06:39:58 UTC</createdTime>
+<createdTime>2024-05-03 06:31:03 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="61F419BB-46A5-FDD8-F7E3-3BC760D53AC0" referredColumn="99A49E16-599C-A568-CD57-E8E548C0B080"/>
+<colAssociation fkAssociation="DB7F67D9-2C1C-30A2-9313-61A5DD0CC078" referredColumn="99A49E16-599C-A568-CD57-E8E548C0B080"/>
 </associations>
 </Column>
-<Column name="deliveryprice" id="AD1A14F4-C671-41FD-1992-19864635AF65">
+<Column name="menuid" id="A06F7D7C-D0DE-45AE-3169-F3A6DE5C6967">
 <createdBy>ITPS</createdBy>
-<createdTime>2024-04-30 07:10:31 UTC</createdTime>
+<createdTime>2024-05-03 06:31:03 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="246C1FE1-EF90-E877-DE52-990D787D6C7A" referredColumn="F17F546A-35B1-0E50-A905-7B4DFDDF4460"/>
+</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="5325815A-0BFE-E024-9FED-19EF7B53D481" name="delivery_PK">
+<ind_PK_UK id="AD2532AD-430F-B3E1-9882-74D04B61785D" name="ordersmenu_PK">
 <createdBy>ITPS</createdBy>
-<createdTime>2024-04-30 07:40:28 UTC</createdTime>
+<createdTime>2024-05-03 06:31:03 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="2809BC9B-EEC2-2858-EBBA-AEA501AE3AFE"/>
+<colUsage columnID="A90E471F-99DE-19E2-6D7A-638656CF1DF9"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="79BEF8D6-93A9-8F2B-9EA8-D0FFB154D811" name="delivery_orders_FK">
+<ind_PK_UK id="ECBE6C8B-BCFC-960D-0B77-45284621D1FA" name="ordersmenu_orders_FK">
 <createdBy>ITPS</createdBy>
-<createdTime>2024-04-30 06:39:58 UTC</createdTime>
+<createdTime>2024-05-03 06:34:28 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="D840396D-D032-EE20-BB46-6B36803B4CB1"/>
+<colUsage columnID="9E8572F9-C498-25AD-6D20-2172A289654A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AEFE3917-17AE-8D8F-0888-D18B0F204013" name="ordersmenu_menu_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-05-03 06:34:36 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A06F7D7C-D0DE-45AE-3169-F3A6DE5C6967"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

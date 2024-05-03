@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="29AF8406-0FA8-7CE0-C4A7-C475A660FDD3" containerWithKeyObject="49C74AB1-67C9-B11B-F8D6-2424F92FC28C" localFKIndex="D1D90A8C-E287-2DB7-5FC9-081B3733F078" name="orders_customer_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DC041C82-28C5-F67B-9E2D-EB6BE9B8D894" containerWithKeyObject="49C74AB1-67C9-B11B-F8D6-2424F92FC28C" localFKIndex="2D8BCAC2-B429-6CBA-7471-9E771A8574FA" name="orders_customer_FK">
 <createdBy>ITPS</createdBy>
-<createdTime>2024-04-30 06:22:12 UTC</createdTime>
+<createdTime>2024-05-03 06:36:44 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
 <referredTableLongName>customer</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>

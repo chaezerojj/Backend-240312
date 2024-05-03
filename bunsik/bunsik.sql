@@ -1,5 +1,85 @@
 -- yamyambunsik
 
+-- < 얌얌분식 주문 관리 프로그램(앱) >
+-- * 프로그램 및 테이블 구성 설명
+-- 1. 얌얌분식의 키오스크 앱 데이터베이스 프로그램이다.
+-- 2. 테이블은 총 6개로 구성되어있으며
+--    menu, menutype, orders, ordersmenu, customer, delivery 테이블이 있다.
+-- 3. 각 테이블 당 기본키는 하나씩 지정되어 있다.
+-- 4. 테이블당 지정된 기본키는 number타입의 id로,
+--    외래키로 사용 시 보다 유기적으로 사용할 수 있도록 하기 위해 지정하였다.
+
+-- 5. menu테이블은 menuid, typename, menuname, menuprice, typeid로 구성되어 있다.
+-- 5-(1) menu테이블에서는 각 음식의 이름과 가격, 음식 종류를 알 수 있는 데이터가 들어가있으며,
+--       menuid가 기본키이며 typeid는 menutype테이블에서 외래키로 받아온다.
+-- 5-(2) 각 열의 데이터 유형은
+--       menuid ? number  /  typename ? varchar(20)  /  menuname ? varchar2(20)
+--       menuprice ? number  / typeid ? number 이다.
+
+-- 6. menutype테이블은 typeid, typename으로 구성되어 있다.
+-- 6-(1) menutype테이블에서는 음식 종류를 구분하기 위해 만든 테이블로, 
+--       음식 종류와 그에 따른 타입 아이디를 번호로 지정하였고,
+--       typetid를 기본키로 두었다.
+-- 6-(2) 각 열의 데이터 유형은 typeid ? number  /  typename ? varchar(20) 이다.
+
+-- 7. orders테이블은 ordersid, takein, orderdate, custid로 구성되어 있다.
+-- 7-(1) orders테이블에서는 주문번호, 매장식사여부, 주문날짜, 주문한 고객번호를 알 수 있는 데이터가 들어가있다.
+-- 7-(2) 매장식사여부를 나타내는 takein 데이터 키는 매장식사 시 'Y', 포장주문 시 'N'로 구분한다.
+-- 7-(3) ordersid가 기본키이며 custid는 customer테이블에서 외래키로 받아온다.
+-- 7-(4) 각 열의 데이터 유형은 
+--       ordersid ? number  /  takein ? varchar(20)  / menuid ? number / 
+--       orderdate ? date / custid ? number 이다.
+
+
+-- 8. ordersmenu테이블은 ordersmenuid, ordersid, menuid로 구성되어있다.
+-- 8-(1) ordersmenu테이블에서는 주문메뉴 번호, 주문번호, 메뉴 번호를 알 수 있는 데이터가 들어가있으며,
+--       ordersmenuid가 기본키, ordersid와 menuid는 각각 외래키로 받아온다.
+-- 8-(2) 주문번호(ordersid)에 따라 여러개의 메뉴(menuid)를 받을 수 있도록 하기 위해 구분한 테이블로,
+--       orders테이블에서 받는 주문의 상세 주문 메뉴를 알 수 있는 테이블로 볼 수 있다.
+-- 8-(3) ordersmenuid는 메뉴의 개수에 따라 하나씩 들어오는 키이지만, 데이터를 관리하기 위해 지정된 기본키로
+--       데이터를 조회하거나 관리할 때 주로 사용되지는 않는다.
+-- 8-(4) 각 열의 데이터 유형은
+--       ordersmenuid ? number / ordersid ? number / menuid ? number 이다.
+
+
+-- 9. customer테이블은 custid, custname, custaddr, custphone으로 구성되어 있다.
+-- 9-(1) customer테이블에서는 고객번호, 고객이름, 고객 주소, 고객 전화번호로 구성되어 있으며,
+--       고객 데이터를 보관하는 테이블로 custid가 기본키로 지정되어있다.
+-- 9-(2) 해당 데이터베이스에서는 주문마다 custid가 들어가있기 때문에 고객번호가 있어야 주문이 가능한 구조로,
+--       모든 고객은 주문 내역을 최소 1개 이상 가지고 있다.
+-- 9-(3) 각 열의 데이터 유형은
+--       custid ? number / custname ? varchar2(20) / 
+--       custaddr ? varchar2(100) / custphone ? varchar2 (20) 이다.
+
+
+-- 10. delivery테이블은 deliveryid, status, ordersid, deliveryprice로 구성되어있다.
+-- 10-(1) delivery테이블에서는 배달번호, 배달 상태, 주문 번호, 배달비를 알 수 있는 데이터가 들어가있으며,
+--        deliveryid는 기본키, ordersid는 외래키로 받아온다.
+-- 10-(2) 배달상태 데이터 status는 '진행중'과 '완료'로 값이 구분되어 들어간다.
+-- 10-(3) 배달은 orders테이블의 takein='N'인 값을 기준으로 일부가 delivery테이블의 deliveryid로 들어갔다.
+-- 10-(4) deliveryprice는 주문번호마다 다르며, 금액은 임의로 작성되어 배달 금액에 대한 기준을 따로 두지 않았다.
+
+-- 테이블 간 관계
+-- 1. orders테이블 - customer테이블
+-- - orders테이블의 custid열은 customer테이블의 custid열을 외래키로 참조하는 일대다(1:N)관계
+-- - >> 한 명의 고객(custid)이 여러 주문(ordersid)을 할 수 있는 관계로
+--      즉, custid 1개 당 ordersid가 여러 개일 수 있다는 뜻
+
+-- 2. orders테이블 - ordersmenu테이블
+-- - orders테이블의 ordersid열은 ordersmenu테이블의 ordersid열을 외래키로 참조하는 일대다(1:N)관계
+-- - >> 1개의 주문(ordersid)에 여러 개의 주문메뉴(menuid)가 포함될 수 있다는 관계로
+--      즉, ordersid 1개 당 menuid가 여러 개일 수 있다는 뜻
+
+-- 3. menu테이블 - ordersmenu테이블
+-- - menu테이블의 menuid열은 ordersmenu테이블의 menuid열을 외래키로 참조하는 일대일(1:1)관계
+-- - >> 주문메뉴(menuid) 1개가 하나의 메뉴가 대응된다는 뜻
+
+-- 4. delivery테이블 - orders테이블
+-- - delivery테이블의 ordersid는 orders테이블의 ordersid열을 외래키로 참조하는 일대일(1:1)관계
+-- - >> 1개의 주문(ordersid)에는 하나의 배달정보가 포함될 수 있다는 뜻
+
+-------------------------------------------------------------------------------------------------------
+
 -- 0. 사용자 생성 
 create user c##bunsik identified by bunsik;
 
@@ -9,75 +89,67 @@ grant connect, resource, dba to c##bunsik;
 -- 2. 변경사항 적용하기
 commit;
 
--- 얌얌분식 주문 관리 프로그램(앱)
--- 1. 얌얌분식의 키오스크 앱 데이터베이스 프로그램이다
--- 2. 테이블은 총 6개로 구성되어있으며
---    menu, menutype, orders, ordersmenu, customer, delivery 테이블이 있다.
--- 3. 각 테이블 당 기본키는 하나씩 구성
-
-
-
 -- 3. 테이블 생성 및 외래키 설정
 
 -- (1) customer(고객) 테이블 생성
-CREATE TABLE customer (
-    custid    NUMBER NOT NULL, -- 고객아이디(기본키)
-    custname  VARCHAR2(20), -- 고객이름
-    custaddr  VARCHAR2(100), -- 고객 주소
-    custphone VARCHAR2(20) -- 고객 전화번호
+create table customer (
+    custid    number not null, -- 고객아이디(기본키)
+    custname  varchar2(20), -- 고객이름
+    custaddr  varchar2(100), -- 고객 주소
+    custphone varchar2(20) -- 고객 전화번호
 );
 -- custid를 기본키로 설정
-ALTER TABLE customer ADD CONSTRAINT customer_pk PRIMARY KEY ( custid );
+alter table customer add contraint customer_pk primary key ( custid );
 
 
 -- (2) delivery(배달) 테이블 생성
-CREATE TABLE delivery (
-    deliveryid      NUMBER NOT NULL, -- 배달아이디
-    status          VARCHAR2(10), -- 배달상태
-    ordersid        NUMBER NOT NULL, -- 외래키
-    deliveryprice   NUMBER -- 배달가격
+create table delivery (
+    deliveryid      number not null, -- 배달아이디
+    status          varchar2(10), -- 배달상태
+    ordersid        number not null, -- 외래키
+    deliveryprice   number -- 배달가격
 );
 -- 배달아이디를 기본키로 설정
-ALTER TABLE delivery ADD CONSTRAINT delivery_pk PRIMARY KEY (deliveryid);
+alter table delivery add constraint delivery_pk primary key (deliveryid);
 -- ordersid를 외래키로 설정
-ALTER TABLE delivery 
-    ADD CONSTRAINT delivery_orders_fk 
-    FOREIGN KEY (ordersid) REFERENCES orders (ordersid);
+alter table delivery 
+    add constraint delivery_orders_fk 
+    foreign key (ordersid) references orders (ordersid);
 
 
 -- (3) menu(메뉴) 테이블 생성
-CREATE TABLE menu 
-    menuid    NUMBER NOT NULL, -- 메뉴 아이디(기본키)
-    typename  VARCHAR2(20), -- 메뉴종류 
-    menuname  VARCHAR2(50), -- 이름
-    menuprice NUMBER -- 가격
+create table menu 
+    menuid    number not null, -- 메뉴 아이디(기본키)
+    typename  varchar2(20), -- 메뉴종류 
+    menuname  varchar2(50), -- 이름
+    menuprice number -- 가격
     typeid    number -- 메뉴타입 아이디
 );
 
 -- menuid를 기본키로 설정
-ALTER TABLE menu ADD CONSTRAINT menu_pk PRIMARY KEY ( menuid );
+alter table menu add constraint menu_pk primary key ( menuid );
 -- menutype테이블의 typeid를 외래키로 받아옴
 alter table menu
     add constraint menu_type_fk foreign key (typeid) references menutype(typeid);
 
 
 -- (4) orders(주문) 테이블 생성
-CREATE TABLE orders (
-    ordersid    NUMBER NOT NULL, -- 기본키
-    takein      VARCHAR2(10), -- 매장 식사 여부 (Y/N)로 표시
-    orderdate   DATE, -- 주문날짜
-    custid      NUMBER NOT NULL -- 외래키: custid
+create table orders (
+    ordersid    number not null, -- 기본키
+    takein      varchar2(10), -- 매장 식사 여부 (Y/N)로 표시
+    orderdate   date, -- 주문날짜
+    custid      number not null -- 외래키: custid
     -- ordersid를 기본키로 설정
-    CONSTRAINT order_pk PRIMARY KEY ( ordersid ),
+    constraint order_pk primary key ( ordersid ),
 );
 -- delivery 테이블에 orders테이블의 ordersid를 외래키로 받아옴
-ALTER TABLE delivery
-    ADD CONSTRAINT delivery_orders_fk FOREIGN KEY ( ordersid )
-        REFERENCES orders ( ordersid );
+alter table delivery
+    add constraint delivery_orders_fk foreign key ( ordersid )
+        references orders ( ordersid );
 -- orders 테이블에 customer테이블의 custid를 외래키로 받아옴
-ALTER TABLE orders
-    ADD CONSTRAINT orders_customer_fk FOREIGN KEY ( custid )
-        REFERENCES customer ( custid );
+alter table orders
+    add constraint orders_customer_fk foreign key ( custid )
+        references customer ( custid );
 
     
 -- (5) menutype(메뉴타입)테이블 생성
@@ -93,18 +165,18 @@ create table menutype (
 --   ordersid 하나 당 여러 개의 menuid를 가질 수 있도록 함
 -- - ordersid에는 동일한 menuid가 여러 개 들어갈 수 있음
 -- - 메뉴 하나가 들어갈 때마다 ordersmenuid 한 개의 값이 들어감
-CREATE TABLE ordersmenu (
-    ordersmenuid   NUMBER NOT NULL, -- 주문메뉴 아이디(기본키)
-    ordersid       NUMBER NOT NULL, -- 주문아이디 (외래키 - orders)
-    menuid         NUMBER NOT NULL, -- 메뉴아이디 (외래키 - menuid)
+create table ordersmenu (
+    ordersmenuid   number not null, -- 주문메뉴 아이디(기본키)
+    ordersid       number not null, -- 주문아이디 (외래키 - orders)
+    menuid         number not null, -- 메뉴아이디 (외래키 - menuid)
     -- ordersmenuid를 기본키로 설정
-    CONSTRAINT ordermenu_pk PRIMARY KEY (ordersmenuid), 
+    constraint ordermenu_pk primary key (ordersmenuid), 
     -- ordersid에 대한 외래 키 제약 조건 추가
-    CONSTRAINT ordersmenu_orders_fk 
-        FOREIGN KEY (ordersid) REFERENCES orders (ordersid), 
+    constraint ordersmenu_orders_fk 
+        foreign key (ordersid) references orders (ordersid), 
     -- menuid에 대한 외래 키 제약 조건 추가
-    CONSTRAINT ordersmenu_menu_fk 
-        FOREIGN KEY (menuid) REFERENCES menu (menuid) 
+    constraint ordersmenu_menu_fk 
+        foreign key (menuid) references menu (menuid) 
 );
 
 

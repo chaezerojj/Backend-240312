@@ -14,7 +14,6 @@
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -25,23 +24,20 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="menuid" id="5AC57CED-DBD2-039A-AFAB-CF914EDBF773">
 <createdBy>ITPS</createdBy>
-<createdTime>2024-04-30 03:30:10 UTC</createdTime>
+<createdTime>2024-05-03 06:34:13 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="E6CB1F71-A4AA-2C5D-09C4-105DD913B70A" referredColumn="F17F546A-35B1-0E50-A905-7B4DFDDF4460"/>
+<colAssociation fkAssociation="432EAD00-D385-2700-8337-0A0F5C5E5DA0" referredColumn="F17F546A-35B1-0E50-A905-7B4DFDDF4460"/>
 </associations>
 </Column>
 <Column name="orderdate" id="DED50C88-BEF6-21CB-48C3-A65B18CBAF32">
@@ -51,22 +47,20 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="custid" id="DF00A7D6-07B0-7004-34D3-0B8407C53944">
 <createdBy>ITPS</createdBy>
-<createdTime>2024-04-30 06:22:12 UTC</createdTime>
+<createdTime>2024-05-03 06:34:13 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="29AF8406-0FA8-7CE0-C4A7-C475A660FDD3" referredColumn="E7A126D7-3810-BCE4-942B-5733B49923EE"/>
+<colAssociation fkAssociation="DC041C82-28C5-F67B-9E2D-EB6BE9B8D894" referredColumn="E7A126D7-3810-BCE4-942B-5733B49923EE"/>
 </associations>
 </Column>
 </columns>
@@ -80,12 +74,11 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="99A49E16-599C-A568-CD57-E8E548C0B080"/>
-<colUsage columnID="DF00A7D6-07B0-7004-34D3-0B8407C53944"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="BA62D5D2-BE64-463C-85A0-B3496E76BA66" name="orders_menu_FK">
+<ind_PK_UK id="28B79E9F-60F4-9E89-69AD-FE0B6EDB4CE3" name="orders_menu_FK">
 <createdBy>ITPS</createdBy>
-<createdTime>2024-04-30 03:30:10 UTC</createdTime>
+<createdTime>2024-05-03 06:36:32 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
@@ -93,9 +86,9 @@
 <colUsage columnID="5AC57CED-DBD2-039A-AFAB-CF914EDBF773"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="D1D90A8C-E287-2DB7-5FC9-081B3733F078" name="orders_customer_FK">
+<ind_PK_UK id="2D8BCAC2-B429-6CBA-7471-9E771A8574FA" name="orders_customer_FK">
 <createdBy>ITPS</createdBy>
-<createdTime>2024-04-30 06:22:12 UTC</createdTime>
+<createdTime>2024-05-03 06:36:44 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>

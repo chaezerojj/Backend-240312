@@ -17,15 +17,14 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="menutype" id="FD6427DE-A7AE-0DED-6561-E72A08C9C796">
+<Column name="typename" id="FD6427DE-A7AE-0DED-6561-E72A08C9C796">
 <createdBy>ITPS</createdBy>
 <createdTime>2024-04-30 06:12:21 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<dataTypeSize>20</dataTypeSize>
-<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="menuname" id="4A7A813A-C73B-29BF-5196-C950DEF7997A">
@@ -35,8 +34,7 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<dataTypeSize>20</dataTypeSize>
-<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="menuprice" id="430F5D72-8D82-9414-83AF-AB7374C8A2AD">
@@ -49,15 +47,17 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="submenuid" id="B6E3FA6C-593C-DDFE-936E-376C2ADA0B5C">
+<Column name="typeid" id="B6E3FA6C-593C-DDFE-936E-376C2ADA0B5C">
 <createdBy>ITPS</createdBy>
 <createdTime>2024-05-02 00:04:30 UTC</createdTime>
 <ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="50935135-CE8F-AFCA-69AE-EA28F4D9E386" referredColumn="863DD1C5-5AA6-F495-1CEA-06788FE6C21A"/>
+</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -70,6 +70,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="F17F546A-35B1-0E50-A905-7B4DFDDF4460"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7E1E514A-82AE-BDA7-53DA-537658D6FCF8" name="menu_menutype_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-05-03 06:32:46 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B6E3FA6C-593C-DDFE-936E-376C2ADA0B5C"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
