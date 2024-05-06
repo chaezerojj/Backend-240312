@@ -13,22 +13,22 @@
 -- 5-(1) menu테이블에서는 각 음식의 이름과 가격, 음식 종류를 알 수 있는 데이터가 들어가있으며,
 --       menuid가 기본키이며 typeid는 menutype테이블에서 외래키로 받아온다.
 -- 5-(2) 각 열의 데이터 유형은
---       menuid ? number  /  typename ? varchar(20)  /  menuname ? varchar2(20)
---       menuprice ? number  / typeid ? number 이다.
+--       menuid = number  /  typename = varchar(20)  /  menuname = varchar2(20)
+--       menuprice = number  / typeid = number 이다.
 
 -- 6. menutype테이블은 typeid, typename으로 구성되어 있다.
 -- 6-(1) menutype테이블에서는 음식 종류를 구분하기 위해 만든 테이블로, 
 --       음식 종류와 그에 따른 타입 아이디를 번호로 지정하였고,
 --       typetid를 기본키로 두었다.
--- 6-(2) 각 열의 데이터 유형은 typeid ? number  /  typename ? varchar(20) 이다.
+-- 6-(2) 각 열의 데이터 유형은 typeid = number  /  typename = varchar(20) 이다.
 
 -- 7. orders테이블은 ordersid, takein, orderdate, custid로 구성되어 있다.
 -- 7-(1) orders테이블에서는 주문번호, 매장식사여부, 주문날짜, 주문한 고객번호를 알 수 있는 데이터가 들어가있다.
 -- 7-(2) 매장식사여부를 나타내는 takein 데이터 키는 매장식사 시 'Y', 포장주문 시 'N'로 구분한다.
 -- 7-(3) ordersid가 기본키이며 custid는 customer테이블에서 외래키로 받아온다.
 -- 7-(4) 각 열의 데이터 유형은 
---       ordersid ? number  /  takein ? varchar(20)  / menuid ? number / 
---       orderdate ? date / custid ? number 이다.
+--       ordersid = number  /  takein = varchar(20)  / menuid = number / 
+--       orderdate = date / custid = number 이다.
 
 
 -- 8. ordersmenu테이블은 ordersmenuid, ordersid, menuid로 구성되어있다.
@@ -39,7 +39,7 @@
 -- 8-(3) ordersmenuid는 메뉴의 개수에 따라 하나씩 들어오는 키이지만, 데이터를 관리하기 위해 지정된 기본키로
 --       데이터를 조회하거나 관리할 때 주로 사용되지는 않는다.
 -- 8-(4) 각 열의 데이터 유형은
---       ordersmenuid ? number / ordersid ? number / menuid ? number 이다.
+--       ordersmenuid = number / ordersid = number / menuid = number 이다.
 
 
 -- 9. customer테이블은 custid, custname, custaddr, custphone으로 구성되어 있다.
@@ -48,8 +48,8 @@
 -- 9-(2) 해당 데이터베이스에서는 주문마다 custid가 들어가있기 때문에 고객번호가 있어야 주문이 가능한 구조로,
 --       모든 고객은 주문 내역을 최소 1개 이상 가지고 있다.
 -- 9-(3) 각 열의 데이터 유형은
---       custid ? number / custname ? varchar2(20) / 
---       custaddr ? varchar2(100) / custphone ? varchar2 (20) 이다.
+--       custid = number / custname = varchar2(20) / 
+--       custaddr = varchar2(100) / custphone = varchar2 (20) 이다.
 
 
 -- 10. delivery테이블은 deliveryid, status, ordersid, deliveryprice로 구성되어있다.
@@ -99,17 +99,17 @@ create table customer (
     custphone varchar2(20) -- 고객 전화번호
 );
 -- custid를 기본키로 설정
-alter table customer add contraint customer_pk primary key ( custid );
+alter table customer add constraint customer_pk primary key (custid);
 
 
 -- (2) delivery(배달) 테이블 생성
 create table delivery (
     deliveryid      number not null, -- 배달아이디
-    status          varchar2(10), -- 배달상태
+    status          varchar2(20), -- 배달상태
     ordersid        number not null, -- 외래키
     deliveryprice   number -- 배달가격
 );
--- 배달아이디를 기본키로 설정
+-- deliveryid를 기본키로 설정
 alter table delivery add constraint delivery_pk primary key (deliveryid);
 -- ordersid를 외래키로 설정
 alter table delivery 
@@ -118,11 +118,11 @@ alter table delivery
 
 
 -- (3) menu(메뉴) 테이블 생성
-create table menu 
-    menuid    number not null, -- 메뉴 아이디(기본키)
+create table menu (
+    menuid    NUMBER NOT NULL, -- 메뉴 아이디(기본키)
     typename  varchar2(20), -- 메뉴종류 
     menuname  varchar2(50), -- 이름
-    menuprice number -- 가격
+    menuprice number, -- 가격
     typeid    number -- 메뉴타입 아이디
 );
 
@@ -139,9 +139,10 @@ create table orders (
     takein      varchar2(10), -- 매장 식사 여부 (Y/N)로 표시
     orderdate   date, -- 주문날짜
     custid      number not null -- 외래키: custid
-    -- ordersid를 기본키로 설정
-    constraint order_pk primary key ( ordersid ),
 );
+-- ordersid를 기본키로 설정
+ALTER TABLE orders ADD CONSTRAINT order_pk PRIMARY KEY ( ordersid );
+
 -- delivery 테이블에 orders테이블의 ordersid를 외래키로 받아옴
 alter table delivery
     add constraint delivery_orders_fk foreign key ( ordersid )
@@ -349,19 +350,19 @@ insert into ordersmenu values (52, 20, 25);
 insert into ordersmenu values (53, 20, 31);
 
 -- (6) delivery 테이블
--- insert into delivery (status, ordersid, deliveryprice, deliveryid) values ();
+-- insert into delivery (deliveryid, status, ordersid, deliveryprice) values ();
 -- status = 배달 상태 ("배달중", "완료"로 구분)
 -- ordersid = 주문번호, deliveryprice = 배달비
 -- deliveryid = 배달아이디
 -- ** 배달은 orders테이블의 takein이 "N"인 주문 내용 중 일부만 진행하는 것으로 둠
 --    ("N"인 값의 (ordersid 3, 4, 8, 9, 11, 12, 14, 15, 18, 19) 중에서 
 --     일부만 배달 주문 받은 것으로 설정함)
-insert into delivery values ('완료', 3, 2000, 1);
-insert into delivery values ('완료', 8, 2000, 2);
-insert into delivery values ('완료', 12, 1500, 3);
-insert into delivery values ('완료', 15, 2000, 4);
-insert into delivery values ('완료', 18, 2000, 5);
-insert into delivery values ('진행중', 19, 2000, 6);
+insert into delivery values (1, '완료', 3, 2000);
+insert into delivery values (2, '완료', 8, 2000);
+insert into delivery values (3, '완료', 12, 1500);
+insert into delivery values (4, '완료', 15, 2000);
+insert into delivery values (5, '완료', 18, 2000);
+insert into delivery values (6, '진행중', 19, 2000);
 
 
 /*
