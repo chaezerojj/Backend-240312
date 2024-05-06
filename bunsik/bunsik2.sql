@@ -1,4 +1,5 @@
 -- 5. 얌얌분식 데이터에 대한 구체적인 데이터 알아보기
+-- <select문>
 -- (1) 얌얌분식 테이블 6개를 출력하시오.
 select * from menu;
 select * from menutype;
@@ -308,9 +309,69 @@ group by o.ordersid
 having sum(m.menuprice) >= 10000;
 
 -- (34) 배달 주문을 한 고객 중에서 주문번호, 고객이름, 배달비를 포함한 총 금액이 나오는 sql문을 작성하시오.
+select 
+    o.ordersid, 
+    c.custname, 
+    (
+        select sum(menuprice) 
+        from ordersmenu om, menu m
+        where om.menuid = m.menuid 
+        and om.ordersid = o.ordersid
+    ) + d.deliveryprice as "총 금액"
+from orders o, customer c, delivery d
+where o.custid = c.custid
+and o.ordersid = d.ordersid;
 
 
 -- (35) 포장주문이 가장 많았던 날의 주문날짜와 해당하는 날의 주문 건이 총 몇 건이었는지 구하시오.
+select *
+from (
+    select orderdate, count(*)
+    from orders
+    where takein = 'N'
+    group by orderdate
+    order by count(*) desc
+)
+where rownum = 1;
 
+-- (36) menu테이블에서 menuname의 길이 출력하기 (length함수 사용)
+select menuname, length(menuname)
+from menu;
+
+-- (37) customer테이블에서 같은 성을 가진 사람의 수 구하기 (substr함수 사용)
+select substr(custname, 1, 1) "성(last name)", count(*)
+from customer
+group by substr(custname, 1, 1);
+
+-- 뷰 생성
+-- takein='N'인 주문 전체를 뷰로 만들기
+create view vw_orders
+as select o.ordersid, o.custid, o.orderdate from orders o where o.takein='N';
+
+-- (38) vw_orders 전체 출력
+select * from vw_orders;
+
+-- (39) ordersid가 2개이상인 고객을 단골로 두는 뷰 테이블을 생성하기
+create view multiple_orders as
+select custid
+from orders
+group by custid
+having count(ordersid) > 1;
+select * from multiple_orders;
+
+-- (40) 위에서 생성한 뷰 테이블을 custid, custname, ordersid의 총 횟수를 보여주는
+--      뷰로 수정하는 sql문 작성하기.
+create or replace view multiple_orders_new as 
+select o.custid, c.custname, count(o.ordersid) as "총 주문횟수"
+from orders o, customer c
+where o.custid = c.custid
+and o.custid in (select custid from multiple_orders)
+group by o.custid, c.custname;
+
+select * from multiple_orders_new;
+
+-- (41) 뷰 테이블 모두 삭제하기
+drop view multiple_orders;
+drop view multiple_orders_new;
 
 
