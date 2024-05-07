@@ -1,5 +1,5 @@
 -- 5. 얌얌분식 데이터에 대한 구체적인 데이터 알아보기
--- <select문>
+-- <select문> >> 조인과 부속질의, 함수와 뷰 생성 및 삭제 질의 내용 (총 42개)
 -- (1) 얌얌분식 테이블 6개를 출력하시오.
 select * from menu;
 select * from menutype;
@@ -344,14 +344,14 @@ from customer
 group by substr(custname, 1, 1);
 
 -- 뷰 생성
--- takein='N'인 주문 전체를 뷰로 만들기
+-- (38) 뷰 생성 : takein='N'인 주문 전체를 뷰로 만들기
 create view vw_orders
 as select o.ordersid, o.custid, o.orderdate from orders o where o.takein='N';
 
--- (38) vw_orders 전체 출력
+-- (39) vw_orders 전체 출력
 select * from vw_orders;
 
--- (39) ordersid가 2개이상인 고객을 단골로 두는 뷰 테이블을 생성하기
+-- (40) ordersid가 2개이상인 고객을 단골로 두는 뷰 테이블을 생성하기
 create view multiple_orders as
 select custid
 from orders
@@ -359,7 +359,7 @@ group by custid
 having count(ordersid) > 1;
 select * from multiple_orders;
 
--- (40) 위에서 생성한 뷰 테이블을 custid, custname, ordersid의 총 횟수를 보여주는
+-- (41) 위에서 생성한 뷰 테이블을 custid, custname, ordersid의 총 횟수를 보여주는
 --      뷰로 수정하는 sql문 작성하기.
 create or replace view multiple_orders_new as 
 select o.custid, c.custname, count(o.ordersid) as "총 주문횟수"
@@ -370,7 +370,7 @@ group by o.custid, c.custname;
 
 select * from multiple_orders_new;
 
--- (41) 뷰 테이블 모두 삭제하기
+-- (42) 뷰 테이블 모두 삭제하기
 drop view multiple_orders;
 drop view multiple_orders_new;
 
