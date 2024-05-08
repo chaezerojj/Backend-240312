@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>c02-01.html</title>
+</head>
+
+<body>
+  <!-- c02-01.html -->
+  <h2>텍스트 태그</h2>
+  <!-- 
+    ! 텍스트 태그
+
+    1. 텍스트를 블록으로 묶어 처리하는 태그
+
+    ? <h1 ~ 6>
+    - 제목 텍스트 태그
+    - 일반 텍스트보다 크고 진하게 표시됨
+    - <h1>이 가장 크게 표시되고 <h6>이 가장 작게 표시됨
+    - 굵기는 자동으로 적용됨
+   -->
+  <h1>h1 제목(headline)1</h1>
+  <h2>h2 제목(headline)2</h2>
+  <h3>h3 제목(headline)3</h3>
+  <h4>h4 제목(headline)4</h4>
+  <h5>h5 제목(headline)5</h5>
+  <h6>h6 제목(headline)6</h6>
+
+  <!-- 
+    ? <p>
+    - 단락을 만드는 태그
+    - <p>태그로 표시하는 텍스트 단락은 
+      </p>태그로 만날 때까지 줄바꿈 없이 텍스트로 한 줄을 표시하는데 
+      텍스트 줄이 브라우저 창의 너비보다 길어질 경우 줄이 자동으로 바뀜
+   -->
+  <p>p태그 내용 본문입니다.</p>
+  <!-- 
+    lorem ipsum (로렘 입숨)
+    : 의미없는 문장이 자동 생성되어 html을 첫 구성할 때 활용함
+  -->
+  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <br/>
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+    nisi ut aliquip ex ea commodo consequat. 
+    <br/>
+    Duis aute irure dolor in reprehenderit in voluptate velit esse 
+    cillum dolore eu fugiat nulla pariatur. 
+    <br/>
+    Excepteur sint occaecat cupidatat non proident, 
+    sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    <!-- p태그는 앞뒤 줄바꿈 자동으로 됨 -->
+    <!-- 줄바꿈: <br> -->
+
+    <!-- 
+      ? <hr>
+      - 분위기 전환을 위한 수평 줄을 넣는 태그
+      - 닫는 태그 없음
+     -->
+     <hr/>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+     <hr/>
+     <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+     nisi ut aliquip ex ea commodo consequat.</p>
+     <hr/>
+
+    <!-- 
+      ? <blockquote>
+      - 인용문 넣는 태그
+      - 다른 텍스트보다 안으로 들여 써짐
+      - cite 속성을 이용하여 인용 사이트 주소 표시할 수 있음
+     -->
+    <blockquote>인용문 태그</blockquote>
+    <blockquote>
+      Excepteur sint occaecat cupidatat non proident, 
+      sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </blockquote>
+    <!-- 줄바꿈이나 스페이스바를 아무리 입력해도 화면 그대로 출력되지 않음 -->
+    <p>
+      Duis aute irure dolor 
+      
+      in reprehenderit in voluptate                   velit esse 
+    cillum dolore eu fugiat nulla pariatur.
+    </p>
+    <hr/>
+    <!-- 
+      ? <pre>
+      - 입력하는 그대로 화면에 표시되는 태그
+     -->
+     <pre>pre태그     띄어쓰기    </pre>
+     <pre>
+      function sayHello(){
+      console.log("Hello World!");  
+    }
+    sayHello();
+
+  </pre>
+  
+</body>
+
+</html>
