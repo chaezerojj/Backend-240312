@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>c02-04.html</title>
+</head>
+
+<body>
+  <!-- c02-04.html -->
+  <!-- 
+    ! 표를 만드는 태그
+
+    ? <table>태그
+    - <tr>, <td>, <th> 태그
+    * <tr>
+    * <td>
+    * <th>
+    
+  -->
+  <!-- <table>태그로 기본 표 생성 -->
+  <table border="1">
+    <tr>
+      <td>내용1</td>
+      <td>내용2</td>
+    </tr>
+    <tr>
+      <td>내용3</td>
+      <td>내용4</td>
+    </tr>
+  </table>
+  <br>
+  <table border="1">
+    <tr>
+      <th>제목1</th>
+      <td>1행 2열</td>
+      <td>1행 3열</td>
+    </tr>
+    <tr>
+      <th>제목2</th>
+      <td>2행 2열</td>
+      <td>2행 3열</td>
+    </tr>
+  </table>
+  <br>
+
+  <!-- 
+    ? <table> 속성 - colspan, rowspan
+    - 행 또는 열 합치기
+
+    * colspan
+    : 가로로 몇 개의 셀을 합칠지 지정
+    - <td colspan="합칠 셀의 개수">
+
+    * rowspan
+    : 세로로 몇 개의 셀을 합칠지 지정
+    - <td rowspan="합칠 셀의 개수">
+   -->
+  <table border="1">
+    <tr>
+      <td>내용1</td>
+      <td>내용2</td>
+      <td>내용3</td>
+    </tr>
+    <tr>
+      <td colspan="3">내용1</td>
+    </tr>
+  </table>
+  <br>
+  <table border="1">
+    <tr>
+      <td>내용1</td>
+      <td rowspan="2">내용2</td>
+      <td>내용3</td>
+    </tr>
+    <tr>
+      <td>내용1</td>
+      <td>내용2</td>
+    </tr>
+    <tr>
+      <td>내용1</td>
+      <td>내용2</td>
+      <td>내용3</td>
+    </tr>
+  </table>
+
+  <br />
+
+  <!-- 
+    ? <caption>, <figcaption>
+    : 표에 제목 붙이는 태그
+    * <caption>
+    - <caption> 표 제목</caption>
+
+   -->
+  <table border="1">
+    <caption>
+      <strong>테이블 굵은 제목</strong>
+      <p>테이블 소제목</p>
+    </caption>
+    <tr>
+      <td>내용1</td>
+      <td>내용2</td>
+      <td>내용3</td>
+      <td>내용4</td>
+      <td>내용5</td>
+    </tr>
+  </table>
+
+  <!-- 
+    ? <figure>, <figcaption> 
+    * <figure>
+    - 주변 콘텐츠의 이해나 흐름과 관련된 
+      이미지, 그림, 도표, 사진, 코드 목록 또는 기타 관련 콘텐츠 등의 
+      독립된 콘텐츠를 나타내는 태그
+    * <figcaption>
+    - <figure>태그 안에서 사용되는 태그
+   -->
+  <figure>
+    <figcaption>
+      <table border="1">
+        <caption>
+          <strong>테이블 굵은 제목</strong>
+          <p>테이블 소제목</p>
+        </caption>
+        <tr>
+          <td>내용1</td>
+          <td>내용2</td>
+          <td>내용3</td>
+          <td>내용4</td>
+          <td>내용5</td>
+        </tr>
+      </table>
+    </figcaption>
+  </figure>
+
+  <!-- 
+    ? aria-describeby 속성
+    - 표에 대한 설명 제공
+    - 화면낭독기에서 표를 읽어줄 때 도움이 되도록 표 설명을 별도의 문자로 작성한 후 추가
+   -->
+  <p id="summary">테이블에 대한 설명</p>
+  <table border="1" aria-describedby="summary">
+    <tr>
+      <td>내용1</td>
+      <td>내용2</td>
+      <td>내용3</td>
+      <td>내용4</td>
+      <td>내용5</td>
+    </tr>
+  </table>
+
+  <!-- 
+    ? <thead>, <tbody>, <tfoot>
+    : 표 구조 정의하기
+    - 테이블을 제목, 본문, 요약 부분으로 구분해서 작성할 때 사용
+    - 테이블 생성 시 꼭 써야하는 것은 아니지만 구조를 구분하여 만들 때 주로 사용
+   -->
+  <table border="1">
+    <thead>
+      <tr>
+        <th>제목 1</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>본문 1</th>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>요약 1</th>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- 
+    ? <col> <colgroup>
+    : 여러 열을 묶어 스타일 지정 가능한 태그
+    -->
+  <table border="1">
+    <colgroup>
+      <col>
+      <col style="background-color: chartreuse;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>제목 1</th>
+        <th>제목 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>본문 1</th>
+        <th>본문 2</th>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>요약 1</th>
+        <th>요약 2</th>
+      </tr>
+    </tfoot>
+  </table>
+
+</body>
+
+</html>
