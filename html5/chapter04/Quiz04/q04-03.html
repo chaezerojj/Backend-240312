@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>상품 주문서</h1>
+
+  <form>
+    <fieldset>
+      <legend style="color: purple;">
+        <strong>개인 정보</strong>
+      </legend>
+      <div>
+        <label>
+          <strong>이름</strong>
+        </label>
+        <input type="text" placeholder="여백없이 입력">
+      </div>
+      <div>
+        <label>
+          <strong>연락처</strong>
+        </label>
+        <input type="text" placeholder="연락가능한 번호">
+      </div>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend style="color: purple;">
+        <strong>배송지 정보</strong>
+      </legend>
+      <div>
+        <label>
+          <strong>주소</strong>
+        </label>
+        <input type="text" style="width: 300px;">
+      </div>
+      <div>
+        <label>
+          <strong>전화번호</strong>
+        </label>
+        <input type="text" style="width: 100px;">
+      </div>
+      <div>
+        <label>
+          <strong>메모</strong>
+        </label>
+        <textarea cols="20" rows="5"></textarea>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend style="color: purple;">
+      <strong>주문 정보</strong>
+    </legend>
+    <div>
+      <input type="checkbox">과테말라 만티구아 (100g)
+      <input type="number">개
+    </div>
+    <div>
+      <input type="checkbox">인도네시아 만델링 (100g)
+      <input type="number">개
+    </div>
+    <div>
+      <input type="checkbox">탐라는도다(블렌딩) (100g)
+      <input type="number">개
+    </div>
+    </fieldset>
+    <br>
+    <div>
+      <input type="submit" value="주문하기">
+      <input type="reset" value="다시 작성">
+    </div>
+  </form>
+</body>
+
+</html>

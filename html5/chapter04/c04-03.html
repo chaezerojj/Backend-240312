@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>c04-03.html</title>
+</head>
+<body>
+  <!-- 
+    ! <input>의 다양한 속성
+
+    ?autofocus
+    - 입력 커서 표시하기
+    - 페이지를 불러오자마자 폼의 요소 중에서 원하는 요소에 마우스 커서 표시 
+    ?placeholder
+    - 힌트 표시하기
+    ?readonly
+    - 읽기 전용 필드
+    - 사용자가 입력하지 못하게 하고 읽게만 만들 수 있는 속성
+    ?min, max, step
+    - min: 최소값
+    - max: 최대값
+    - step: 허영된 범위 내의 숫자의 일정한 간격을 가리킴. 짝수만 입력 가능
+    ?size, minlength, maxlength
+    - 길이, 최소길이, 최대길이 속성
+    - size: 보여지는 글자의 길이, 화면에 표시되는 글자 수
+    - 
+    ?
+   -->
+   <form action="">
+    <p> autofocus
+      <input type="text" autofocus>
+    </p>
+
+    <p> placeholder
+      <input type="text" placeholder="검색어를 입력하세요.">
+    </p>
+
+    <p> readonly
+      <input type="text" value="닉네임" readonly>
+    </p>
+
+    <p> min, max, step
+      <input type="number" min="2" step="2">
+    </p>
+    <br>
+    <p>size, minlength, maxlength</p>
+    <p>
+      <!-- 비밀번호가 최소 8자 이상 18자 이하로만 입력 가능한 필드 -->
+      <input type="password" minlength="8" maxlength="18" placeholder="password">
+      <input type="submit">
+    </p>
+   </form>
+</body>
+</html>

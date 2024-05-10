@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>c04-04.html</title>
+</head>
+
+<body>
+  <!-- 
+    여러 데이터를 나열하여 보여주기 
+    ! <select> - <optgroup>, <option>
+    ? <select>
+      - 드롭다운 목록 만들기
+      - 여러 옵션 중 선택할 수 있도록 만들때 사용
+      * 속성
+      - size: 화면에 표시될 드롭다운 메뉴의 항목 개수 지정
+      - multiple: 브라우저 화면에 여러 개의 옵션이 함께 표시되면서 여러 항목 선택 가능
+        ? 2개 선택하는 방법: 
+          ctrl+클릭(클릭한 한개씩 선택됨)
+          shift+클릭(처음클릭부터 다음 클릭 사이 전체가 선택됨)
+    ? <option> 
+      * 속성
+        value: 옵션 선택 시 서버로 넘겨질 값 지정
+        select: 화면에 표시될 때 기본으로 선택되어 있는 옵션 지정
+    ? <optgroup> 
+      - 옵션끼리 묶기
+      - 드롭다운 목록에서 여러 항목들을 몇가지 그룹으로 묶어야 할 경우 사용
+      - 사용할 때 label 속성을 사용해 그룹 제목 붙임
+
+    ! <datalist>, <option>
+      - 텍스트 필드에 직접 값을 입력하는 것이 아닌 
+        데이터 목록에서 제시한 값 중에서 선택하도록 하는 것
+
+    ! <textarea>
+      - 여러줄 입력하는 텍스트 영역 만들기
+      * 속성
+      - name: 다른 폼 요소와 구분하기 위해 텍스트 영역 이름 지정
+      - cols: 텍스트 영역의 가로 너비를 문자 단위로 지정
+      - rows: 텍스트 영역의 세로 길이를 줄 단위로 지정
+              지정한 숫자보다 줄 개수가 많아지면 스크롤 막대 생김
+      -
+   -->
+
+  <h3>Frontend skills</h3>
+  <select>
+    <option>html</option>
+    <option>css</option>
+    <option>JavaScript</option>
+    <option>react</option>
+  </select>
+
+  <select size="4">
+    <option>html</option>
+    <option>css</option>
+    <option>JavaScript</option>
+    <option>react</option>
+  </select>
+
+  <select multiple>
+    <option>html</option>
+    <option>css</option>
+    <option>JavaScript</option>
+    <option>react</option>
+    <option>TypeScript</option>
+  </select>
+
+  <!-- option - value속성 -->
+  <select>
+    <option value="html">html</option>
+    <option value="css">css</option>
+    <option value="js" selected>JavaScript</option>
+    <option value="react">react</option>
+  </select>
+
+  <h3>web application</h3>
+  <select>
+    <optgroup label="Frontend">
+      <option>Html</option>
+      <option>Css</option>
+      <option>JavaScript</option>
+      <option>React</option>
+    </optgroup>
+    <optgroup label="Backend">
+      <option>Java</option>
+      <option>Spring</option>
+      <option>Spring Boot</option>
+      <option>mySQL</option>
+    </optgroup>
+  </select>
+
+  <hr />
+  <!-- datalist, option -->
+  <h3>가장 취향에 맞는 언어는? </h3>
+  <input type="text" list="d1">
+  <datalist id="d1">
+    <option>Java</option>
+    <option>JavaScript</option>
+    <option>React</option>
+    <option>Python</option>
+    <option>C++</option>
+  </datalist>
+  <hr>
+  <!-- textarea -->
+  <textarea name="textarea1" cols="50" rows="10">
+    글을 작성해주세요.
+   </textarea>
+</body>
+
+</html>

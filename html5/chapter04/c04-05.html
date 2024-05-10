@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>c04-05.html</title>
+</head>
+<body>
+  <!-- 기타 다양한 폼 요소들 -->
+
+  <!-- 
+    ? <button> 태그 - 버튼 넣기 
+      <button type="submit/reset/button"> 버튼 이름 </button> -->
+  <button>버튼 1</button>
+  <button>
+    <img src="./images/b.png" width="100">
+  </button>
+ <br><hr>
+  <!-- 
+    ? <output> 태그 - 계산 결과 
+      일반 텍스트와 화면에 표시되는 것은 같으나
+      웹 브라우저와 소스코드를 보는 개발자에게 계산의 결과값이라는 점 인식 
+  -->
+  <output>계산 결과값</output>
+  <!-- 
+    ? <progress> 태그 - 진행 상태 보여주기
+      * 속성
+      - value: 작업 진행 상태를 나타냄. 부동 소수점으로 표현
+               최소 0보다 크거나 같고 max값보다 작거나 같아야 함
+               만약, max값이 지정되지 않았다면 이 값은 1.0보다 작아야 함
+      - max: 작업이 완료되려면 얼마나 많은 작업을 해야 하는지 부동 소수점으로 표현
+             값은 0보다 커야 함
+    ? <meter> 태그 - 값이 차지하는 크기 표시하기
+      * 속성
+      - min, max: 범위의 최소값과 최대값을 나타냄. 값을 정하지 않으면 0과 1로 간주
+      - value: 범위 내에서 차지하는 값을 나타냄
+      - low: 낮은 값을 지정함
+      - high: 높은 값을 지정함
+      - optimum: 적당한 값을 지정. 
+                 optimum > high -> value값이 클수록 좋음
+                 optimun < low -> value값이 작을수록 좋음
+                 high값 또는 low값 지정되어 있다면, 
+                  현재 값(value)이 높은지 낮은지 비교 가능 & 색상 표시 가능
+   -->
+   <div>
+    <p>Progress...</p>
+    <progress></progress>
+    <br>
+    <progress value="0.5"></progress>
+    <h3>평가를 본 훈련생 수 (13/15)</h3>
+    <progress value="13" max="15"></progress>
+   </div>
+
+   <div>
+    <h3>다이어트 성공하자!</h3>
+    <label>
+      <p>* 오늘 목표 대비 섭취한 칼로리</p>
+      42.5%
+    </label>
+    <meter value="0.425"></meter>
+
+    <label>
+      <p>* 오늘 목표 걷기 수 2만보 목표</p>
+        <br> 오늘 걸은 수 7890
+    </label>
+    <meter min="0" max="20000" value="7890"></meter>
+
+    <label>
+      <p>표준 체중(70kg) 대비 현재 체중 (100kg)</p>
+    </label>
+    <meter min="60" max="130" low="75" high="83" value="100">
+    </meter>
+
+   </div>
+</body>
+</html>
