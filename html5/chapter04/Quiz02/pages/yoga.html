@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoga</title>
+  <style>
+    #div1 {
+      background-color: rgb(239, 253, 233);
+      width: 600px;
+      height: 1200px;
+    }
+
+    #ol01 {
+      margin: 10px;
+      padding-top: 30px;
+    }
+
+    li {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🍃 Yoga</h1>
+  <a href="../index.html">🔙 메뉴로 돌아가기</a>
+  <div id="div1">
+    <ol type="1" id="ol01">
+      <li>
+        <h4>요가란?</h4>
+        <button>
+          <a href="https://ko.wikipedia.org/wiki/%EC%9A%94%EA%B0%80"> 링크
+          </a>
+        </button>
+      </li>
+      <li>
+        <h4>좋아하는 이유</h4>
+        <ol type="a">
+          <li>몸의 유연성을 늘리면서 근력까지 함께 키울 수 있다.</li>
+          <li>정적인 운동이지만 칼로리 소모를 함께 할 수 있는 운동이다.</li>
+          <li>매일 수련하면서 생활에 활력을 불어넣어 주는 운동이다.</li>
+        </ol>
+      </li>
+      <li>
+        <h4>요가 사진</h4>
+        <ol>
+          <li>
+            <button id="btn1">
+              사진 1
+            </button>
+            <div id="div2"></div>
+          </li>
+          <li>
+            <button id="btn2">
+              사진 2
+            </button>
+            <div id="div3"></div>
+          </li>
+          <li>
+            <button id="btn3">
+              사진 3
+            </button>
+            <div id="div4"></div>
+          </li>
+          
+        </ol>
+      </li>
+    </ol>
+  </div>
+  <p></p>
+  
+
+  <script>
+    
+    const btn1 = document.querySelector("#btn1");
+    const btn2 = document.querySelector("#btn2");
+    const btn3 = document.querySelector("#btn3");
+    btn1.addEventListener("click", function () {
+      div2.innerHTML = "<img src=../images/yoga1.jpg width=300>"
+    })
+    btn2.addEventListener("click", function () {
+      div3.innerHTML = "<img src=../images/yoga2.jpg width=300>"
+    })
+    btn3.addEventListener("click", function () {
+      div4.innerHTML = "<img src=../images/yoga3.jpg width=300>"
+    })
+  </script>
+
+  
+
+</body>
+</html>

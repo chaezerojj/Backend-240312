@@ -9,7 +9,7 @@
 
 <body>
   <!-- 
-    ? 사용자 입력을 위한 <input> 태그
+    ! 사용자 입력을 위한 <input> 태그
 
     input 태그에서는 
     텍스트, 비밀번호, 이메일 주소, 전화번호, 날짜, 시간, 이미지, 버튼 등
@@ -18,23 +18,223 @@
     
     <input type="유형" 속성="속성값">
 
-    * input type = "text"
+    * input type
+    ?text 
     - 한줄짜리 일반 텍스트를 입력하는 필드
-
-    name / 텍스트 필드를 구별할 수 있도록 이름 붙임
-    size / 텍스트 필드의 길이를 지정
-    maxlength / 텍스트 필드에 입력할 수 있는 최대 문자 개수 지정
-    value / 텍스트 필드 부분에 표시될 내용
+    ?name 
+    - 텍스트 필드를 구별할 수 있도록 이름 붙임
+    ?size 
+    - 텍스트 필드의 길이를 지정
+    ?maxlength 
+    - 텍스트 필드에 입력할 수 있는 최대 문자 개수 지정
+    ?value 
+    - 텍스트 필드 부분에 표시될 내용
+    ?hidden 
+    - 히든필드 /  화면 상의 폼에는 보이지 않지만 폼을 서버로 전송할 때 함께 전송되는 요소
+    ?password 
+    - 비밀번호 입력란 / 사용자가 입력한 내용이 화면에 표시되지 않고 *나 ●로 표시됨
+                    / value 속성 없음
    -->
 
-   <h2>input 태그 예제</h2>
+  <h2>input 태그 예제</h2>
   <p>input태그 - 입력항목 만들기</p>
+  <!-- text -->
   <input type="text">
+  <!-- size, maxlength -->
   <input type="text" name="user-id" size="10" maxlength="10">
   <!-- >> java에서는 String userId=nickname으로 데이터 받음 -->
   <br />
-  <input type="text" name="user-id" value="아이디를 입력해주세요">
+  <!-- value -->
+  <input type="text" name="user-id" value="저장된 아이디">
+  <!-- hidden -->
+  <input type="hidden" name="서버로 전송되면 변수 이름" value="서버로 넘길 값">
+  <!--
+    수정, 삭제 시 수정값 or 기본키 값을 서버로 전송해서 데이터베이스에서 수정 or 삭제
+    delete tablename where id = "1(기본키값)";
+  -->
+  <br />
+  <input type="password" placeholder="password">
+  <br />
 
+  <!-- 
+    * input type : 세분화된 텍스트 필드
+    ?search (검색상자) 
+    - 오른쪽에 X가 표시되어 입력했던 검색어를 지울 수 있음
+    ?url 
+    - https://로 시작하는 사이트 주소를 입력해야 함
+    ?email 
+    - 브라우저 자체에서 사용자가 입력한 내용이 메일 주소 형식에 맞는지 자동 체크
+    ?tel 
+    - 사용자가 입력한 값을 이용하여 바로 전화를 걸 수 있도록 만들 수 있는 필드
+    ?number (숫자 입력을 받는 필드)
+    - 스핀박스가 표시되어 화살표를 클릭하면 숫자를 증감시킬 수 있음
+    ?range 
+    - 슬라이드 막대를 움직여 숫자값을 입력하게 함
+   
+   -->
+  <!-- search -->
+  <input type="search" placeholder="search"> <br>
+  <form>
+    <!-- url -->
+    <label for="">
+      <input type="url" placeholder="url">
+    </label>
+    <input type="submit">
+    <br>
+    <!-- email -->
+    <label for="email"> 이메일:
+      <input type="email" placeholder="email">
+      <input type="submit">
+    </label>
+    <br>
+    <!-- tel -->
+    <label for="tel"> 전화
+      <input type="tel" placeholder="tel">
+      <input type="submit">
+    </label>
+    <br>
+    <!-- number -->
+    <label> 주문개수:
+      <input type="number" min="1" max="5" value="1">개
+      <input type="submit">
+    </label>
+    <p></p>
+    <!-- range -->
+    <label> volume:
+      <input type="range" min="1" max="5">
+    </label>
+    <p></p>
+
+    <!-- 
+      ? number필드와 range필드에서 사용할 수 있는 속성 
+      속성 / 설명
+      min / 필드에 입력할 수 있는 최솟값 지정
+            type="range"일 때 기본 최솟값 0
+      max / 필드에 입력할 수 있는 최댓값 지정
+            type="range"일 때 기본 최댓값 100
+      step / 짝수나 홀수 등 특정 숫자로 제한하려고 할 때 숫자 간격 지정
+            기본값 1(생략가능)
+      value / 필드에 표시할 초기값
+
+       
+    ^ 여러 항목 중 원하는 항목을 선택할 때 사용하는 폼 요소
+    ?radio / 한 개만 선택
+    ?checkbox / 두 개 이상 선택 가능
+      - name : 서버의 폼 프로그램에서 라디오 버튼이나 체크박스를 구분하기 위해 이름 지정 (변수 이름)
+      -        radio > 한개만 선택할 수 있기 때문에 관련 있는 그룹끼리 name속성 값 똑같이 만들어야 함
+      - value : 선택한 라디오 버튼이나 체크박스를 서버로 알려줄 때 값 지정
+                필수속성이며, 영문이거나 숫자여야 함
+      - checked : 라디오 버튼 항목들 중 기본으로 선택되어 설정
+
+    -->
+
+    <!-- radio -->
+    <h3>한개만 선택 1</h3>
+    <label>
+      <input type="radio" name="s" value="s1" checked> 선택 1
+    </label>
+    <label>
+      <input type="radio" name="s" value="s2"> 선택 2
+    </label>
+    <label>
+      <input type="radio" name="s" value="s3"> 선택 3
+    </label>
+
+    <h3>한개만 선택 2</h3>
+    <label>
+      <input type="radio" name="s" value="ss1"> 선택 1
+    </label>
+    <label>
+      <input type="radio" name="s" value="ss2"> 선택 2
+    </label>
+    <label>
+      <input type="radio" name="s" value="ss3"> 선택 3
+    </label>
+
+    <!-- checkbox -->
+    <h3>여러개 선택</h3>
+    <label>
+      <input type="checkbox" name="c1" value="cc1" /> 선택 1
+    </label>
+    <label>
+      <input type="checkbox" name="c2" value="cc2" checked /> 선택 2
+    </label>
+    <label>
+      <input type="checkbox" name="c3" value="cc3" /> 선택 3
+    </label>
+  </form>
+
+  <!-- 
+    * input type
+    ?color(색상 선택 상자)
+    - 색상 값은 16진수로 표시
+    ?date, month, week(날짜 표시)
+    - date: 날짜 선택
+    - month: 월과 연도 선택
+    - week: 주와 연도 선택
+    ?time, datetime, datetime-local(시간 지정)
+    - 날짜나 시간과 관련된 유형의 속성
+    - min: 날짜나 시간의 최소값 지정
+    - max: 날짜나 시간의 최대값 지정
+    - step: 스핀박스의 화살표를 누를 때마다 날짜나 시간을 얼마나 조절할 지 지정
+    - value: 화면에 표시할 초기값 지정
+    ?submit(서버 전송)
+    - 사용자가 폼에 입력한 정보를 서보로 전송하는 버튼을 넣음
+    ?reset(리셋버튼)
+    - 사용자가 입력한 내용 모두 지움
+    - value 속성을 사용해 버튼에 표시할 내용 지정함
+    ?image(이미지)
+    - src 속성을 함께 사용하여 이미지 넣음
+    ?button(버튼)
+    - 자체 기능은 없고, 오직 버튼만 넣음
+    - 자바 스크립트로 추가 기능 생성해야 함
+    - value속성을 사용해 버튼에 표시할 내용 지정
+    ?file(파일 첨부)
+    - 
+   -->
+
+  <!-- color -->
+  <form>
+    <h3>컬러 입력</h3>
+    <label>
+      <input type="color" value="#00ff00">
+      <!-- 
+        32bit true color
+        RGB - 빛 삼원색 red green blue
+        2^8, 2^8, 2^8, 투명도 2^8 (0~255, 0~255)
+    -->
+    </label>
+    <p></p>
+    <!-- date, month, week -->
+    <label>
+      <input type="date">
+    </label>
+    <br />
+    <label>
+      <input type="month">
+    </label>
+    <br />
+    <label>
+      <input type="week">
+    </label>
+    <br />
+  </form>
+
+  <p></p>
+
+  <!-- submit, reset -->
+  <form method="get">
+    <input type="text" name="n1">
+    <input type="text" name="n2">
+    <input type="submit" value="전송">
+    <input type="reset" value="모두 지우기">
+    <p></p>
+    <input type="image" src="images/b.png" alt="buttonImage" width="150">
+    <p></p>
+    <!-- button -->
+    <input type="button" value="button1">
+    <!-- file -->
+  </form>
 
 
 
