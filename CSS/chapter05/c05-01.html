@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>c05-01.html</title>
+</head>
+<body>
+  <!-- 
+    ! CSS 기초
+
+    : Cascading Style Sheets
+    - html과 함께 웹 표준의 기본 개념
+    - html - 텍스트나 이미지, 표 같은 각각의 요소를 웹 문서에 넣어 뼈대를 만듦
+    - css - 텍스트 색상이나 크기, 이미지 크기나 위치, 표 색상, 배치 방법 등 웹 문서의 디자인 요소 담당
+
+    - 웹 문서 내용과 상관없이 디자인만 바꿀 수 있음
+
+    ? 스타일 형식
+    선택자 {
+      스타일속성: 속성 값;
+    }
+    * 선택자(selector)
+    : 앞으로 만들 스타일 규칙을 어디에 적용할 것인지 나타냄
+    - text-align: 속성 - 텍스트 단락을 중앙정렬하는 스타일 규칙
+
+    - 속성을 적용하는 2가지 방법: <style></style> or .css파일 생성
+
+   -->
+   <p>p태그</p>
+   <h1>h1 태그</h1>
+  <style>
+    p {
+      color: blue;
+      font-size: 16px;
+    }
+    h1 {
+      color: blueviolet;
+    }
+    /* 스타일의 주석 */
+    /* 한줄 주석 */
+    /* 
+    여러 줄
+    주석
+    */
+  </style>
+
+  <!-- 
+    ? 스타일과 스타일 시트
+    - 스타일 규칙들을 한눈에 확인하고 필요할 때마다 수정하기 쉽게
+      한군데 묶어 놓은 것
+
+    * 내부 스타일 시트
+    - <style></style> 사이에 작성
+    - 일반적으로 <head></head>태그 내에 작성
+    
+    * 외부 스타일 시트
+   -->
+</body>
+</html>

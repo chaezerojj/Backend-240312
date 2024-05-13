@@ -1,0 +1,9 @@
+/* CSS/chapter05/styles/c05-01-02.css */
+ul {
+  color: cornflowerblue;
+  list-style-type: square;
+}
+
+h1 {
+  color: darkblue;
+}
