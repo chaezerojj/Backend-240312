@@ -16,8 +16,7 @@
     }
     
     body {
-      font-family: '나눔스퀘어 네오';
-      font-size: 20px;
+      font-family: '굴림';
     }
 
     @font-face {
@@ -56,6 +55,20 @@
     }
     #p5 {
       font-style: oblique;
+    }
+    #p6 {
+      font: bold '나눔스퀘어 네오' 1em;
+    }
+    #p7 {
+      font: 120%/120%;
+      /* 부모요소의 글자 크기를 기준으로 120%만큼 표시하고,
+      현재 요소의 글자 크기를 기준으로 120% 표시 */
+    }
+    #p8 {
+      font: caption;
+    }
+    #p9 {
+      font: menu;
     }
   </style>
 </head>
@@ -140,6 +153,27 @@
     - italic / 이탤릭체로 표시
     - oblique / 이탤릭체로 표시. 원래 글꼴을 단지 기울어지게 표시
 
+    ? font 속성 - 글꼴 속성을 한꺼번에 묶어 표현하기
+    - 사용하는 값이 다르기 때문에 한꺼번에 사용 가능
+    * 기본형
+    - font: <font-style><font-variant><font-weight>
+            <font-size/line-weight><font-family>/  >> 실제로 입력할 값
+            caption/icon/menu/message-box/small-caption/status-bar >> 해당 유형의 값을 입력
+    * 속성 값 / 설명
+    - font-* / font-로 시작하는 글꼴 관련 속성을 한꺼번에 나열
+    - caption / 캡션에 어울리는 글꼴 스타일로 표시
+    - icon / 아이콘에 어울리는 글꼴 스타일로 표시
+    - menu / 드롭다운 메뉴에 어울리는 글꼴 스타일로 표시
+    - message-box / 대화상자에 어울리는 글꼴 스타일로 표시
+    - small-caption / 작은 캡션에 어울리는 글꼴 스타일로 표시
+    - status-bar / 상태 표시줄에 어울리는 글꼴 스타일로 표시
+    
+    - font-size와 line-weight는 12px/24px처럼 슬래시로 연결해 함께 표현
+    - line-weight: 줄 간격을 조절하는 속성
+
+    - 공식문서
+    - https://www.w3.org/
+    - https://www.w3.org/TR/css-font-3/
    -->
 
 
@@ -176,6 +210,16 @@
      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
   <p id="p5">Duis aute irure dolor in reprehenderit 
      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+
+    <!-- font-* -->
+  <p id="p6">Duis aute irure dolor in reprehenderit 
+     in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+  <p id="p7">Duis aute irure dolor in reprehenderit 
+     in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+  <p id="p8">Duis aute irure dolor in reprehenderit 
+     in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+  <p id="p9">Duis aute irure dolor in reprehenderit 
+    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 </body>
 
 </html>
