@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .d1 {
+      background: linear-gradient(to right, #dfdfdf, #c99dff);
+      height: 300px;
+    }
+
+    .d2 {
+      background: linear-gradient(to right bottom, #ffffff, #9844ff);
+      height: 300px;
+    }
+
+    .d3 {
+      background: linear-gradient(225deg, #ffffff, #9844ff);
+      height: 300px;
+
+    }
+    .d4 {
+      background: linear-gradient(to bottom, 
+       rgb(255, 0, 0, 0.5), rgb(255, 165, 0, 0.5),
+        rgb(255, 255, 0, 0.5), rgb(0, 128, 0, 0.5), rgb(0, 0, 255, 0.5),
+         rgb(0, 0, 128, 0.5), rgb(128, 0, 128, 0.5));
+      height: 300px;
+    }
+    .d5 {
+      background: linear-gradient(to bottom, 
+       #ff0000, rgb(255, 165, 0, 0.5),
+        rgb(255, 255, 0, 0.5), rgb(0, 128, 0, 0.5), rgb(0, 0, 255, 0.5),
+         rgb(0, 0, 128, 0.5), rgb(128, 0, 128, 0.5));
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    ! CSS - 그라데이션 효과로 배경 꾸미기
+
+    ? 선형 그라데이션
+    - 색상이 수직이나 수평 또는 대각선 방향으로 일정하게 변하는 것
+    * 기본형
+    - linear-gradient(<각도>to<방향>, color-stop, [color-stop, ...])
+    * 방향 (속성값 / 설명)
+    - to top / 아래에서 위로 그라데이션이 만들어짐
+    - to left / 오른쪽에서 왼쪽으로 그라데이션이 만들어짐
+    - to right / 왼쪽에서 오른쪽으로 그라데이션이 만들어짐
+    - to bottom / 위에서 아래로 그라데이션이 만들어짐
+   -->
+
+  <div class="d1">
+    <!-- linear-gradient(to right) -->
+  </div>
+  <div class="d2">
+    <!-- linear-gradient(to right bottom) -->
+  </div>
+
+  <!-- 
+    * 각도
+    - deg로 표기
+    - 맨 위부분이 0deg, 시계방향으로 회전하면서 90deg, 180deg가 됨
+   -->
+  <div class="d3">
+    <!-- linear-gradient(225deg) -->
+  </div>
+
+  <!-- 
+    * 색상 중지점(color-stop)
+    - : 색이 바뀌는 지점
+    - 색상만 지정 가능
+    - 색상 수에 따라 같은 크기를 분배함
+    - 색상과 함께 중지 점의 위치도 함께 지정 가능
+    - 색상 지정 시 rgba 표기법 이용해 투명도를 함께 사용한 색상도 사용 가능
+   -->
+
+   <!-- 
+    * 원형 그라데이션 (radial-gradient)
+    -->
+   <div class="d4">
+    <!-- color-stop -->
+   </div>
+   <div class="d5">
+    <!-- radial-gradient -->
+   </div>
+</body>
+
+</html>
