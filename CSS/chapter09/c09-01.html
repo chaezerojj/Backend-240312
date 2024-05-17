@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*box-sizing*/
+    #d1 {
+      box-sizing: content-box;
+      width: 300px;
+      height: 200px;
+      margin: 10px;
+      padding: 50px;
+      background-color: rgb(131, 255, 131);
+    }
+
+    #d2 {
+      box-sizing: border-box;
+      width: 300px;
+      height: 200px;
+      margin: 10px;
+      padding: 50px;
+      background-color: rgb(255, 169, 64);
+    }
+
+    /* float */
+    .left-img {
+      float: left;
+      padding: 10px;
+    }
+
+    .div1 {
+      background-color: greenyellow;
+      float: left;
+      /* float: none; */
+    }
+
+    .div2 {
+      background-color: aquamarine;
+      float: left;
+    }
+
+    .div3 {
+      background-color: salmon;
+      float: left;
+    }
+
+    .div4 {
+      background-color: crimson;
+      float: right;
+    }
+
+    /* clear */
+    .div4 {
+      clear: right;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- 
+    ! CSS - 포지셔닝
+    
+    ? CSS 포지셔닝과 주요 속성들
+    - 브라우저 화면 안에 각 콘텐츠 영역을 어떻게 배치할 지를 결정하는 것
+
+    ? box-sizing 속성 - 박스 너비 기준 정하기
+    * 속성 값 / 설명
+    - content-box / width 속성 값을 콘텐츠 영역 넓이 값으로 사용
+    - border-box / width 속성 값을 콘텐츠 영역 테두리까지 포함한 
+                   박스 모델 전체 넓이 값으로 사용
+    - 박스 모델의 넓이 값 = 콘텐츠 영역 + 좌우 패딩 + 좌우 테두리
+   -->
+   <div id="d1" class="dc01"></div>
+   <div id="d2" class="dc01"></div>
+
+   <!-- 
+    ? float 속성 - 왼쪽이나 오른쪽으로 배치하기
+    * 속성 값 / 설명
+    - left / 해당 요소를 문서의 왼쪽으로 배치
+    - right / 해당 요소를 문서의 오른쪽으로 배치
+    - none / 좌우 어느 쪽으로도 배치하지 않음
+    - float 속성 지정 시 넓이 값은 콘텐츠가 표시할 때 필요한 만큼만 차지하고
+      다른 요소가 들어올 만큼의 공간을 비워둠
+    -->
+    <div>
+      <!-- <img class="left-kitten-img" src="https://placekitten.com/300/300" alt=""> -->
+      <img class="left-img" src="https://placehold.co/300x300" alt="">
+      <h1>Lorem Ipsum</h1>
+      <p> Et harum quidem rerum facilis est et expedita distinctio. 
+        Nam libero tempore, cum soluta nobis est eligendi optio 
+        cumque nihil impedit quo minus id quod maxime placeat facere possimus, 
+        omnis voluptas assumenda est, omnis dolor repellendus.
+        Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus 
+        saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. 
+        Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
+        voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+    </div>
+    
+    <br /><br /><br /><hr />
+
+    <div class="div1">
+      <h2>div1</h2>
+    </div>
+    <div class="div2">
+      <h2>div2</h2>
+    </div>
+    <div class="div3">
+      <h2>div3</h2>
+    </div>
+    <div class="div4" id="id01">
+      <h2>div4</h2>
+    </div>
+
+    <!-- 
+      ? clear 속성 - float 속성 해제하기
+      - float속성을 이용해 웹 페이지 요소를 왼쪽이나 오른쪽에 배치하면 
+        그 다음에 넣는 다른 요소들에도 똑같은 속성 전달됨
+      - clear속성으로 float 속성 취소 가능
+      * 속성 값 / 설명
+      - left / float:left 속성 종료
+      - right / float:right 속성 종료
+      - both / 무조건 기본 상태로 되돌림
+
+     -->
+</body>
+</html>
