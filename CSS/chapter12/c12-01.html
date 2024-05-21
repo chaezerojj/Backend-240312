@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: darksalmon;
+    }
+
+    @media screen and (max-width: 1024px) {
+
+      /* 테블릿 가로 화면 */
+      body {
+        background-color: darkgreen;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+
+      /* 화면 너비 768px이하일 대 아래의 CSS 적용 */
+      /* - 테블릭 넓이 기준 768px */
+      /* - 테블릿 화면에서는 아래의 CSS 적용 */
+      body {
+        background-color: skyblue;
+      }
+    }
+
+    @media screen and (max-width: 320px) {
+      
+      /* 모바일 화면에서의 CSS 적용 */
+      body {
+        background-color: crimson;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- 
+    ! 반응형 웹사이트 만들기
+    ? 미디어 쿼리 (가변 그리드, 플렉서블 박스 레이아웃)
+    : 사이트에 접속하는 장치에 따라 특정한 CSS 스타일을 사용하도록 해줌
+
+    ? 미디어 쿼리 구문
+    @media [only | not] 미디어 유형 [and 조건] * [and 조건]
+
+    * 연산자 / 설명
+    - only / 미디어 쿼리를 지원하는 웹 브라우저에서만 조건을 인식
+    - not / not 다음에 지정하는 미디어 유형을 제외
+
+    ? 미디어 유형의 종류
+    * 미디어 유형 / 사용 가능한 미디어
+    - screen / 가로 길이 감지
+    - tv / tv
+    - projection / 프로젝터
+    - print / 인쇄 장치
+
+    ? 미디어 쿼리의 조건
+    * 가로, 세로 값 설정하는 속성 / 설명
+    - min-width, min-height / 최소 넓이, 최소 높이
+    - max-width, max-height / 최대 넓이, 최대 높이
+    - width, height / 웹 페이지의 가로 넓이, 세로 높이
+
+
+   -->
+</body>
+
+</html>

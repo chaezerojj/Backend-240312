@@ -1,0 +1,45 @@
+@media all and (min-width:1024px) {
+  #container, nav {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+/* 
+nav ul li {
+  float: left;
+  margin: 5px 15px;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+
+#container, nav {
+  width: 310px;
+  margin: 0 auto;
+} */
+
+#intro img {
+  float: left;
+  width: 200px;
+  margin: 20px;
+}
+
+#desc {
+  display: inline-block;
+  width: 250px;
+  height: 200px;
+  padding: 5px;
+  border: 1px dotted #ccc;
+}
+
+footer {
+  clear: both;
+  height: 200px;
+  background: url(../images/1.jpg) no-repeat center;
+  background-size: cover;
+}
+
+footer p {
+  text-align: center;
+  line-height: 200px;
+}
+

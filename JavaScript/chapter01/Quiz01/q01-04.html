@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 6 9 게임</title>
+</head>
+<body>
+  <button class="btn">369 시작</button>
+  <div class="number"></div>
+  <script>
+    const result = document.querySelector(".number");
+   
+    function game() {
+      result.innerHTML = '';
+      for (let i = 1; i <= 100; i++) {
+        const a = Math.floor(i / 10); // 십의 자리
+        const b = i % 10; // 일의 자리
+  
+        let count = 0;
+  
+        if (b % 3 === 0 && b != 0) {
+          count++
+        } 
+        if (a % 3 == 0 && a != 0) {
+          count++
+        }
+
+
+        if (count == 0) {
+          result.innerHTML += `${i}<br>`
+        }
+        if (count == 1) {
+          result.innerHTML += "짝<br>"
+        }
+        if (count == 2) {
+          result.innerHTML += "짝짝<br>"
+        }
+
+        setTimeout(() => game(i), 2000);
+
+      }
+    }
+
+    const btn = document.querySelector(".btn");
+
+    btn.addEventListener("click", () => {
+     result.innerHTML = '';
+     game();
+    })
+  </script>
+</body>
+</html>

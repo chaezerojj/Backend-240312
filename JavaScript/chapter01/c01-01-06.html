@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button {
+      width: 200px;
+      height: 50px;
+      font-size: 20px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <button class="click">클릭 횟수 : 0</button>
+
+  <p></p>
+
+  <h1 class="counter">클릭 횟수 : 0</h1>
+  <button class="btn-connect">이벤트 연결</button>
+  <button class="btn-disconnect">이벤트 제거</button>
+  <p class="status">이벤트 연결 상태:</p>
+
+
+  <script>
+    // 이벤트 설정하기
+    
+    // - 기본형
+    //   문서객체.addEventListener(이벤트 이름, 콜백함수)
+    
+    // * 이벤트 리스너, 이벤트 핸들러
+    // : 이벤트가 발생할 때 실행할 함수
+    
+    const click = document.querySelector(".click");
+    let count = 0;
+    click.addEventListener("click", () => {
+      count++;
+      click.textContent = `클릭 횟수: ${count}`
+      console.log("클릭");
+    })
+
+    /* 이벤트 연결 제거하기 */
+    // - 기본형
+    //  문서객체.removeEventListener(이벤트 이름, 이벤트 리스너);
+
+    const counter = document.querySelector(".counter");
+    const status = document.querySelector(".status");
+    const cButton = document.querySelector(".btn-connect");
+    const dButton = document.querySelector(".btn-disconnect");
+    let ctr = 0;
+
+    const listener = () => {
+      counter.textContent = `클릭 횟수: ${ctr++}`
+    }
+
+    // 이벤트 연결
+    cButton.addEventListener("click", () => {
+      counter.addEventListener("click", listener);
+      status.textContent = "이벤트 연결 상태: 연결";
+    })
+    // 이벤트 해제
+    dButton.addEventListener("click", () => {
+      counter.removeEventListener("click", listener);
+      status.textContent = "이벤트 연결 상태: 해제"
+    })
+
+
+  </script>
+</body>
+</html>

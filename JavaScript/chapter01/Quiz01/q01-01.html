@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="home"></div>
+    <div class="html"></div>
+    <div class="css"></div>
+    <div class="jquery"></div>
+  </div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const nav = document.querySelector(".nav");
+
+      const home = document.querySelector(".home");
+      const html = document.querySelector(".html");
+      const css = document.querySelector(".css");
+      const jquery = document.querySelector(".jquery");
+
+      nav.appendChild(home);
+      nav.appendChild(html);
+      nav.appendChild(css);
+      nav.appendChild(jquery);
+
+      nav.style.borderCollapse = "separate";
+
+      home.style.float = "left";
+      home.textContent = "Home";
+      home.style.width = "100px";
+      home.style.height = "30px";
+      home.style.border = "1px solid black";
+      home.style.textAlign = "center";
+      home.style.padding = "15px";
+      home.style.borderTopLeftRadius = "20px";
+      home.style.borderBottomLeftRadius = "20px";
+      
+      html.style.float = "left";
+      html.textContent = "HTML";
+      html.style.width = "100px";
+      html.style.height = "30px";
+      html.style.border = "1px solid black";
+      html.style.textAlign = "center";
+      html.style.padding = "15px";
+      
+      css.style.float = "left";
+      css.textContent = "CSS";
+      css.style.width = "100px";
+      css.style.height = "30px";
+      css.style.border = "1px solid black";
+      css.style.textAlign = "center";
+      css.style.padding = "15px";
+      
+      jquery.style.float = "left";
+      jquery.textContent = "JQuery";
+      jquery.style.width = "100px";
+      jquery.style.height = "30px";
+      jquery.style.border = "1px solid black";
+      jquery.style.textAlign = "center";
+      jquery.style.padding = "15px";
+      jquery.style.borderTopRightRadius = "20px";
+      jquery.style.borderBottomRightRadius = "20px";
+      
+
+    })
+  </script>
+</body>
+</html>

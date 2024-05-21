@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>c01-01-03</title>
+</head>
+<body>
+  <div id="diva"></div>
+  <div id="divb"></div>
+
+  <img class="rect"></div>
+  <img class="rect"></div>
+  <img class="rect"></div>
+  <img class="rect"></div>
+
+  <h1 class="main-title">Hello World!</h1>
+
+  <!-- div태그 25개 -->
+
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+  <div class="gradient"></div>
+
+  <div class="parent-div"></div>
+
+  <script>
+    /*
+      글자(내용) 조작하기
+      * 속성이름 / 설명
+      - 문서객체.textContent / 입력된 문자열을 그대로 넣음
+      - 문서객체.innerHTML / 입력된 문자열을 HTML형식으로 넣음
+    */
+   const diva = document.querySelector("#diva");
+   const divb = document.querySelector("#divb");
+
+   diva.textContent="<h1>textContent 속성</h1>";
+   divb.innerHTML="<h1>textContent 속성</h1>";
+
+  /*
+    예전 js 코드에서는 innerText 속성을 사용
+    - textContent속성과 비슷함
+    - 성능 문제로 textContent속성이 추가됨
+    - 글자를 다룰 때는 성능이 좋은 textContent속성 사용
+  */
+
+  /*
+    속성 조작하기
+    * 속성이름 / 설명
+    - 문서객체.setAttribute(속성이름, 값) / 특성속성에 값을 지정
+    - 문서객체.getAttribute(속성이름) / 특정 속성을 추출
+  */ 
+  const rect = document.querySelectorAll(".rect");
+  rect.forEach((rect, index) => {
+    const width = (index + 1) * 100;
+    const src = `https://placehold.co/300x${width}`;
+    // 속성 추가
+    // rect.setAttribute("src", src);
+    /*
+      속성 추가 간단히 사용하기
+      setAttribute()와 getAttribute()메소드를 사용하지 않고도 다음과 같이
+      온점을 찍고 속성을 바로 읽어들이거나 지정 가능
+    */
+    rect.src = src;
+  })
+
+  /*
+    스타일 조작하기
+    - style 속성은 객체
+    - 내부에 속성으로 CSS 사용하여 지정할 수 있는 스타일들이 있음
+    - 입력 시 CSS로 사용하는 값과 동일하게 입력
+    - js style 지정 시 css 스타일과 다른 점 : - 없애고 camelCase표기법 사용
+    - background-color >> backgroundColor
+    - text-align >> textAlign
+    - font-size >> fontSize
+
+    - 가장 많이 사용하는 스타일들
+      문서객체.style.backgroundColor
+      문서객체.style["backgroundColor"]
+      문서객체.style["background-color"]
+  */ 
+
+  const mainTitle = document.querySelector(".main-title");
+  mainTitle.style.color = "rgb(150, 50, 250)";
+
+  // div gradient 25개
+  const gradient = document.querySelectorAll(".gradient");
+  gradient.forEach((gradient, index,) => {
+    const val = index * 10;
+    gradient.style.height = "10px";
+    gradient.style.backgroundColor = `rgb(${val}, ${val}, ${val})`;
+  }) 
+  
+  // const gradient2 = document.querySelectorAll(".gradient");
+  // for (let i = 0; i < gradient2.length; i++) {
+  //   const val2 = i * 10;
+  //   gradient2[i].style.height="10px";
+  //   gradient2[i].style.backgroundColor = `rgb(${val2}, ${val2}, ${val2})`;
+  // }
+
+  /*
+    * document.createElement() : 문서 객체 생성하기
+    - 기본형
+      document.createElement(문서객체이름)
+    * appendChild() 메소드 : 어떤 부모 객체 아래 자식 객체 추가
+    - 기본형
+      부모객체.appendChild(자식 객체)
+  */
+
+  // 변수, 상수 선언
+  // 부모 객체 가져오기
+  const parentDiv = document.querySelector(".parent-div");
+  // h1 문서 객체 생성
+  const title = document.createElement("h1");
+  title.textContent = '문서 객체 동적으로 생성하기';
+  title.style.color = "white";
+  title.style.backgroundColor = "black";
+  // h1 객체를 부모 객체에 추가하기
+  parentDiv.appendChild(title);
+
+  </script>
+</body>
+</html>
