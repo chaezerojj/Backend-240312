@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text"> cm =
+  <span></span>
+  <select>
+    <option value="10">mm</option>
+    <option value="0.01">m</option>
+    <option value="0.303701">inch</option>
+  </select>
+
+  <script>
+    /* cm단위를 여러 단위로 변환하는 프로그램 */
+    const select = document.querySelector("select");
+    const input = document.querySelector("input");
+    const span = document.querySelector("span");
+    let inputValue;
+    let optionValue = 10;
+
+    function printSpan(){
+      span.textContent = inputValue * optionValue;
+    }
+
+    select.addEventListener("change", (event) => {
+      const options = event.currentTarget.options;
+      const index = event.currentTarget.options.selectedIndex;
+
+      //옵션 항목의 value값을 추출
+      optionValue = options[index].value;
+      // console.log(optionValue);
+      optionValue = Number(optionValue);
+      printSpan();
+    })
+
+    input.addEventListener("keyup", (event) => {
+      inputValue = Number(event.currentTarget.value);
+      printSpan();
+    })
+    
+  </script>
+</body>
+
+</html>

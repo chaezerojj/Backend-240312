@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <textarea></textarea>
+  <h1></h1>
+  <script>
+    /* 키보드 이벤트 */
+    //   이벤트 / 설명
+    // - keydown / 키가 눌릴 때 실행됨. 
+    //           키보드를 꾹 누르고 있을 때도, 입력될 때도 실행됨
+    // - keyup / 키보드에서 키가 떨어질 때 실행됨
+    // - keypress / 키가 입력되었을 때 실행.
+    //             과거 아시아권 문자(한국어, 중국어, 일본어) 제대로 처리 못하는 문제 있었음
+    
+    /* 남은 글자 수 출력하기 */
+    const textarea = document.querySelector("textarea");
+    const h1 = document.querySelector("h1");
+
+    textarea.addEventListener("keypress", () => {
+      const length = textarea.value.length;
+      h1.textContent = `글자 수: ${length}`;
+      // console.log(length);
+    })
+  
+  </script>
+</body>
+</html>

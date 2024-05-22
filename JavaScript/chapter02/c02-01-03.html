@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>⚽</h1>
+
+  <script>
+    /* wasd로 움직이게 만들기 */
+    // w: 87, a: 65, s: 83, d: 68
+    
+    // 이모지 : window키 + .키 
+    
+    const ball = document.querySelector("h1");
+    ball.style.position = "absolute";
+    
+    // 이모지 이동하는 함수
+    let [x, y] = [0, 0]; 
+    const move = () => {
+      ball.style.top = `${x*10}px`;
+      ball.style.left = `${y*10}px`;
+    };
+
+    move(); // 초기 위치
+
+    
+    document.body.addEventListener("keydown", (e) => {
+      switch(e.keyCode) {
+        case 87 :
+          // 위쪽으로 움직이기
+          x -= 1;
+          break;
+        case 83:
+          // 아래쪽으로 움직이기
+          x += 1;
+          break;
+        case 65:
+          y -= 1;
+          // 왼쪽으로 움직이기
+          break;
+        case 68:
+          // 오른쪽으로 움직이기
+          y += 1;
+          break;
+      }
+      move();
+    })
+
+  </script>
+</body>
+</html>
