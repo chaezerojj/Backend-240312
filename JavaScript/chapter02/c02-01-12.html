@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="https://placehold.co/600x400" alt="">
+
+  <script>
+    /* 기본 이벤트 막기 */
+    
+    // 기본 이벤트?
+    // - 예를 들어, 마우스 오른쪽 버튼 클릭 -> 컨텍스트메뉴 출력
+    // - 어떤 이벤트가 발생했을 때 웹 브라우저가 기본적으로 처리해주는 것
+    // - 링크 클릭 시 이동, 버튼 눌렀을 시 이동 등이 해당됨
+    // - 기본이벤트 제거 > preventDefault() 메소드 사용
+    
+    /* 불펌 방지등을 구현 시 사용하는 코드 중,
+        이미지 오른쪽 버튼 클릭 막기 */
+
+    const imgs = document.querySelectorAll("img");
+
+    imgs.forEach((img) => {
+      img.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      })
+    })
+  </script>
+</body>
+</html>

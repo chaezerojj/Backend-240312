@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
+.nanum-gothic-coding-regular {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Nanum Gothic Coding", monospace;
+}
+
+.todo-wrapper {
+  width: 300px;
+  height: 700px;
+  border-radius: 20px;
+  background-color: gray;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: rgb(0, 0, 0);
+}
+
+.todo-header h1 {
+  font-size: 25px;
+}
+
+.todo-body {
+  padding: 15px;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+
+.todo-body button {
+  background-color: darkgray;
+  border: 0px solid;
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.todo-list {
+  padding: 15px;
+  width: 100%;
+  height: 550px;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  overflow: auto;
+  box-sizing: border-box;
+}
