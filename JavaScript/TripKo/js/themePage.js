@@ -1,11 +1,9 @@
-// themePage.js
-
-// 자동 슬라이더 - 3초에 한번씩 메인 이미지 자동으로 넘어감
-
 window.onload = function() {
   const sliderWrapper = document.querySelector('.slider-wrapper');
   const sliderInner = sliderWrapper.querySelector('.slider-inner');
   const slider = sliderInner.querySelectorAll('.slider');
+  const prevButton = sliderWrapper.querySelector('.prev');
+  const nextButton = sliderWrapper.querySelector('.next');
 
   // 슬라이드 너비와 개수 계산
   const slideWidth = slider[0].offsetWidth;
@@ -52,4 +50,14 @@ window.onload = function() {
 
   // 페이지 로드 시 자동 재생 시작
   startAutoPlay();
+
+  // 이전 버튼 클릭 시 이벤트 핸들러
+  prevButton.addEventListener('click', () => {
+    moveSlide('prev');
+  });
+
+  // 다음 버튼 클릭 시 이벤트 핸들러
+  nextButton.addEventListener('click', () => {
+    moveSlide('next');
+  });
 }
