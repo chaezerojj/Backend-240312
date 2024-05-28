@@ -151,14 +151,29 @@ a {
   vertical-align: top;
 }
 
+.slider-wrapper .arrow > a {
+  display: block;
+  width: 50px; /* 버튼의 크기 조정 */
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: rgba(0, 0, 0, 0.5); /* 버튼 배경색 조정 */
+  color: white; /* 버튼 텍스트 색상 조정 */
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s; /* 호버 및 포커스 시 애니메이션 추가 */
+}
+
+.slider-wrapper .arrow > a:hover,
+.slider-wrapper .arrow > a:focus {
+  background-color: rgba(0, 0, 0, 0.8); /* 호버 및 포커스 시 배경색 조정 */
+}
+
 .slider-wrapper .arrow > a.prev {
-  position: absolute;
-  left: -50px;
-  top: 100px;
+  left: 0; /* 이전 버튼 위치 조정 */
 }
 
 .slider-wrapper .arrow > a.next {
-  position: absolute;
-  left: -50px;
-  top: 100px;
+  right: 0; /* 다음 버튼 위치 조정 */
 }
