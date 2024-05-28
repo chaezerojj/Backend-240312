@@ -30,6 +30,7 @@ ul li {
 }
 
 a {
+  display: inline-block;
   text-decoration-line: none;
 }
 
@@ -109,7 +110,7 @@ a {
   margin: 0 auto;
 }
 
-.contents {
+.top-contents {
   /* width: 100rem; */
   justify-content: center;
 }
@@ -122,17 +123,20 @@ a {
 
 .main-text-wrapper {
   margin-top: -25rem;
-  margin-bottom: 2rem;
-  margin-left: 15rem;
+  text-align: left;
+}
+
+.main-text-wrapper div {
+  margin-left: 25rem;
 }
 
 .main-text {
-  font-size: 2rem;
+  font-size: 35px;
   font-weight: 700;
 }
 
-.main-sub-text{
-  font-size: 1rem;
+.main-sub-text {
+  font-size: 20px;
   margin-top: 0.5rem;
   margin-left: 0.3rem;
 }
@@ -142,17 +146,65 @@ a {
   flex-direction: row;
   justify-content: center;
   margin-top: 1rem;
+  margin-bottom: 5rem;
 }
 
-.seoul-contents {
+.city-list div {
+  padding: 0.7rem;
+  font-size: 0;
+}
+
+.city-link-inner {
+  width: 100px;
+  height: 100px;
+  border: 1px solid brown;
+}
+
+.city-list div a:hover {
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+
+/* ----------------------------------- */
+
+.city-wrapper div a:hover {
+  border: 5px solid blue;
+  border-radius: 15px;
+}
+
+.city-contents div {
+  margin: 1rem;
+  margin-bottom: 3rem;
+}
+
+.city-contents > div {
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
+.city-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 2rem;
 }
 
-.seoul-contents div {
-  padding: 0.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.con-left a, .con-center a, .con-right a{
+  border: 0.5px solid black;
+  border-radius: 17px;
+  display: flex;
+  width: 300px;
+  height: 250px;
+}
+
+.left-inner, .center-inner, .right-inner {
+  width: 300px;
+  height: 200px;
+  border: 1px solid red;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0.5rem;
+  font-weight: 500;
 }
