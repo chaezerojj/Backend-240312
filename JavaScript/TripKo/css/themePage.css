@@ -13,7 +13,7 @@
   font-style: normal;
 }
 
-.gmarkt-sans {
+.gmarket-sans {
   font-family: "GmarketSans"
 }
 
@@ -104,7 +104,7 @@ a {
   width: 16px;
 }
 
-/* main - theme */
+/* themePage contents */
 
 .container {
   padding: 0;
@@ -118,8 +118,8 @@ a {
 
 .background-color {
   width: 100%;
-  height: 40rem;
-  background-color: rgb(234, 211, 255);
+  height: 50rem;
+  background-color: rgb(187, 243, 253);
 }
 
 /* ========================================= */
@@ -127,11 +127,11 @@ a {
 /* slider */
 
 .top-contents {
-  margin-top: -25rem;
+  margin-top: -35rem;
 }
 
 .slider-wrapper {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
@@ -157,33 +157,118 @@ a {
 
 .slider-wrapper .arrow > a {
   display: block;
-  width: 50px; /* 버튼의 크기 조정 */
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  background-color: rgba(0, 0, 0, 0.5); /* 버튼 배경색 조정 */
-  color: white; /* 버튼 텍스트 색상 조정 */
+  width: 25px; /* 버튼의 크기 조정 */
+  height: 25px;
   text-decoration: none;
-  font-size: 24px;
-  font-weight: bold;
   transition: background-color 0.3s, transform 0.3s; /* 호버 및 포커스 시 애니메이션 추가 */
-}
-
-.slider-wrapper .arrow > a:hover,
-.slider-wrapper .arrow > a:focus {
-  background-color: rgba(0, 0, 0, 0.8); /* 호버 및 포커스 시 배경색 조정 */
 }
 
 .slider-wrapper .arrow > a.prev {
   position: absolute;
-  left: -10%;
+  left: -7%;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .slider-wrapper .arrow > a.next {
   position: absolute;
-  right: -10%;
+  right: -7%;
   top: 50%;
   transform: translateY(-50%);
 }
+
+.prev-img, .next-img {
+  width: 25px;
+}
+
+/* contents */
+
+.wrapper {
+  margin-top: 10rem;
+}
+.wrapper div {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* con-nav */
+.con-nav {
+  border: 1px solid red;
+  width: 900px;
+}
+
+.con-ul {
+  display: flex;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  width: 90%;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 1px 1px; 
+  border-radius: 30px;
+}
+
+.con-ul li {
+  width: 100px;
+  margin: 0 2rem;
+}
+
+li button {
+  font-family: "GmarketSans";
+  margin: 0 auto;
+  width: 120px;
+  padding: 0.5rem;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  border-radius: 25px;
+  border: 0px;
+}
+
+li button:hover {
+  font-weight: bolder;
+}
+
+/* con-nav 아래 div 태그 숨기기 */
+.beach, .mountain, .history, .activity {
+  display: none;
+}
+
+.con-box {
+  border: 1px solid black;
+  display: flex;
+  padding: 30px;
+  width: 800px;
+}
+
+.forest-con, .beach-con, .mountain-con, .history-con, .activity-con {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.forest-con-top, .forest-con-bottom,
+.beach-con-top, .beach-con-bottom,
+.mountain-con-top, .mountain-con-bottom,
+.history-con-top, .history-con-bottom,
+.activity-con-top, .activity-con-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forest-con-top > div,
+.forest-con-bottom > div,
+.beach-con-top > div,
+.beach-con-bottom > div,
+.mountain-con-top > div,
+.mountain-con-bottom > div,
+.history-con-top > div,
+.history-con-bottom > div,
+.activity-con-top > div,
+.activity-con-bottom > div {
+  flex: 1; 
+  /* 너비를 동일하게 */
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
