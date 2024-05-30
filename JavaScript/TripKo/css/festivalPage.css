@@ -33,6 +33,10 @@ a {
   text-decoration-line: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ! header */
 .header {
   position: fixed;
@@ -42,8 +46,8 @@ a {
   margin: 0;
   text-align: justify;
   color: black;
-  background-color: rgb(255, 255, 255, 0.7);
-
+  background-color: rgb(255, 255, 255, 0.9);
+  z-index: 2;
 }
 
 .header a:link,
@@ -129,7 +133,6 @@ a {
   margin-top: 180px;
 }
 
-
 .rosefestival-img {
   position: absolute;
   top: 100%;
@@ -179,7 +182,6 @@ a {
   border-radius: 30px;
 }
 
-
 .jazzfestival-img {
   position: absolute;
   top: 100%;
@@ -225,7 +227,7 @@ a {
   margin-top: 90px;
   background: url(../images/festival/changdeok.jpg) no-repeat;
   background-size: cover;
-  background-position: 0 -1000px;
+  background-position: 0 -1000px; /* 사진 위치 조정 */
 }
 
 .gung-text-wrapper {
@@ -248,8 +250,9 @@ a {
   width: 1200px;
   height: 500px;
   overflow: hidden;
-  white-space: nowrap;
   margin: 0 auto;
+  white-space: nowrap;
+  font-size: 0;
 }
 
 .slider {
@@ -258,8 +261,97 @@ a {
   vertical-align: top;
   display: inline-block;
   flex: none;
-  margin-right: 0;
+  margin: 0;
 }
+
 .slider:last-child {
-  margin-right: 0; /* 수정: 마지막 슬라이더의 오른쪽 마진 제거 */
+  margin-right: 0; /* 마지막 슬라이더의 오른쪽 마진 제거 */
+}
+
+/* ! wrapper / con-box */
+.wrapper {
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+}
+
+.wrapper div {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.con-box {
+  border: 0.5px solid rgb(235, 235, 235);
+  border-radius: 120px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.con-text-box {
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem;
+  padding-bottom: 4rem;
+}
+
+.con-title {
+  font-size: 40px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.con-sub-text {
+  font-size: 18px;
+  padding: 20px;
+  color: rgb(100, 100, 100);
+}
+
+.con-top, .con-middle, .con-bottom {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 770px;
+  display: flex;
+  flex-direction: row;
+}
+
+.con-top-left, .con-top-center, .con-top-right,
+.con-middle-left, .con-middle-center, .con-middle-right,
+.con-bottom-left, .con-bottom-center, .con-bottom-right {
+  width: 320px;
+  height: 550px;
+  padding: 20px;
+  /* border: 0.1px solid gray; */
+  border-radius: 30px;
+}
+
+.con-top > div:hover,
+.con-middle > div:hover,
+.con-bottom > div:hover {
+  box-shadow: 0 0 5px black;
+}
+
+.con-top div a img,
+.con-middle div a img,
+.con-bottom div a img{
+  width: 320px;
+  height: 450px;
+  padding-bottom: 0.5rem;
+}
+
+.text-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  /* border-top: 0.5px dashed rgb(197, 197, 197); */
+  padding: 10px;
+}
+
+.text-title {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.text-date {
+  font-size: 25px;
 }

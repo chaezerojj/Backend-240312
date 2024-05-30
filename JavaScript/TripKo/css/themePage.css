@@ -34,6 +34,10 @@ a {
   text-decoration-line: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ! header */
 
 .header {
@@ -44,7 +48,8 @@ a {
   margin: 0;
   text-align: justify;
   color: black;
-  background-color: rgb(255, 255, 255, 0.7);
+  background-color: rgb(255, 255, 255, 0.9);
+  z-index: 1;
 
 }
 
@@ -112,8 +117,11 @@ a {
 }
 
 .top-contents {
-  /* width: 100rem; */
+  margin-top: -35rem;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rem;
 }
 
 .background-color {
@@ -122,69 +130,80 @@ a {
   background-color: rgb(187, 243, 253);
 }
 
+.main-wrapper {
+  width: 100%;
+  display: flex;
+  width: 1100px;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.main-text {
+  padding: 20px;
+  padding-left: 25px;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.main-sub-text {
+  font-size: 18px;
+  padding-left: 25px;
+  font-weight: 400;
+}
+
 /* ========================================= */
 
 /* slider */
 
-.top-contents {
-  margin-top: -35rem;
-}
-
 .slider-wrapper {
-  /* border: 2px solid black; */
   width: 100%;
   max-width: 700px;
-  margin: 0 auto;
+  height: 400px;
+  margin: 0;
   position: relative;
-}
-
-.slider-wrapper > .slider-images {
   overflow: hidden;
+  white-space: nowrap;
+  font-size: 0;
 }
 
-.slider-wrapper > .slider-images .slider-inner{
-  position: relative;
-  transition: 0.5s;
-}
 
-.slider-wrapper > .slider-images .slider-inner div {
-  float: left;
-}
-
-.slider-wrapper > .slider-images img {
+.slider {
+  width: 700px;
+  height: 500px;
   vertical-align: top;
+  display: inline-block;
+  flex: none;
+  margin: 0;
 }
 
-.slider-wrapper .arrow > a {
-  display: block;
-  width: 25px; /* 버튼의 크기 조정 */
-  height: 25px;
-  text-decoration: none;
-  transition: background-color 0.3s, transform 0.3s; /* 호버 및 포커스 시 애니메이션 추가 */
+.slider:last-child {
+  margin-right: 0; /* 마지막 슬라이더의 오른쪽 마진 제거 */
 }
 
-.slider-wrapper .arrow > a.prev {
-  position: absolute;
-  left: -7%;
-  top: 50%;
-  transform: translateY(-50%);
+.theme-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: rgb(254, 235, 255);
+  z-index: 1;
 }
 
-.slider-wrapper .arrow > a.next {
-  position: absolute;
-  right: -7%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.prev-img, .next-img {
-  width: 25px;
+.theme-wrapper img {
+  object-fit: scale-down;
 }
 
 /* contents */
 
 .wrapper {
-  margin-top: 10rem;
+  margin-top: 250px;
+  margin-bottom: 15px;
 }
 .wrapper div {
   text-align: center;
@@ -193,8 +212,19 @@ a {
 
 /* con-nav */
 .con-nav {
-  border: 1px solid red;
+  padding: 20px;
   width: 900px;
+}
+
+.nav-text {
+  display: flex;
+}
+
+.nav-text span {
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 80px;
+  padding-bottom: 20px;
 }
 
 .con-ul {
@@ -204,7 +234,7 @@ a {
   width: 90%;
   justify-content: center;
   background-color: #ffffff;
-  box-shadow: 1px 1px 1px 1px; 
+  box-shadow: 0 0 2px rgb(200, 200, 200); 
   border-radius: 30px;
 }
 
@@ -223,10 +253,11 @@ li button {
   color: black;
   border-radius: 25px;
   border: 0px;
+  background-color: #ffffff;
 }
 
 li button:hover {
-  font-weight: bolder;
+  font-weight: 600;
 }
 
 /* con-nav 아래 div 태그 숨기기 */
@@ -235,7 +266,8 @@ li button:hover {
 }
 
 .con-box {
-  border: 1px solid black;
+  box-shadow: 0 0 2px rgb(200, 200, 200);
+  border-radius: 30px;
   display: flex;
   padding: 30px;
   width: 800px;
@@ -268,7 +300,17 @@ li button:hover {
 .activity-con-bottom > div {
   flex: 1; 
   /* 너비를 동일하게 */
-  padding: 10px;
-  margin-bottom: 5px;
+  padding: 20px;
+  margin-bottom: 15px;
 }
 
+.con-box img {
+  width: 350px;
+  height: 300px;
+  padding: 5px;
+}
+
+.con-title {
+  font-size: 20px;
+  font-weight: 600;
+}

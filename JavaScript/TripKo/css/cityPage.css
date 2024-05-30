@@ -34,6 +34,10 @@ a {
   text-decoration-line: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ! header */
 .header {
   position: fixed;
@@ -43,7 +47,7 @@ a {
   margin: 0;
   text-align: justify;
   color: black;
-  background-color: rgb(255, 255, 255, 0.7);
+  background-color: rgb(255, 255, 255, 0.9);
 
 }
 
@@ -123,11 +127,10 @@ a {
 
 .main-text-wrapper {
   margin-top: -35rem;
-  text-align: left;
 }
 
 .main-text-wrapper div {
-  margin-left: 25rem;
+  text-align: center;
 }
 
 .main-text {
@@ -145,26 +148,76 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 5rem;
 }
 
 .city-list div {
-  padding: 0.7rem;
-  font-size: 0;
+  margin: 7px;
 }
 
 .city-link-inner {
   width: 100px;
   height: 100px;
-  border: 1px solid brown;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 60px;
+  margin: 0;
+  overflow: hidden;
 }
 
 .city-list div a:hover {
-  border: 2px solid black;
-  border-radius: 15px;
+  box-shadow: 0 0 5px black;
+  border-radius: 60px;
 }
 
+.seoul-img {
+  width: 200%;
+  margin: 0;
+  transform: translate(-45%, -50%);
+}
+
+.incheon-img {
+  width: 440%;
+  margin: 0;
+  transform: translate(-17%, -12%);
+}
+
+.daejeon-img {
+  width: 140%;
+  transform: translate(-10%, -20%);
+}
+
+.daegu-img {
+  width: 230%;
+  transform: translate(-28%, -8%);
+}
+
+.gangwon-img {
+  width: 650%;
+  transform: translate(-11%, -23%);
+}
+
+.gyeonggi-img {
+  width: 260%;
+  transform: translate(-32%, -12%);
+}
+
+.busan-img {
+  width: 200%;
+  transform: translate(-38%, -20%);
+}
+
+.jeju-img {
+  width: 200%;
+  transform: translate(-26%, -10%);
+}
+
+.city-name {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+}
 
 /* ----------------------------------- */
 
@@ -173,13 +226,25 @@ a {
   border-radius: 15px;
 }
 
+.city-contents {
+  background-color: #ffffff;
+  width: 1300px;
+  margin: 0 auto;
+  box-shadow: 0 0 2px rgb(0, 0, 0, 0.4);
+  border-radius: 70px;
+  margin-top: 7rem;
+  padding-top: 7rem;
+  margin-bottom: 15rem;
+}
+
 .city-contents div {
   margin: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 30px;
 }
 
 .city-contents > div {
   padding-bottom: 2.5rem;
+  padding-top: 2rem;
   text-align: center;
 }
 
@@ -190,21 +255,36 @@ a {
 }
 
 .con-left a, .con-center a, .con-right a{
-  border: 0.5px solid black;
+  box-shadow: 0 0 5px black;
   border-radius: 17px;
   display: flex;
   width: 300px;
-  height: 250px;
+  height: 270px;
 }
 
 .left-inner, .center-inner, .right-inner {
   width: 300px;
-  height: 200px;
-  border: 1px solid red;
+  height: 270px;
+  margin: 0;
+  /* border: 1px solid red; */
+  overflow: hidden;
 }
 
 .title {
   font-size: 2rem;
-  margin: 0.5rem;
+  margin: 1.5rem;
   font-weight: 500;
+}
+
+.con-img {
+  width: 130%;
+  height: 200px;
+  overflow: hidden;
+  padding-top: 5px;
+  transform: translate(-10%, 0);
+}
+
+.place-name {
+  margin: 0;
+  font-size: 15px;
 }
