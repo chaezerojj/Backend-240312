@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/joinPage.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-wrapper">
+      <ul class="header-ul">
+        <li class="logo">
+          <a href="../main/main.html">TripKo</a>
+        </li>
+        <li>
+          <ul class="header-ul-left">
+            <li>
+              <a href="../main/main.html">홈</a>
+            </li>
+            <li>
+              <a href="../city/cityPage.html">지역</a>
+            </li>
+            <li>
+              <a href="../theme/themePage.html">테마</a>
+            </li>
+            <li>
+              <a href="../festival/festivalPage.html">축제</a>
+            </li>
+            <li>
+              <a href="../randomPick/randomPickPage.html">랜덤 Pick!</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="header-ul-right">
+            <li>
+              <!-- 검색 아이콘 -->
+              <img src="../../images/main/magnifying-glass.png" alt="검색">
+            </li>
+            <li>
+              <!-- 회원가입 아이콘 -->
+              <a href="../join/joinPage.html">
+                <img src="../../images/main/profile-user.png" alt="메뉴바">
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="join-wrapper">
+    <div class="join">
+      <div class="hello">👋 반갑습니다! 👋</div>
+      <div class="join-title">회원가입</div>
+      <!-- 아이디, 비밀번호, 이메일주소 전체-->
+      <form id="form">
+        <div class="id-password-wrapper">
+          아이디 | 비밀번호 | 이메일(선택) <br><br>
+          <!-- 아이디 전체 -->
+          <div class="input-wrapper">
+            <input type="text" class="" placeholder="아이디" name="id" id="id">
+          </div>
+          <!-- 비밀번호 전체-->
+          <div class="input-wrapper">
+            <input type="password" class="" placeholder="비밀번호" name="password" id="password">
+          </div>
+  
+          <!-- 이메일주소 전체-->
+          <div class="input-wrapper">
+            <input type="email" class="" placeholder="[선택] 이메일주소(비밀번호 찾기 등 본인 확인용)">
+          </div>
+        </div>
+      </form>
+  
+      <!-- 이름, 생년월일, 국가번호, 휴대전화번호 전체-->
+      <form id="form">
+        <div class="name-birth-wrapper">
+          이름 | 생년월일 | 휴대전화번호 <br><br>
+          <!-- 이름 전체 -->
+          <div class="input-wrapper">
+            <input type="text" class="" placeholder="이름" name="name" id="name">
+          </div>
+          <!-- 생년월일 8자리 전체-->
+          <div class="input-wrapper">
+            <input type="date" class="" placeholder="생년월일 8자리" name="birth" id="birth">
+          </div>
+          <br>
+          <!-- 국가번호 전체 -->
+          <div class="input-wrapper">
+            <select class="country-num" id="country-num">
+              <option>대한민국 +82</option>
+              <option>미국/캐나다 +1 </option>
+              <option>가나 +233</option>
+            </select>
+          </div>
+          <!-- 휴대전화번호 전체 -->
+          <div class="input-wrapper">
+            <input type="text" class="" placeholder="휴대전화번호" name="phone-number" id="phone-number">
+          </div>
+        </div>
+        
+        <div class="button-wrapper">
+          <button class="submit" type="submit">가입하기</button>
+        </div>
+      </form>
+
+    </div>
+  </div> <!-- join-wrapper -->
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="footer-wrapper">
+      <div class="footer-info-01">
+        <ul>
+          <li>개인정보처리방침</li>
+          <li>이용약관</li>
+          <li>저작권정책</li>
+          <li>찾아오시는 길</li>
+        </ul>
+      </div>
+      <div class="footer-info-02">
+        <ul>
+          <li>주소: 서울특별시 강남구 테헤란로 00</li>
+          <li>TEL: 02-0000-0000</li>
+          <li>사업자등록번호: 123-45-67890</li>
+        </ul>
+      </div>
+      <div class="footer-info-03">
+        <span>COPYRIGHT (C) TRIPKO. ALL RIGHTS RESERVED.</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

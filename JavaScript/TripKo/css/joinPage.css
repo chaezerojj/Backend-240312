@@ -111,74 +111,92 @@ a:visited {
   width: 16px;
 }
 
-/* ------------------------------------------ */
+/* ----------------------------------- */
 
 .container {
   padding: 0;
   margin: 0 auto;
 }
 
-.contents-wrapper {
-  width: 600px;
+.join-wrapper {
+  width: 800px;
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
 }
 
-.contents {
-  background-color:rgb(194, 238, 255, 0.5);
+.join {
+  margin: 0 auto;
   width: 100%;
   margin-top: 12rem;
+  box-shadow: 0 0 2px black;
   border-radius: 30px;
   padding-bottom: 10rem;
   margin-bottom: 10rem;
 }
 
-.text-wrapper {
+.hello {
+  font-size: 20px;
   margin: 3rem auto;
+  margin-top: 4.5rem;
 }
 
-.title-text {
-  font-size: 30px;
+.join-title {
+  font-size: 35px;
+  margin-bottom: 4rem;
   font-weight: 700;
-  padding: 1rem;
 }
 
-.explain-text {
-  font-size: 18px;
+form {
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.random-button {
-  background-color:rgb(194, 238, 255, 0.1);
+.input-wrapper {
+  width: 360px;
+  height: 45px;
+  border: 0.5px solid grey;
+  border-radius: 15px;
+  margin: 0.3rem auto;
+}
+
+input {
+  border-radius: 15px;
+  width: 350px;
+  height: 40px;
+  border: none;
+}
+
+.input-wrapper li {
+  list-style-type: none;
+  float: left;
+  padding-right: 15px;
+}
+
+.country-num {
+  border-radius: 15px;
+  width: 350px;
+  height: 40px;
   border: 0px;
-  font-size: 45px;
 }
 
-.random-button:hover {
-  transform: translateY(-2px);
+.button-wrapper {
+  margin: 2rem auto;
 }
 
-.random-city, .random-theme {
-  font-size: 40px;
+.submit {
+  padding: 0.8rem;
+  border-radius: 25px;
+  border: 0px;
+  box-shadow: 0 0 2px;
+  font-size: 15px;
   font-weight: 700;
-  padding: 2rem;
+  background-color: #fff;
 }
 
-.city-text, .theme-text {
-  display: none;
-  font-size: 25px;
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.5s forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+.submit:hover {
+  box-shadow: 0 0 5px;
 }
 
 
