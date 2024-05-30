@@ -31,10 +31,15 @@ ul li {
 
 a {
   text-decoration-line: none;
+  color: black;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+a:visited {
+  color: black;
 }
 
 /* ! header */
@@ -47,6 +52,7 @@ html {
   text-align: justify;
   color: black;
   background-color: rgb(255, 255, 255, 0.9);
+  z-index: 1000;
 }
 
 .header a:link, .header a:visited {
@@ -116,21 +122,67 @@ html {
   flex-direction: column;
 }
 
-.main-img {
+.main-img-container {
+  position: relative;
   width: 100%;
-  margin-bottom: 2rem;
+  height: 50rem;
+  overflow: hidden;
 }
 
-.main-img a img {
+.main-img {
+  position: absolute;
   width: 100%;
-  /* 페이지 조절에 따라 이미지도 따라서 조절됨 */
-  object-fit: cover;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
+
+.main-img img {
+  width: 100%;
+  object-fit: cover;
+  height: 50rem;
+}
+
+.main-text-wrapper {
+  position: absolute;
+  top: 25rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+  width: 600px;
+}
+
+.main-text {
+  font-size: 40px;
+}
+
+.main-sub-text {
+  font-size: 55px;
+  font-weight: 700;
+}
+
+.fade {
+  animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+.active {
+  opacity: 1 !important;
+}
+
+/* ---------------------------- */
 
 .contents {
   text-align: center;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
+  margin-top: 50rem;
 }
 
 .contents-wrapper {
@@ -140,10 +192,37 @@ html {
   margin-top: 2rem;
 }
 
-.contents-wrapper div {
-  padding: 1rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.contents-wrapper > div {
+  width: 400px;
+  height: 500px;
+  margin: 1.5rem;
+  box-shadow: 0 0 2px black;
+  border-radius: 30px;
+  position: relative;
+}
+
+.contents-wrapper > div > .page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  left: 0%;
+}
+
+.contents-wrapper > div:hover {
+  box-shadow: 0 0 5px;
+}
+
+.con-img {
+  width: 350px;
+  height: 250px;
+  object-fit: none;
+  border-radius: 10px;
+}
+
+.con-title {
+  margin: 2rem;
+  font-size: 32px;
 }
 
 /* sns */
@@ -153,10 +232,30 @@ html {
   justify-content: center;
 }
 
-.contents-sns div {
-  padding: 1rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.contents-sns > div {
+  margin: 1.5rem;
+  box-shadow: 0 0 2px black;
+  width: 400px;
+  height: 100px;
+  position: relative;
+}
+
+.sns-img {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  width: 50px;
+  height: 50px;
+}
+
+.sns-text {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 
