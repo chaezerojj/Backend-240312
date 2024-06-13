@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input, select {
+      width: 150px;
+      height: 35px;
+    }
+   div {
+    float: left;
+    padding: 10px;
+   }
+  </style>
+</head>
+
+<body>
+  <!-- 단위 선택 -->
+
+  <div>
+    <input type="text" class="first-input"><br>
+    <select class="select-one">
+      <option class="m">m</option>
+      <option class="km">km</option>
+      <option class="cm">cm</option>
+      <option class="mm">mm</option>
+    </select>
+  </div>
+
+  <div>
+    <p>=</p>
+  </div>
+
+  <div>
+    <input type="text" class="second-input"><br>
+    <!-- <h3 class="result"></h3> -->
+    <select class="select-two">
+      <option class="m">m</option>
+      <option class="km">km</option>
+      <option class="cm">cm</option>
+      <option class="mm">mm</option>
+    </select>
+  </div>
+
+
+  <script>
+    const firstInput = document.querySelector(".first-input");
+    const secondInput = document.querySelector(".second-input");
+    const selectOne = document.querySelector(".select-one");
+    const selectTwo = document.querySelector(".select-two");
+    const option = document.querySelector("option");
+
+    function convertMeterTo(type, m) {
+      if (type == 'm') {
+        return m;
+      }
+      else if (type == 'km') {
+        return m * 0.001;
+      }
+      else if (type == 'cm') {
+        return m * 100;
+      }
+      else if (type == 'mm') {
+        return m * 1000;
+      }
+      else {
+        return 'error';
+      }
+    };
+
+    function convertKmTo(type, km) {
+      if(type == 'm') {
+        return km * 1000;
+      }
+      else if (type == 'km') {
+        return km;
+      }
+      else if (type == 'cm') {
+        return km * 100000;
+      }
+      else if (type == 'mm') {
+        return (km + 'e') + '6';
+      }
+      else {
+        return 'error'
+      }
+    };
+
+    function convertCmTo(type, cm) {
+      if (type == 'm'){
+        return cm * 0.01
+      }
+      else if (type == 'km') {
+        return (cm + 'e') + '-5';
+      }
+      else if (type == 'cm') {
+        return cm;
+      }
+      else if (type == 'mm') {
+        return cm * 10;
+      }
+      else {
+        return 'error';
+      }
+    };
+
+    function convertMmTo(type, mm) {
+      if (type == 'm') {
+        return mm * 0.001
+      }
+      else if (type == 'km') {
+        return (mm + 'e') + '-6';
+      }
+      else if (type == 'cm') {
+        return mm * 0.1;
+      }
+      else if (type == 'mm') {
+        return mm;
+      }
+      else {
+        return 'error';
+      }
+    };
+
+    function changeValue() {
+      let inputFirst = selectOne.value;
+      let inputSecond = selectTwo.value;
+      let values = parseInt(firstInput.value);
+      let resultValue = "";
+
+      if (inputFirst == 'm') {
+        resultValue = convertMeterTo(inputSecond, values);
+      }
+      else if (inputFirst == 'km') {
+        resultValue = convertKmTo(inputSecond, values);
+      }
+      else if (inputFirst == 'cm') {
+        resultValue = convertCmTo(inputSecond, values);
+      }
+      else if (inputFirst == 'mm') {
+        resultValue = convertMmTo(inputSecond, values);
+      }
+      else {
+        resultValue = 'Error';
+      }
+      secondInput.value = resultValue;
+    };
+
+
+    firstInput.addEventListener("change", changeValue);
+    selectOne.addEventListener("change", changeValue);
+
+  </script>
+</body>
+
+</html>

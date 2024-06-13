@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>c03-02.html</title>
+</head>
+
+<body>
+  <!-- 
+    ! 링크
+
+    ? 링크(link) 만들기
+    - 링크 - 클릭하면 연결된 웹 주소로 즉시 이동하여
+             웹 사용을 더욱 편리하게 해주는 웹 문서만의 가장 큰 특징
+    - <a> 태그 - href 속성 으로 생성
+    <a href="링크할 주소" [속성="속성 값"]>텍스트</a>
+    <a href="링크할 주소" [속성="속성 값"]><img src="이미지 파일 경로"></a>
+    <a href="링크할 주소" [속성="속성 값"]><button></button></a>
+   -->
+  <h3>텍스트 링크 만들기</h3>
+  <a href="https://g-sa.koreaisacademy.com/">코리아 IT 아카데미</a>
+  <a href="https://www.naver.com">네이버</a>
+
+  <h3>이미지 링크 만들기</h3>
+  <a href="https://g-sa.koreaisacademy.com/">
+    <img src="./images/korea-it.jpg" alt="korea-it.jpg" width="200">
+  </a>
+  
+  <!-- 
+      ? <a> - target 속성
+      - 새 탭에서 링크 열기
+      * 속성값
+        _blank / 링크 내용이 새 창이나 새 탭에서 열림
+        _self / target 속성의 기본값으로 링크가 있는 화면에서 열림
+        _parent / 프레임 사용 시 링크 내용을 부모 프레임에서 표시
+        _top / 프레임 사용 시 프레임에서 벗어나 링크 내용을 전체 화면에 표시함
+      -->
+  <a href="https://www.naver.com" target="_blank"> 네이버
+  </a>
+  
+  
+  
+  </body>
+
+</html>

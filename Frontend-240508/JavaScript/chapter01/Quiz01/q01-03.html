@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="title"></div>
+
+  <ul class="ul-reservation">
+    <li class="li-call"></li>
+    <li class="li-text"></li>
+  </ul>
+  
+  <ul class="ul-price">
+    <li class="one"></li>
+    <li class="two"></li>
+    <li class="three"></li>
+    <li class="four"></li>
+  </ul>
+
+  <script>
+    const title = document.querySelector(".title")
+    title.textContent = '예약 방법 및 요금';
+    title.style.fontSize = "35px";
+    title.style.fontWeight = "bolder";
+    title.style.padding = "15px";
+
+    const ulR = document.querySelector(".ul-reservation");
+    const liCall = document.querySelector(".li-call");
+    const liText = document.querySelector(".li-text");
+    ulR.appendChild(liCall);
+    ulR.appendChild(liText);
+
+
+    liCall.textContent = '직접 전화';
+    liText.textContent = '문자 남기기';
+
+    liCall.style.color = "blue";
+    liCall.style.fontWeight = "bolder";
+  
+    liText.style.color = "blue";
+    liText.style.fontWeight = "bolder";
+
+    const ulP = document.querySelector(".ul-price");
+    const one = document.querySelector(".one");
+    const two = document.querySelector(".two");
+    const three = document.querySelector(".three");
+    const four = document.querySelector(".four");
+    ulP.appendChild(one);
+    ulP.appendChild(two);
+    ulP.appendChild(three);
+    ulP.appendChild(four);
+
+    one.textContent = '1인: 40,000원'
+    two.textContent = '2인: 60,000원'
+    three.textContent = '3인: 80,000원'
+    four.textContent = '4인: 100,000원'
+
+    one.style.color = "blue";
+    one.style.fontWeight = "bolder"
+
+    two.style.color = "blue";
+    two.style.fontWeight = "bolder";
+
+    three.style.color = "blue";
+    three.style.fontWeight = "bolder";
+
+    four.style.color = "blue";
+    four.style.fontWeight = "bolder";
+
+
+
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+/* main.css */
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 100 to 900 */
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+.noto-sans-kr {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: 100~900; */
+  font-style: normal;
+}
+
+.gmarkt-sans {
+  font-family: "GmarketSans"
+}
+
+/* =================================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration-line: none;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a:visited {
+  color: black;
+}
+
+/* ! header */
+.header {
+  position: fixed;
+  width: 100%;
+  height: 6rem;
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+  color: black;
+  background-color: rgb(255, 255, 255, 0.9);
+  z-index: 1000;
+}
+
+.header a:link, .header a:visited {
+  color: black;
+}
+
+.header-wrapper {
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.header-ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header-ul .logo {
+  display: flex;
+  margin: 1.5rem;
+  margin-left: 2rem;
+  font-family: "GmarketSans";
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.header-ul-left {
+  display: flex;
+  align-items: flex-start;
+  font-weight: 500;
+}
+
+.header-ul-left li {
+  width: 80px;
+  margin: 1.5rem;
+}
+
+.header-ul-left li a:hover {
+  font-weight: 800;
+}
+
+.header-ul-right {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 5rem;
+}
+
+.header-ul-right li {
+  margin: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.header-ul-right li img {
+  width: 16px;
+}
+
+/* ! main (contents) */
+.main {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-img-container {
+  position: relative;
+  width: 100%;
+  height: 50rem;
+  overflow: hidden;
+}
+
+.main-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.main-img img {
+  width: 100%;
+  object-fit: cover;
+  height: 50rem;
+}
+
+.main-text-wrapper {
+  position: absolute;
+  top: 25rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+  width: 600px;
+}
+
+.main-text {
+  font-size: 40px;
+}
+
+.main-sub-text {
+  font-size: 55px;
+  font-weight: 700;
+}
+
+.fade {
+  animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+.active {
+  opacity: 1 !important;
+}
+
+/* ---------------------------- */
+
+.contents {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 10rem;
+  margin-top: 50rem;
+}
+
+.contents-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.contents-wrapper > div {
+  width: 400px;
+  height: 500px;
+  margin: 1.5rem;
+  box-shadow: 0 0 2px black;
+  border-radius: 30px;
+  position: relative;
+}
+
+.contents-wrapper > div > .page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  left: 0%;
+}
+
+.contents-wrapper > div:hover {
+  box-shadow: 0 0 5px;
+}
+
+.con-img {
+  width: 350px;
+  height: 250px;
+  object-fit: none;
+  border-radius: 10px;
+}
+
+.con-title {
+  margin: 2rem;
+  font-size: 32px;
+}
+
+/* sns */
+.contents-sns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contents-sns > div {
+  margin: 1.5rem;
+  box-shadow: 0 0 2px black;
+  width: 400px;
+  height: 100px;
+  position: relative;
+}
+
+.sns-img {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  width: 50px;
+  height: 50px;
+}
+
+.sns-text {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+/* ! footer */
+.footer {
+  width: 100%;
+  height: 250px;
+  bottom: 0px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-info-01 {
+  display: inline-block;
+}
+
+.footer-info-01 ul li {
+  float: left;
+  margin: 5px 40px;
+  padding: 5px;
+}
+
+.footer-info-02 {
+  display: inline-block;
+}
+
+.footer-info-02 ul li {
+  float: left;
+  margin: 0px 12px;
+  padding: 5px;
+}
+
+.footer-info-03 {
+  display: inline-block;
+}
+
+.footer-info-03 span{
+  float: left;
+  margin-top: 15px;
+}

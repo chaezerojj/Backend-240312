@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index.html</title>
+</head>
+
+<body>
+  <!-- 
+    ! 링크
+
+    ? 내 페이지 링크 걸기
+   -->
+
+  <h1>Index - Frontend</h1>
+  <ul>
+    <li>
+      <!-- htmlPage.html로 이동 -->
+      <a href="pages/htmlPage.html">Html page</a>
+    </li>
+    <li>
+      <!-- cssPage.html로 이동 -->
+      <a href="pages/cssPage.html">CSS page</a>
+    </li>
+    <li>
+      <!-- javascriptPage.html로 이동 -->
+      <a href="pages/javascriptPage.html">JavaScript page</a>
+    </li>
+  </ul>
+
+  <div id="div1">
+    <!-- div -->
+  </div>
+  <button id="btn1">Html Page</button>
+  <button id="btn2">CSS Page</button>
+  <button id="btn3">JavaScript Page</button>
+
+  <script>
+    const btn1 = document.querySelector("#btn1");
+    const btn2 = document.querySelector("#btn2");
+    const btn3 = document.querySelector("#btn3");
+    btn1.addEventListener("click", function () {
+      div1.innerHTML = "<h1> html page </h1>"
+    })
+    btn2.addEventListener("click", function () {
+      div1.innerHTML = "<h1> css page </h1>"
+    })
+    btn3.addEventListener("click", function () {
+      div1.innerHTML = "<h1> JavaScript page </h1>"
+    })
+
+    // SPA - single page application (한 페이지로 웹사이트 구성)
+  </script>
+
+
+
+
+</body>
+
+</html>

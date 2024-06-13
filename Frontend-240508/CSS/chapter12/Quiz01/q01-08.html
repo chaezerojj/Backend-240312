@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    li {
+      list-style-type: square;
+      padding: 10px;
+    }
+
+    a{
+      text-decoration-line: none;
+    }
+
+    a[href $="hwp"]{
+      background: url(images/hwp_icon.gif) no-repeat right;
+      padding-right: 30px;
+    }
+
+    a[href $="xls"]{
+      background: url(images/excel_icon.gif) no-repeat right;
+      padding-right: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h3>회사 소개 파일 다운 받기</h3>
+  <ul>
+    <li><a href="intro.hwp" id="hwp">hwp 파일</a></li>
+    <li><a href="intro.xls" id="xls">xls 파일</a></li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .d1class {
+      border: 1px solid black;
+      width: 400px;
+      height: 300px;
+      background-image: url(images/20191229153530528.jpg);
+      background-repeat: no-repeat;
+    }
+    
+    #d1 {
+      background-size: auto;
+    }
+    #d2 {
+      background-size: 400px 200px;
+    }
+
+    /* 백분율 */
+    #d3 {
+      background-size: 50%;
+    }
+
+    /* contain */
+    #d4 {
+      background-size: contain;
+    }
+
+    /* cover */
+    #d5 {
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    ! CSS - 색상과 배경을 위한 스타일
+
+    ! 배경 색과 배경 이미지
+
+    ? background-size 속성 - 배경 이미지 크기 조절하기
+    * 속성 값 / 설명
+    - auto / 원래 배경 이미지 크기만큼 표시됨
+    - contain / 요소 안에 배경 이미지가 다 들어오도록 이미지를 확대, 축소
+    - cover / 배경 이미지로 요소를 모두 덮도록 이미지를 확대, 축소
+    - <크기 값> / 너비 값과 높이 값을 지정. 
+      너비값만 지정할 경우, 원래 배경 이미지 크기를 기준으로 
+      축소,확대 비율을 자동으로 계산해 높이값 지정
+    - <백분율> / 배경 이미지가 들어갈 요소의 크기를 기준으로 백분율 값을 지정하고
+      그 크기에도 맞도록 배경 이미지를 확대하거나 축소함
+      
+   -->
+  <div id="d2" class="d1class">  
+  </div>
+
+  <div id="d2" class="d1class">
+  </div>
+
+  <div id="d3" class="d1class">
+  </div>
+
+  <div id="d4" class="d1class">
+  </div>
+
+  <div id="d5" class="d1class">
+  </div>
+</body>
+
+</html>

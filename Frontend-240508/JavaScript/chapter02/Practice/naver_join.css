@@ -1,0 +1,33 @@
+form {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.input-wrapper {
+  width: 360px;
+  height: 45px;
+  border: 0.5px solid grey;
+}
+
+input {
+  width: 350px;
+  height: 40px;
+  border: none;
+}
+
+.input-wrapper li {
+  list-style-type: none;
+  float: left;
+  padding-right: 15px;
+}
+
+.country-num {
+  width: 350px;
+  height: 40px;
+}
+
+.naver-logo a img{
+  width: 90px;
+  margin: 0 auto;
+  padding: 20px;
+}

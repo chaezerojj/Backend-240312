@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/c01-01.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+    ! 문서 객체 조작하기
+    : html 요소들을 조작한다는 의미
+    - html 페이지에 있는 태그 등을 html언어에서는 요소라고 부르지만,
+    javascript에서는 이를 문서 객체라고 부름
+    - html 요소들을 js에서 사용하기 편한 객체 형태로 줌
+    >> 문서 객체 모델(DOM, Document Object Model)
+    
+    ? DOMContentLoaded 이벤트
+    - head 안에서 자바스크립트 사용 시 DOMContentLoaded 이벤트 사용
+  -->
+  <h1 id="h101"> Hello World!</h1>
+  <h1 id="h102"> Hello World!</h1>
+  <h1 id="h103"> Hello World!</h1>
+
+  <!-- 
+    * script 태그 
+    >> head 태그 내부에 배치 시 body 태그에 있는
+       문서 객체에 접근 불가
+    1. 모든 요소가 먼저 로드되는 body태그 
+      가장 아래부분에 script 태그 사용
+    2. DOMContentLoaded 이벤트는 웹 브라우저가 문서 객체를
+       모두 읽고 나서 실행하는 이벤트임
+       해당 이벤트 내 js를 작성함
+   -->
+
+  <script>
+    const h101 = document.querySelector("#h101");
+    h101.textContent = "Hello JavaScript!";
+
+    const h102 = document.querySelector("#h102");
+    h102.textContent = "Hello DOM!";
+
+    const h103 = document.querySelector("#h103");
+    h103.textContent = "Hello Node.js!";
+  </script>
+</body>
+
+</html>

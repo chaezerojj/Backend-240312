@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #first {
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+    #second {
+      border: 1px solid black;
+    }
+  </style>
+
+</head>
+<body>
+  
+  <div id="first">
+    <h1>첫 번째 div 태그 내부</h1>
+  </div>
+
+  <div id="second">
+    <h1>두 번째 div 태그 내부</h1>
+  </div>
+
+  <h1 id="remove-text">제거 대상 문서 객체</h1>
+
+  <script>
+    /*
+      문서 객체 이동하기
+
+      - appendChild()메소드로 문서 객체를 이동할 때도 사용 가능
+      - 문서 객체를 다른 문서 객체에 추가하면 문서 객체 이동됨
+    */ 
+
+    const divA = document.querySelector("#first");
+    const divB = document.querySelector("#second");
+    const h1 = document.createElement("h1");
+
+    h1.textContent = '이동하는 h1 태그';
+
+    const toFirst = () => {
+      divA.appendChild(h1)
+      setTimeout(toSecond, 1000)
+    }
+    const toSecond = () => {
+      divB.appendChild(h1)
+      setTimeout(toFirst, 1000)
+    }
+    toFirst();
+    toSecond();
+    
+    /*
+      문서 객체 제거하기
+      - 기본형
+        부모객체.removeChild(자식객체)
+    */ 
+    const removeText = document.querySelector("#remove-text");
+    setTimeout(() => {
+      // document.body.removeChild(removeText);
+      removeText.parentNode.removeChild(removeText);
+    }, 3000);
+
+    /*
+      자신의 부모 객체를 선택하는 속성
+      : parentNode
+      - 기본형
+        문서객체.parentNode.removeChild(문서객체)
+    */
+  </script>
+</body>
+</html>

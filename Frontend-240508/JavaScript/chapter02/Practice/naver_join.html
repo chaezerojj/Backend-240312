@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="naver_join.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- 네이버 로고 -->
+  <div class="naver-logo">
+    <a href="https://www.naver.com">
+      <img src="./images/naver_logo.png" alt="네이버 로고">
+    </a>
+  </div>
+
+  <div class="join-wrapper">
+
+    <!-- 아이디, 비밀번호, 이메일주소 전체-->
+    <form id="form">
+      <div class="id-password-wrapper">
+        <!-- 아이디 전체 -->
+        <div class="input-wrapper">
+          <input type="text" class="" placeholder="아이디" name="id" id="id">
+        </div>
+        <!-- 비밀번호 전체-->
+        <div class="input-wrapper">
+          <input type="password" class="" placeholder="비밀번호" name="password" id="password">
+        </div>
+
+        <!-- 이메일주소 전체-->
+        <div class="input-wrapper">
+          <input type="email" class="" placeholder="[선택] 이메일주소(비밀번호 찾기 등 본인 확인용)">
+        </div>
+      </div>
+    </form>
+
+    <!-- 이름, 생년월일, 성별, 국가번호, 휴대전화번호 전체-->
+    <form id="form">
+      <div class="name-birth-wrapper">
+        <!-- 이름 전체 -->
+        <div class="input-wrapper">
+          <input type="text" class="" placeholder="이름" name="name" id="name">
+        </div>
+        <!-- 생년월일 8자리 전체-->
+        <div class="input-wrapper">
+          <input type="date" class="" placeholder="생년월일 8자리" name="birth" id="birth">
+        </div>
+        <!-- 성별 전체 -->
+        <div class="input-wrapper">
+          <form>
+            <ul>
+              <li>남자</li>
+              <li>여자</li>
+              <li>선택 안함</li>
+            </ul>
+          </form>
+        </div>
+        <br>
+        <!-- 국가번호 전체 -->
+        <div class="input-wrapper">
+          <select class="country-num" id="country-num">
+            <option>대한민국 +82</option>
+            <option>미국/캐나다 +1 </option>
+            <option>가나 +233</option>
+          </select>
+        </div>
+        <!-- 휴대전화번호 전체 -->
+        <div class="input-wrapper">
+          <input type="text" class="" placeholder="휴대전화번호" name="phone-number" id="phone-number">
+        </div>
+      </div>
+    </form>
+  </div> <!-- join-wrapper -->
+  
+  
+  <script src="naver_join.js"></script>
+</body>
+
+</html>

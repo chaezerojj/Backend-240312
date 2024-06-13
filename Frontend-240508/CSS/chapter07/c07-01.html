@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>c07-01.html</title>
+  <style>
+    body {
+      background-color: rgb(227, 252, 225);
+    }
+
+    #div01 {
+      border: 1px solid black;
+      background-color: white;
+    }
+
+    .d2 {
+      /* 너비 300px, 테두리 3px짜리 점선, 패딩 30px */
+      width: 300px;
+      border: 3px dotted green;
+      padding: 30px;
+      background-color: rgb(90, 180, 160);
+    }
+
+    #div03 {
+      border: 3px dotted black;
+      background-color: aquamarine;
+      background-clip: padding-box;
+    }
+
+    #div04 {
+      border: 3px dotted black;
+      background-color: antiquewhite;
+      background-clip: content-box;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    ! CSS - 색상과 배경을 위한 스타일
+
+    ! 배경 색과 배경 이미지
+    ? background-color 속성 - 배경 색 지정하기
+
+    ? <div> 태그 
+    - 아무런 효과는 없지만 블록 형태로 감싸주는 태그
+   -->
+
+  <div id="div01">
+    <h1>Frontend Skills</h1>
+    <p>HTML</p>
+    <p>CSS</p>
+    <p>JavaScript</p>
+  </div>
+
+  <!-- 
+    * 배경 색 스타일과 상속
+    - 예외적으로 background-color값은 상속되지 않음
+    - 기본적으로 모든 웹 문서 요소의 배경이 투명하기 때문에 
+      부모의 색으로 지정한 문서 배경이 그대로 비치는 것일 뿐임
+    -->
+  <div class="d2" id="div02">
+    <h2>background-clip 속성 - 배경 적용 범위 조절하기</h2>
+    <p>border-box / 박스 모델의 가장 외곽인 테두리(border)까지 적용</p>
+    <p>padding-box / 박스 모델에서 테두리를 밴 패딩(padding)범위까지 적용</p>
+    <p>content-box / 박스 모델에서 내용 부분에만 적용</p>
+  </div>
+
+  <!-- 
+    ? border-box
+    - 테두리 부분까지 배경 색이 채워짐 (기본값)
+   -->
+
+  <!-- 
+    ? padding-box
+    - 패딩 부분까지 배경 색이 채워짐
+    -->
+  <div id="div03">
+    <h1>Frontend Skills</h1>
+    <p>HTML</p>
+    <p>CSS</p>
+    <p>JavaScript</p>
+  </div>
+
+  <!-- 
+    ? content-box
+    - 콘텐츠 부분만 배경이 채워짐
+   -->
+   <div id="div04">
+    <h1>Frontend Skills</h1>
+    <p>HTML</p>
+    <p>CSS</p>
+    <p>JavaScript</p>
+  </div>
+
+  
+</body>
+
+</html>

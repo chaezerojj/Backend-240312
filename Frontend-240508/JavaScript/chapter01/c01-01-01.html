@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>c01-01-01.html</title>
+  <script>
+    /* 
+    js - DOMContentLoaded 이벤트
+    이벤트 = 사건
+    : 모든 변화가 일어나는 것.
+    * 코드 디벨롭 패턴 (Code Develope Pattern)
+    - 좋은 코드는 유지보수성과 확장성이 좋아야 함
+    - >> 응집력을 높이고 결합도를 낮춤
+    - 23가지 코드 디자인 패턴
+    - 문서가 모두 로드된 후 이벤트가 발생했을 때 코드를 실행하겠다 = 옵저버 패턴
+    */
+
+    // 모든 문서가 로드된 후 이벤트 실행
+    // addEventListener()
+    // - 첫 번째 인자 - 이벤트 이름
+    // - 두 번째 인자 - 콜백 함수
+    document.addEventListener("DOMContentLoaded", () => {
+      const h103 = document.querySelector("#h103")
+      h103.textContent = "Hello Node.js!"
+    });
+  </script>
+</head>
+
+<body>
+  <h1 id="h103">Hello World!</h1>
+
+
+</body>
+
+</html>

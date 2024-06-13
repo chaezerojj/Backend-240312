@@ -1,0 +1,369 @@
+/* themePage.css */
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 100 to 900 */
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+.noto-sans-kr {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: 100~900; */
+  font-style: normal;
+}
+
+.gmarket-sans {
+  font-family: "GmarketSans"
+}
+
+/* css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration-line: none;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a:visited {
+  color: black;
+}
+
+/* ! header */
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 6rem;
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+  color: black;
+  background-color: rgb(255, 255, 255, 0.9);
+  z-index: 1;
+
+}
+
+.header a:link, .header a:visited {
+  color: black;
+}
+
+.header-wrapper {
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.header-ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header-ul .logo {
+  display: flex;
+  margin: 1.5rem;
+  margin-left: 2rem;
+  font-family: "GmarketSans";
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.header-ul-left {
+  display: flex;
+  align-items: flex-start;
+  font-weight: 500;
+}
+
+.header-ul-left li {
+  width: 80px;
+  margin: 1.5rem;
+}
+
+.header-ul-left li a:hover {
+  font-weight: 800;
+}
+
+.header-ul-right {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 5rem;
+}
+
+.header-ul-right li {
+  margin: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.header-ul-right li img {
+  width: 16px;
+}
+
+/* themePage contents */
+
+.container {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.top-contents {
+  margin-top: -35rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rem;
+}
+
+.background-color {
+  width: 100%;
+  height: 50rem;
+  background-color: rgb(187, 243, 253);
+}
+
+.main-wrapper {
+  width: 100%;
+  display: flex;
+  width: 1100px;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.main-text {
+  padding: 20px;
+  padding-left: 25px;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.main-sub-text {
+  font-size: 18px;
+  padding-left: 25px;
+  font-weight: 400;
+}
+
+/* ========================================= */
+
+/* slider */
+
+.slider-wrapper {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+
+.slider {
+  width: 700px;
+  height: 500px;
+  vertical-align: top;
+  display: inline-block;
+  flex: none;
+  margin: 0;
+}
+
+.slider:last-child {
+  margin-right: 0; /* 마지막 슬라이더의 오른쪽 마진 제거 */
+}
+
+.theme-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: rgb(254, 235, 255);
+  z-index: 1;
+}
+
+.theme-wrapper img {
+  object-fit: scale-down;
+}
+
+/* contents */
+
+.wrapper {
+  margin-top: 250px;
+  margin-bottom: 15px;
+}
+.wrapper div {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* con-nav */
+.con-nav {
+  padding: 20px;
+  width: 900px;
+}
+
+.nav-text {
+  display: flex;
+}
+
+.nav-text span {
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 80px;
+  padding-bottom: 20px;
+}
+
+.con-ul {
+  display: flex;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  width: 90%;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0 0 2px rgb(200, 200, 200); 
+  border-radius: 30px;
+}
+
+.con-ul li {
+  width: 100px;
+  margin: 0 2rem;
+}
+
+li button {
+  font-family: "GmarketSans";
+  margin: 0 auto;
+  width: 120px;
+  padding: 0.5rem;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  border-radius: 25px;
+  border: 0px;
+  background-color: #ffffff;
+}
+
+li button:hover {
+  font-weight: 600;
+}
+
+/* con-nav 아래 div 태그 숨기기 */
+.beach, .mountain, .history, .activity {
+  display: none;
+}
+
+.con-box {
+  box-shadow: 0 0 2px rgb(200, 200, 200);
+  border-radius: 30px;
+  display: flex;
+  padding: 30px;
+  width: 800px;
+}
+
+.forest-con, .beach-con, .mountain-con, .history-con, .activity-con {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.forest-con-top, .forest-con-bottom,
+.beach-con-top, .beach-con-bottom,
+.mountain-con-top, .mountain-con-bottom,
+.history-con-top, .history-con-bottom,
+.activity-con-top, .activity-con-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forest-con-top > div,
+.forest-con-bottom > div,
+.beach-con-top > div,
+.beach-con-bottom > div,
+.mountain-con-top > div,
+.mountain-con-bottom > div,
+.history-con-top > div,
+.history-con-bottom > div,
+.activity-con-top > div,
+.activity-con-bottom > div {
+  flex: 1; 
+  /* 너비를 동일하게 */
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.con-box img {
+  width: 350px;
+  height: 300px;
+  padding: 5px;
+}
+
+.con-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ! footer */
+.footer {
+  width: 100%;
+  height: 250px;
+  bottom: 0px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-info-01 {
+  display: inline-block;
+}
+
+.footer-info-01 ul li {
+  float: left;
+  margin: 5px 40px;
+  padding: 5px;
+}
+
+.footer-info-02 {
+  display: inline-block;
+}
+
+.footer-info-02 ul li {
+  float: left;
+  margin: 0px 12px;
+  padding: 5px;
+}
+
+.footer-info-03 {
+  display: inline-block;
+}
+
+.footer-info-03 span{
+  float: left;
+  margin-top: 15px;
+}

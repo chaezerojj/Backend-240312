@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1>여름방학 특강 신청</h1>
+    <form>
+      <fieldset style="width: 500px;">
+        <legend><strong>수강과목</strong></legend>
+        <div style="margin-left: 30px;">
+          <label style="margin-left: 20px; color: green;">
+            <strong>영어회화(초급)</strong>
+          </label>
+          <input style="margin-left: 10px; text-align: left;" 
+          type="text" value="오전 9:00 ~ 11:00" readonly> 
+        </div>
+      </fieldset>
+
+      <fieldset style="width: 500px;">
+        <legend><strong>신청자</strong></legend>
+        <div style="margin-left: 30px;">
+          <div>
+            <label style="margin-left: 20px; color: green;">
+              <strong>이름</strong>
+            </label>
+            <input 
+            style="margin-left: 10px; text-align: left;" 
+            type="text"> 
+          </div>
+          <div>
+            <label style="margin-left: 20px; color: green;">
+              <strong>학번</strong>
+            </label>
+            <input 
+            style="margin-left: 10px; text-align: left;" 
+            type="text" placeholder="하이픈없이 입력"> 
+          </div>
+          <div>
+            <label style="margin-left: 20px; color: green;">
+              <strong>학과</strong>
+            </label>
+            <select name="major" style="margin-left: 10px; text-align: left;">
+              <option>컴퓨터공학과</option>
+              <option>기계공학과</option>
+              <option>건축학과</option>
+              <option>물리학과</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><strong>교재 주문</strong></legend>
+        <div style="margin-left: 30px;">
+          <div>
+            <label style="margin-left: 20px; color: green;">
+              <strong>교재</strong>
+            </label>
+            <input 
+            style="margin-left: 10px; text-align: left;" 
+            type="number"> 
+          </div>
+          <div>
+            <label style="margin-left: 20px; color: green;">
+              <strong>워크시트</strong>
+            </label>
+            <input 
+            style="margin-left: 10px; text-align: left;" 
+            type="number"> 
+          </div>
+          <div>
+            <label style="margin-left: 20px; color: green;">
+              <strong>단체주문</strong>
+            </label>
+            <input type="number" min="10" max="100" step="10"
+              style="margin-left: 10px; text-align: left;">
+          </div>
+        </div>
+      </fieldset>
+      <br>
+      <fieldset>
+        <input type="submit" value="신청하기">
+        <input type="reset" value="다시쓰기">
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

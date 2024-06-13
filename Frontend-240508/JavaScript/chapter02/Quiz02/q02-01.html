@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .content-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      text-align: center;
+      flex-direction: column;
+    }
+    #add-button {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- todolist 만들기 복습 -->
+
+  <div class="content-wrapper">
+    <h1>✔ 할일 목록</h1>
+    <input id="todo">
+    <button id="add-button">추가</button>
+    <div id="todo-list"></div>
+  </div>
+
+  <script>
+    // 할일 목록 만들기
+
+    // 문서 객체 가져오기
+    const input = document.querySelector("#todo");
+    const todoList = document.querySelector("#todo-list");
+    const addButton = document.querySelector("#add-button");
+    let keyCount = 0;
+
+    // 할 일 추가해주는 함수
+    function addTodo() {
+      // 공백 입력 체크 - input창에 할일이 입력되지 않으면 alert 알림
+      if (input.value.trim().length <= 0) {
+        alert("할 일을 입력해주세요.");
+        return;
+      }
+
+      // 할일 객체 생성
+      const item = document.createElement("div"); // 할일 목록 한줄 전체 감싸는 div
+      const checkbox = document.createElement("input"); // 할일 입력창
+      const text = document.createElement("span"); // 입력된 할일 text
+      const button = document.createElement("button"); // 입력된 할일 삭제하는 버튼
+
+      // 할 일 객체에 속성 추가
+      checkbox.type = "checkbox"; // 체크박스 타입
+      text.textContent = input.value; // text의 내용은 input에 입력된 값들로 저장됨
+      input.value = ""; // input값 초기화 설정
+      button.textContent = "삭제" // 삭제 버튼
+      let itemKey = keyCount++; // itemKey가 들어오면 keyCount가 증가
+      item.setAttribute("data-key", itemKey);
+      // setAttribute(name, value);
+      // itemKey 데이터 속성을 data-key라는 이름으로 설정
+
+      // item에 checkbox, text, button 자식요소 상속
+      item.appendChild(checkbox);
+      item.appendChild(text);
+      item.appendChild(button);
+
+      // todoList에 item 상속
+      todoList.appendChild(item);
+
+      // 체크박스 표시되면 취소선 추가하기
+      checkbox.addEventListener("change", (e) => {
+        text.style.textDecoration = 
+              event.currentTarget.checked ? "line-through" : "none";
+      })
+
+      // 삭제 버튼 클릭 시 할일 삭제됨
+      button.addEventListener("click", ()  => {
+        removeTodo(itemKey);
+      })  
+
+      // css
+      item.style.marginTop = "7px";
+      text.style.padding = "5px";
+
+    }
+
+    // 할일 제거 함수
+    function removeTodo(key) {
+      const removeItem = document.querySelector(`[data-key="${key}"]`)
+      if (removeItem) {
+        todoList.removeChild(removeItem);
+      }
+    }
+
+    addButton.addEventListener("click", addTodo);
+  </script>
+</body>
+
+</html>

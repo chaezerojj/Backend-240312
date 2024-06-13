@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text">
+  <p></p>
+
+  <script>
+    /* 이메일 형식 확인하기 */
+    const input = document.querySelector("input");
+    const p = document.querySelector("p");
+
+    // 이메일 형식 확인 함수
+    // 골뱅이 포함 && 골뱅이 뒤 점이 있는지 확인
+
+    const isEmail = (value) => {
+      return (value.indexOf("@") > 1) 
+            && (value.split("@")[1].indexOf('.') > 1);
+    }
+
+    input.addEventListener("keyup", (event) => {
+      const value = event.currentTarget.value;
+      if(isEmail(value)) {
+        p.style.color = "green";
+        p.textContent = `이메일 형식입니다 : ${value}`;
+      } else {
+        p.style.color = "red";
+        p.textContent = `이메일 형식이 아닙니다 : ${value}`;
+      }
+    })
+
+    /* 유효성 검사 */
+    // : 정한 규칙에 맞는 형식을 입력했는지 검사
+    // - 정규표현식을 사용하여 유효성 검사
+    
+  </script>
+</body>
+</html>

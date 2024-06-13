@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h1 id="goodbye">Goodbye</h1>
+  <h1>Hot Reloading</h1>
+
+  <script>
+   // 자바스크립트의 특징
+   // 1. 페이지 리로드(새로고침) 없이 html 요소 변경 가능
+
+    const goodbye = document.querySelector("#goodbye");
+    setTimeout(() => {
+      goodbye.textContent = 'Hello!';
+    }, 2000)
+
+    // 핫 리로딩 (hot-reloading)
+    // : 서버프로그램이 문서에 변경점을 감지하여 자동으로 페이지 새로고침을 해줌
+  </script>
+</body>
+</html>

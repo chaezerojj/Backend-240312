@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>c05-02.html</title>
+</head>
+<style>
+  * {
+    color: red;
+  }
+
+  h1 {
+    color: green;
+  }
+
+  .orangetext {
+    color: orange;
+  }
+
+  p.bluetext {
+    color: blue;
+  }
+
+  h2.bluetext {
+    color: darkblue;
+  }
+
+  .span-red {
+    color: red;
+    background-color: yellow;
+  }
+
+  #h1-lorem {
+    color: blueviolet;
+  }
+  #h1-lorem2 {
+    color: black;
+  }
+  #h1-lorem3 {
+    color: aqua;
+  }
+  
+  .h1class01 {
+    color: brown;
+  }
+</style>
+
+<body>
+  <!-- 
+    ! CSS - 선택자
+
+    ? 전체 선택자
+    - 모든 요소에 스타일 적용하기
+    - : 문서의 모든 요소에 적용할 때 사용
+    - 문서의 여백이나 글꼴 크기 등 기본 스타일 초기화 시 사용
+    - 전체 선택자: *
+
+    ? 태그 선택자
+    - 특정 태그를 사용한 요소에 스타일 적용하기
+    - : 특정 태그가 사용된 모든 요소에 스타일을 적용
+
+    ? 클래스 선택자
+    - 특정 부분에 스타일 적용하기
+    - 태그 대신 클래스 이름을 사용하고, 클래스 이름 설정 시 기억하기 쉬운 이름을 임의로 지정함
+    - 사용할 때 클래스 이름 앞에 .을 찍어야함
+    - 클래스 부여는 어느 태그에서나 사용 가능
+    - 같은 태그나 다른 태그에 클래스 이름을 다수로 부여할 수 있음
+    - 클래스 선택자 앞에 태그 사용하여 클래스 스타일 적용 가능
+
+    - 스타일 요소를 클래스 선택자에서 일부에만 적용하고 싶을때는 <span>태그 활용
+    
+    ? id 선택자
+    - 특정 부분에 스타일 적용하기
+    - 선택할 때 앞에 #을 붙여줌
+    - 클래스 선택자는 문서 안에서 여러 번 적용할 수 있지만,
+      id 선택자는 문서 안에서 같은 이름의 id는 한 번만 적용 가능
+
+    - 여러 요소에 같은 이름을 부여할 때 >> 클래스
+    - 한 요소에 각기 다른 이름 부여할 때 >> id 
+   -->
+  <h1>CSS - 선택자</h1>
+  <h1>What is <span class="span-red">Lorem Ipsum</span>?</h1>
+  <h1>What is Lorem Ipsum?</h1>
+  <h1 class="orangetext">What is Lorem Ipsum?</h1>
+  <h2 class="bluetext">What is Lorem Ipsum?</h2>
+  <p class="orangetext">What is Lorem Ipsum?</p>
+  <p class="bluetext">What is Lorem Ipsum?</p>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and
+    scrambled it to make a type specimen book. </p>
+  <p></p>
+  <h1 id="h1-lorem">What is Lorem Ipsum?</h1>
+  <h1 id="h1-lorem2">What is Lorem Ipsum?</h1>
+  <h1 id="h1-lorem3">What is Lorem Ipsum?</h1>
+  <h1 class="h1class01">What is Lorem Ipsum?</h1>
+  <h1 class="h1class01">What is Lorem Ipsum?</h1>
+  <h1 class="h1class01">What is Lorem Ipsum?</h1>
+
+</body>
+
+</html>

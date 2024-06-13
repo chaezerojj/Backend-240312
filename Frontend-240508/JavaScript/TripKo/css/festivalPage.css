@@ -1,0 +1,410 @@
+/* festivalPage.css */
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 100 to 900 */
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+.noto-sans-kr {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: 100~900; */
+  font-style: normal;
+}
+
+.gmarkt-sans {
+  font-family: "GmarketSans"
+}
+
+/* css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration-line: none;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a:visited {
+  color: black;
+}
+
+/* ! header */
+.header {
+  position: fixed;
+  width: 100%;
+  height: 6rem;
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+  color: black;
+  background-color: rgb(255, 255, 255, 0.9);
+  z-index: 2;
+}
+
+.header a:link,
+.header a:visited {
+  color: black;
+}
+
+.header-wrapper {
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.header-ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header-ul .logo {
+  display: flex;
+  margin: 1.5rem;
+  margin-left: 2rem;
+  font-family: "GmarketSans";
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.header-ul-left {
+  display: flex;
+  align-items: flex-start;
+  font-weight: 500;
+}
+
+.header-ul-left li {
+  width: 80px;
+  margin: 1.5rem;
+}
+
+.header-ul-left li a:hover {
+  font-weight: 800;
+}
+
+.header-ul-right {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 5rem;
+}
+
+.header-ul-right li {
+  margin: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.header-ul-right li img {
+  width: 16px;
+}
+
+/* !----------------------------------------- */
+.container {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.top-contents {
+  margin-top: -39rem;
+}
+
+.background-color {
+  width: 100%;
+  height: 50rem;
+  background-color: rgb(24, 26, 59);
+  z-index: -1;
+}
+
+.rose-wrapper, .jazz-wrapper, .gung-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: rgb(254, 235, 255);
+  z-index: 1;
+  margin-top: 180px;
+}
+
+.rosefestival-img {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 500px;
+  background:
+    url(../images/festival/rosefestival.png) no-repeat;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.rose-text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -50%);
+}
+
+.rose-text, .jazz-text, .gung-text {
+  font-size: 55px;
+  font-weight: 700;
+  text-shadow: 0px 1px 7px black;
+}
+
+.rose-sub-text, .jazz-sub-text, .gung-sub-text {
+  font-size: 30px;
+  font-weight: 500;
+  text-shadow: 3px 3px 3px black;
+}
+
+.rose-goto-link, .jazz-goto-link, .gung-goto-link {
+  margin-top: 20px;
+  /* 버튼 사이의 간격 조정 */
+}
+
+.rose-goto-link a {
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  /* 버튼 내부 여백 조정 */
+  border-radius: 30px;
+}
+
+.jazzfestival-img {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  background:
+    url(../images/festival/jazzfestival.jpg) no-repeat;
+  background-size: cover;
+}
+
+.jazz-text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-115%, -50%);
+}
+
+.jazz-goto-link a {
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  /* 버튼 내부 여백 조정 */
+  border-radius: 30px;
+}
+
+.gungfestival-img {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  background: url(../images/festival/changdeok.jpg) no-repeat;
+  background-size: cover;
+  background-position: 0 -1000px; /* 사진 위치 조정 */
+}
+
+.gung-text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-125%, -50%);
+}
+
+.gung-goto-link a {
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+/* slider */
+.slider-wrapper {
+  width: 1200px;
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.slider {
+  width: 1200px;
+  height: 500px;
+  vertical-align: top;
+  display: inline-block;
+  flex: none;
+  margin: 0;
+}
+
+.slider:last-child {
+  margin-right: 0; /* 마지막 슬라이더의 오른쪽 마진 제거 */
+}
+
+/* ! wrapper / con-box */
+.wrapper {
+  margin-top: 13rem;
+  margin-bottom: 20rem;
+}
+
+.wrapper div {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.con-box {
+  border: 0.5px solid rgb(235, 235, 235);
+  border-radius: 120px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.con-text-box {
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem;
+  padding-bottom: 4rem;
+}
+
+.con-title {
+  font-size: 40px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.con-sub-text {
+  font-size: 18px;
+  padding: 20px;
+  color: rgb(100, 100, 100);
+}
+
+.con-top, .con-middle, .con-bottom {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 770px;
+  display: flex;
+  flex-direction: row;
+}
+
+.con-top-left, .con-top-center, .con-top-right,
+.con-middle-left, .con-middle-center, .con-middle-right,
+.con-bottom-left, .con-bottom-center, .con-bottom-right {
+  width: 320px;
+  height: 550px;
+  padding: 20px;
+  /* border: 0.1px solid gray; */
+  border-radius: 30px;
+}
+
+.con-top > div:hover,
+.con-middle > div:hover,
+.con-bottom > div:hover {
+  box-shadow: 0 0 5px black;
+}
+
+.con-top div a img,
+.con-middle div a img,
+.con-bottom div a img{
+  width: 320px;
+  height: 450px;
+  padding-bottom: 0.5rem;
+}
+
+.text-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  /* border-top: 0.5px dashed rgb(197, 197, 197); */
+  padding: 10px;
+}
+
+.text-title {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.text-date {
+  font-size: 25px;
+}
+
+/* ! footer */
+.footer {
+  width: 100%;
+  height: 250px;
+  bottom: 0px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-info-01 {
+  display: inline-block;
+}
+
+.footer-info-01 ul li {
+  float: left;
+  margin: 5px 40px;
+  padding: 5px;
+}
+
+.footer-info-02 {
+  display: inline-block;
+}
+
+.footer-info-02 ul li {
+  float: left;
+  margin: 0px 12px;
+  padding: 5px;
+}
+
+.footer-info-03 {
+  display: inline-block;
+}
+
+.footer-info-03 span{
+  float: left;
+  margin-top: 15px;
+}

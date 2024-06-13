@@ -1,0 +1,238 @@
+/* main.css */
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 100 to 900 */
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+.noto-sans-kr {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: 100~900; */
+  font-style: normal;
+}
+
+.gmarkt-sans {
+  font-family: "GmarketSans"
+}
+
+/* =================================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration-line: none;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a:visited {
+  color: black;
+}
+
+/* ! header */
+.header {
+  position: fixed;
+  width: 100%;
+  height: 6rem;
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+  color: black;
+  background-color: rgb(255, 255, 255, 0.9);
+  z-index: 1000;
+}
+
+.header a:link, .header a:visited {
+  color: black;
+}
+
+.header-wrapper {
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.header-ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header-ul .logo {
+  display: flex;
+  margin: 1.5rem;
+  margin-left: 2rem;
+  font-family: "GmarketSans";
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.header-ul-left {
+  display: flex;
+  align-items: flex-start;
+  font-weight: 500;
+}
+
+.header-ul-left li {
+  width: 80px;
+  margin: 1.5rem;
+}
+
+.header-ul-left li a:hover {
+  font-weight: 800;
+}
+
+.header-ul-right {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 5rem;
+}
+
+.header-ul-right li {
+  margin: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.header-ul-right li img {
+  width: 16px;
+}
+
+/* --------------------------------------------- */
+/* container */
+
+.container {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.contents-wrapper {
+  width: 1100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contents {
+  width: 100%;
+  margin-top: 12rem;
+  box-shadow: 0 0 2px black;
+  border-radius: 30px;
+  padding-bottom: 10rem;
+  margin-bottom: 10rem;
+}
+
+.title-wrapper {
+  margin: 4rem auto;
+}
+
+.main-title {
+  font-size: 45px;
+  font-weight: 700;
+  color: rgb(67, 67, 67);
+  margin: 2rem;
+}
+
+.sub-title {
+  font-size: 23px;
+  color: rgb(100, 100, 100);
+}
+
+.image-wrapper {
+  width: 900px;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.image-wrapper img {
+  width: 120%;
+}
+
+.text-wrapper {
+  width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-text {
+  font-size: 20px;
+}
+
+.about-text span {
+  font-weight: 700;
+}
+
+.info-text {
+  margin-top: 3rem;
+  border-top: 1px solid black;
+  padding-top: 3rem;
+}
+
+.info-text p {
+  font-size: 18px;
+}
+
+
+/* ! footer */
+.footer {
+  width: 100%;
+  height: 250px;
+  bottom: 0px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-info-01 {
+  display: inline-block;
+}
+
+.footer-info-01 ul li {
+  float: left;
+  margin: 5px 40px;
+  padding: 5px;
+}
+
+.footer-info-02 {
+  display: inline-block;
+}
+
+.footer-info-02 ul li {
+  float: left;
+  margin: 0px 12px;
+  padding: 5px;
+}
+
+.footer-info-03 {
+  display: inline-block;
+}
+
+.footer-info-03 span{
+  float: left;
+  margin-top: 15px;
+}

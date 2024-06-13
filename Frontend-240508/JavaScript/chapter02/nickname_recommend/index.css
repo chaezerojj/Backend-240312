@@ -1,0 +1,34 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+.jua-regular {
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  font-family: "Jua", sans-serif;
+}
+
+.title {
+  font-size: 30px;
+}
+
+#nickname-box {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

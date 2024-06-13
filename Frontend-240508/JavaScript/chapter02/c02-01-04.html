@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <textarea></textarea>
+  <h1></h1>
+
+  <script>
+    /* 이벤트 발생 객체 */
+    // 이벤트 발생시킨 객체에 접근하는 방법
+    // 1. event.currentTarget 속성 사용
+    // 2. this 키워드 사용
+    // - 익명함수에서만 사용 가능
+
+
+    const listener = function(){
+      console.log(this);
+      // console.log(event.currentTarget);
+      // const length = textarea.currentTarget.value.length;
+      const length = this.value.length;
+      // h1.textContent = `글자 수: ${length}`;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const textarea = document.querySelector("textarea");
+      const h1 = document.querySelector("h1");
+      textarea.addEventListener("keyup", listener)
+    })
+
+  </script>
+</body>
+
+</html>

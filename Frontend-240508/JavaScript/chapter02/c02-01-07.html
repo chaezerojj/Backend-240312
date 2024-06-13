@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <select>
+    <option>떡볶이</option>
+    <option>튀김</option>
+    <option>순대</option>
+    <option>어묵</option>
+  </select>
+  <p></p>
+
+
+  <script>
+    /* 드롭다운 목록 활용하기 */
+
+    const select = document.querySelector("select");
+    const p = document.querySelector("p")
+
+    select.addEventListener("change", (event) => {
+      const options = event.currentTarget.options;
+      const index = event.currentTarget.options.selectedIndex;
+
+      // console.log(options[index].textContent); // 태그에 입력된 값을 그대로 들고옴
+      p.textContent = `내가 가장 좋아하는 분식: ${options[index].textContent}`
+    })
+
+  </script>
+</body>
+</html>

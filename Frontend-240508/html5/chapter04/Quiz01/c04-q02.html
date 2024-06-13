@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 폼 / 웹 폼</title>
+  <style>
+    label {
+      margin: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HTML 폼 -->
+  <input type="text">
+  <input type="submit">
+
+  <hr><br>
+
+  <!-- 웹 폼 -->
+  <h1>회원 가입을 환영합니다</h1>
+  <form action="">
+    <div>
+      <label>
+        아이디:
+        <input type="text" minlength="4" maxlength="15">
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>
+        이메일:
+        <input type="email">
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>
+        비밀번호:
+        <input type="password">
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>
+        비밀번호 확인:
+        <input type="password">
+      </label>
+    </div>
+    <br>
+    <div>
+      <input type="submit" name="회원가입">
+    </div>
+  </form>
+
+  <hr /><br />
+  <!-- label 태그 사용 -->
+  <h2>수강 분야(다수 선택 가능)</h2>
+  <form>
+    <div>
+      <label>
+        <input type="checkbox"> 문법
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>
+        <input type="checkbox"> 작문
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>
+        <input type="checkbox"> 독해
+      </label>
+    </div>
+  </form>
+
+  <h2>수강 분야(1과목만 선택 가능)</h2>
+  <form>
+    <div>
+      <label>
+        <input type="radio"> 영어회화
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>
+        <input type="radio"> 중국어회화
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>
+        <input type="radio"> 일어회화
+      </label>
+    </div>
+  </form>
+
+  <br/><hr/><br />
+
+  <!-- fieldset과 legend 태그 -->
+  <form action="">
+    <fieldset>
+      <legend>개인정보</legend>
+      <div>
+        <div>
+          <label>
+            이름 <input type="text">
+          </label>
+        </div>
+        <br>
+        <div>
+          <label>
+            메일 주소<input type="email">
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>로그인 정보</legend>
+      <div>
+        <div>
+          <label>
+            아이디 <input type="text"> 
+          </label>
+        </div>
+        <br>
+        <div>
+          <label>
+            비밀번호 <input type="password">
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</body>
+</html>
