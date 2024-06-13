@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-02-03.html</title>
+</head>
+<body>
+  <script>
+    // 상속 클래스
+
+    // 사각형 클래스 (상위클래스)
+    class Rectangle {
+      constructor(width, height) {
+        this.width = width;
+        this.height= height;
+      }
+      getPerimeter() {
+        return 2 * (this.width) * (this.height);
+      }
+      getArea() {
+        return this.width * this.height;
+      }
+    }
+
+    // 사각형 클래스를 상속받는 정사각형 클래스 (하위클래스)
+    class Square extends Rectangle{
+      constructor(length) {
+        super(length, length)
+        // super: 상위클래스의 생성자 함수 호출 키워드
+      }
+    }
+    const square = new Square(10);
+    console.log(`정사각형의 둘레: ${square.getPerimeter()}`);
+    console.log(`정사각형의 넓이: ${square.getArea()}`);
+  </script>
+</body>
+</html>

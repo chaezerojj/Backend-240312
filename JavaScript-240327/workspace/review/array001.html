@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array001.html</title>
+</head>
+<body>
+  <input type="text">
+  <script>
+    // 자바스크립트 배열(array)
+
+    // - 여러 자료를 묶어서 활용할 수 있는 특수한 자료
+    // 만약, 1부터 10까지 정수를 갖는 데이터가 필요하다면,
+    // let a = 1, b = 2, c = 3,... >> 비효율적(하드코딩)
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let sum = 0;
+    // 1부터 10까지 정수에서 짝수의 합을 구해야 한다면 
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 == 0) {
+        sum += arr[i];
+      }
+    }
+    console.log("1 ~ 10까지의 짝수의 합:", sum);
+
+    // 배열 요소에 접근하기
+    // 배열[인덱스]
+    const numbers = [273, 52, 103, 32];
+    console.log(numbers[0]); // 273
+    numbers.push(88); // numbers 배열에 88 넣기
+
+    // 배열 안 모든 요소 출력
+    for (let i = 0; i < numbers.length; i++){
+      console.log(numbers[i]);
+    }
+
+    console.log("-----------");
+    
+    // 배열 안 특정 값 삭제
+    numbers.splice(2, 1);
+    for (let i = 0; i < numbers.length; i++){
+      console.log(numbers[i]);
+    }
+
+    console.log("-----------");
+    
+    // 배열에 요소 값 변경
+    numbers[0] = 300;
+    for (let i = 0; i < numbers.length; i++){
+      console.log(numbers[i]);
+    }
+    // 배열 오름차순으로 정렬
+    console.log(numbers.sort((a, b) => a - b));
+    
+
+
+  </script>
+</body>
+</html>

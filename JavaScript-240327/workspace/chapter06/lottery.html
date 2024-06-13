@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 로또
+    // 1~ 45까지 정수 추출
+    // let num = Math.floor(Math.random() * 45 + 1);
+    // 번호 담을 배열 생성
+    let numList = [];
+    // 중복번호 생성 방지 방법
+    // 1. 1~45 배열에서 splice()를 이용하여 뽑으면서 중복번호 없애기
+    // 2. or 랜덤으로 6개를 뽑으면서 중복을 검사하여 같은 번호가 뽑히면 다시 돌려서 배열 담기
+
+    let sameNum = true;
+    while (numList.length < 6) {
+      let num = Math.floor(Math.random() * 45 + 1);
+      for (let n of numList) {
+        if(n === num) {
+          sameNum = false;
+        }
+      }
+      if (sameNum) {
+        numList.push(num)
+        sameNum != sameNum;
+      }
+    }
+    numList = numList.sort()
+    console.log(numList);
+
+    // 배열에 번호 6개 담기
+    
+
+
+  </script>
+</body>
+</html>

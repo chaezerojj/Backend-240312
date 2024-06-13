@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-02-04.html</title>
+</head>
+<body>
+  <script>
+    //자바스크립트 private 속성과 메소드
+
+    class Square {
+      constructor(length) {
+        if (length <= 0) {
+          throw "길이는 0보다 커야 합니다."
+        }
+        this.length = length;
+      }
+      // 정사각형 둘레
+      getPerimeter() {
+        return 4 * this.length;
+      }
+      // 정사각형 넓이
+      getArea() {
+        return this.length * this.length;
+      }
+    }
+    
+    // 길이는 음수가 나오면 안되는 값이기 때문에
+    // 예외를 발생시켜 해당 에러 해결하는 방법 사용 - if문에 throw사용
+    
+    try {
+      const square = new Square(-10); // 음수를 대입
+      console.log(`정사각형의 둘레: ${square.getPerimeter()}`);
+      console.log(`정사각형의 넓이: ${square.getArea()}`);
+    } catch (e) {
+      console.log(e); // 길이는 0보다 커야 합니다.
+    }
+    
+    // length속성을 직접 변경할 때에는 작동하지 않음
+    const s1 = new Square(10);
+    s1.length = -10;
+    console.log(`정사각형의 둘레: ${s1.getPerimeter()}`);
+    console.log(`정사각형의 넓이: ${s1.getArea()}`);
+    // 속성에 직접 접근 시 에러 잡을 수 없음
+    // >> private 속성 메소드 사용 필요
+    /*
+      class 클래스이름 {
+        #속성이름
+        #메소드이름() {
+
+        }
+      }
+    */
+    // #이 붙어있는 속성과 메소드는 모두 private 속성과 메소드
+     
+
+
+
+
+
+
+  </script>
+</body>
+</html>

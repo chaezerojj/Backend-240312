@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-02.html</title>
+</head>
+<body>
+  <script>
+    // 자바스크립트 상속
+
+    // Rectangle 클래스 생성
+    // - 둘레와 넓이를 구하는 클래스
+    class Rectangle {
+      constructor(width, height) {
+        this.width = width;
+        this.height = height;
+      }
+      // 사각형 둘레
+      getPerimeter() {
+        return 2 * (this.width + this.width);
+      }
+
+      //사각형 넓이
+      getArea() {
+        return (this.width * this.height);
+      }
+    }
+    const rectangle = new Rectangle(10, 20);
+    console.log(`사각형의 둘레: ${rectangle.getPerimeter()}`);
+    console.log(`사각형의 넓이: ${rectangle.getArea()}`);
+
+    // 정사각형을 나타내는 Square클래스 추가
+    class Square {
+      constructor(length) {
+        this.length = length;
+      }
+      // 정사각형 둘레
+      getPerimeter() {
+        return 4 * this.length;
+      }
+      // 정사각형 넓이
+      getArea() {
+        return this.length * this.length;
+      }
+    }
+    const square = new Square(10);
+    console.log(`정사각형의 둘레: ${square.getPerimeter()}`);
+    console.log(`정사각형의 넓이: ${square.getArea()}`);
+    // 비슷한 클래스를 분리하는 것이 클래스 활용에는 편리하지만
+    //  , 분리하여 사용한다면 클래스 선언 부분이 복잡해짐
+    // >> 상속으로 클래스 생성하기
+
+
+    //* 상속
+    // - 클래스의 선언 코드를 중복하여 작성하지 않도록 함으로써
+    //   코드의 생산 효율을 올리는 문법
+    // 상속 클래스 형식
+    // : class 클래스이름 extends 상위클래스이름 {}
+    // - 어떤 클래스가 가지고 있는 속성과 메소드를 다른 클래스에게 물려주는 형태로 사용
+    // 주는 클래스: 상위클래스, 부모클래스, superClass
+    // 받는 클래스: 하위클래스, 자식클래스, subClass
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

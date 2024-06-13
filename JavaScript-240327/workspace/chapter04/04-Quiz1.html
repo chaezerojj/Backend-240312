@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04-Quiz1.html</title>
+</head>
+<body>
+  <script>
+    const array = [1, 2, 3, 4];
+    console.log(array.length); // 4
+    console.log(array.push(5)); // 5
+
+    // ----------------------------------
+    // 트리 별 만들기
+    let output = '';
+    for (let i = 1; i < 15; i++) {
+      for (let j = 15; j > i; j--) {
+        output += ' ';
+      }
+      for (let k = 0; k < 2 * i - 1; k++) {
+        output += '*';
+      }
+      output += '\n';
+    }
+    console.log(output);
+    
+    // ----------------------------------
+    
+    const array1 = ['사과', '배', '귤', '바나나'];
+    console.log('# for in 반복문');
+    for (const i in array1) {
+      console.log(i); // 0 1 2 3 
+    }
+    console.log('# for of 반복문');
+    for (const i of array) {
+      console.log(i); // 1 2 3 4 5
+    }
+    // ----------------------------------
+    const array2 = [];
+    // for (const i = 0; i < 3; i++) { 
+      for (let i = 0; i < 3; i++) { // const를 let으로 수정
+        array.push((i + 1) * 3);
+      }
+      console.log(array);
+    // ----------------------------------
+    // 1부터 100까지 곱하기
+    let result = 0;
+    for (let i = 1; i <= 100; i++) {
+      result *= i;
+    }
+    console.log(`1~100의 숫자를 모두 곱하면, ${result}입니다.`); // 값이 커서 콘솔에 안나옴
+    // ----------------------------------
+    // 피라미드 별
+    let stars = '';
+    const size = 5;
+    
+    // 별이 증가
+    for (let i = 1; i <= size; i++) {
+      for (let j = size; j > i; j--) {
+        stars += " ";
+      }
+      for (let k = 0; k < 2 * i - 1; k++) {
+        stars += "*";
+      }
+      stars += "\n"; // 줄바꿈
+    }
+
+    // 별이 감소
+    for (let l = size - 1; l > 0; l--) {
+      // 별이 감소하는 4줄
+      for (let m = size; m > l; m--) {
+        stars += " "; // 여백은 증가
+      }
+      for (let n = 0; n < 2 * l - 1; n++) {
+        // 별이 하나씩 감소
+        stars += "*";
+      }
+      stars += "\n"; // 줄바꿈
+    }
+    console.log(stars);
+      
+    
+    </script>
+</body>
+</html>

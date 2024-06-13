@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02-02-1.html</title>
+  </head>
+  
+  <body>
+    <h1>02-02-1</h1>
+    <!-- 복합 대입 연산자 활용 -->
+   <div id = "d1"></div>
+  </br>
+
+  <!-- 
+    ? 증감 연산자
+    - prefix(전위), postfix(후위)
+    - 변수 ++, 변수 --, ++변수, --변수
+
+    ? undefined
+    - 상수와 변수로 선언하지 않은 식별자
+    - -> undefined 자료형이 나옴 
+    - 백틱(`) 감싼 것도 문자열
+    - 값이 없는 변수도 undefined로 나옴
+
+    - 변수를 선언하면서 값을 지정하지 않은 경우, 
+      상수는 선언할 때 반드시 값을 지정해야 하므로
+      값이 없는 상수는 존재하지 않음
+
+   -->
+
+  <script>
+    let list = "";
+    list += "<ul>";
+    list += "<li>hello</li>";
+    list += "<li>JavaScript...</li>";
+    list += "</ul>";
+    document.querySelector("#d1").innerHTML = list;
+
+    // 증감 연산자
+    let number = 10;
+    ++number;
+    number++;
+    console.log(number); // 12
+
+    console.log(number++); // 12
+    console.log(number++); // 13
+    console.log(++number); // 15
+    console.log(number); // 15
+    number += 1; // === ++number, number--
+    // 후위가 해당 문자를 실행한 후 값을 더하는 것
+    // 해당 문자를 실행하기 전에 값을 더하는 것이 전위
+    
+    let num = 10;
+    console.log(num++); // 10
+    console.log(++num); // 12
+    console.log(num--); // 12
+    console.log(--num); // 10
+
+    // undefined
+    if (num != undefined) {
+      
+    }
+    console.log(typeof (abc)); // undefined
+    // console.log(문자열);
+    console.log(`문자열 타입`);
+    console.log(typeof (`문자열 타입`)); // string >> `도 문자열
+    // 변수를 선언하면서 값을 지정하지 않은 경우, 상수는 선언할 때 반드시 값을 지정해야 하므로
+    // 값이 없는 상수는 존재하지 않음
+
+    let v; // let은 선언만 가능하지만
+    console.log(typeof (v)); // 값을 대입하지 않았기 때문에 undefined
+    
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05-01.html</title>
+</head>
+<body>
+  <h1>js 함수</h1>
+  <!-- 
+    ! 함수 (function)
+
+    ? 익명 함수
+    - 기본 형태
+      :  function() {}
+    * 함수 사용 시 장점 
+    - 코드 재사용 가능 (같은 코드를 여러번 작성할 필요 없이 필요할 때마다 함수 호출하여 사용)
+    - 긴 프로그램을 기능별 여러 함수로 나누어 작성하면 모듈화로 전체 코드 가독성 향상
+    - 함수마다 수정이 가능하여 유지보수에 용이
+    
+    - 함수의 자료형은 function
+
+    ? 선언적 함수
+    - 이름이 있는 함수
+    - 형태
+      : function 함수이름() {}
+
+    ? 매개변수와 리턴값이 있는 함수
+    - function 함수이름(매개변수, 매개변수, 매개변수) {
+      문장;
+      문장;
+      return 리턴값;
+    }
+
+    ? 함수 오버로딩
+
+   -->
+  <script>
+    // 함수
+    const func = function() {
+      console.log("함수 내부 코드입니다.");
+      console.log("함수 내부 코드입니다.");
+      console.log("함수 내부 코드입니다.");
+    }
+    // 함수 호출
+    func();
+    // 함수 자료형 알아보기
+    console.log(typeof(func)); // function
+    console.log(func); // 함수 코드 전체가 콘솔에 나옴
+
+    // 선언적 함수
+    function funcName() {
+      console.log("선언적 함수 호출");
+    }
+    funcName(); // 함수는 항상 호출해야 함
+    console.log(typeof(funcName));
+    console.log(funcName);
+
+    // 매개변수와 리턴값이 있는 함수
+    function f(x) {
+      return x * x;
+    }
+    console.log(f(4)); // 16
+
+    // 윤년(leap year)을 확인하는 함수 만들기
+    // 4로 나누어 떨어지는 해 == 윤년 but 100으로 나누어 떨어지는 해는 윤년 X
+    // 400으로 나누어 떨어지는 해 == 윤년
+
+    function isLeapYear(year) {
+      // 결과값은 true나 false로 나옴
+      return (year % 4 == 0) && (year % 100 !== 0) || (year % 400 == 0);
+    }
+    console.log(`2024년은 윤년입니까? ${isLeapYear(2024)}`);
+    console.log(`2023년은 윤년입니까? ${isLeapYear(2023)}`);
+    // 2024년 이후 가장 가까운 윤년 계산하기
+    for (let i = 2025; i < 2025 + 400; i++) {
+      if(isLeapYear(i)) {
+        console.log(`2024년 이후 다음 윤년은? ${i}`);
+        break;
+      }
+    }
+
+    // A부터 B까지 더하는 함수
+    // 예) a = 1, b = 5 라면 1부터 5까지 다 더한 값이 리턴됨
+    function add(a, b){
+      let num = 0;
+      for (let i = a; i <= b; i++) {
+        num += i;
+      }
+      return num;
+    }
+    console.log(add(10, 11));
+    console.log(add(1, 5));
+
+    // 최솟값을 구하는 함수
+    // - 매개변수로 숫자들의 배열을 입력하면 배열 내부에 있는 숫자중에서 
+    // 가장 작은 값을 구하는 함수
+    function min(array) {
+      let output = array[0];
+      for (const item of array) {
+        if (output > item) {
+          output = item;
+        }
+      }
+      return output;
+    }
+    const testArray = [52, 273, 32, 103, 275, 24, 57];
+    console.log(`${testArray}중에서 `);
+    console.log(`최솟값 = ${min(testArray)}`);
+
+    // 함수 오버로딩
+    const basicFunc = function() {
+      console.log("함수가 호출되었습니다.");
+    }
+    // 함수는 매개변수 수에 맞게 호출하지 않아도 에러 없음
+    basicFunc(" ", true, 42);
+
+    const basicFunc1 = function(a) {
+      console.log("함수가 호출되었습니다.");
+      console.log("a: ", a);
+    }
+    basicFunc1(2);
+    
+    const basicFunc2 = function(a, b) {
+      console.log("함수가 호출되었습니다.");
+      console.log("a: ", a);
+      console.log(b);
+    }
+    basicFunc2(2, 4);
+
+    const basicFunc3 = function(a, b) {
+      if (b!== undefined) {
+        console.log("a: ", a);
+        console.log("b: ", b);
+      } else if (a !== undefined) {
+        console.log("a: ", a);
+      } else {
+        console.log("empty");
+      }
+    }
+    basicFunc3();
+    basicFunc3(1);
+    basicFunc3(1, 2);
+    
+
+  </script>
+</body>
+</html>

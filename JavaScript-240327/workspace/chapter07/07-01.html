@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07-01.html</title>
+</head>
+<body>
+  <!-- <h1>안녕하세요</h1> -->
+  <script>
+    // 자바스크립트 구문 오류와 예외
+    
+    // 오류의 2가지
+    // 1. 구문오류
+    // - 프로그램 실행 전 발생하는 오류
+    console.log("# 프로그램이 시작되었습니다.");
+    // console.log("#괄호를 닫지 않았습니다."; -- 구문 오류
+    
+    // 2. 예외 또는 런타임 오류
+    // - 프로그램 실행 중 발생하는 오류
+    // console.log("# 프로그램이 시작되었습니다.");
+    // console.rog("console.rog 오타 발생"); // Uncaught TypeError: console.rog is not a function
+    // >> 오타를 수정하면 해결할 수 있는 에러
+
+    // 기본 예외 처리
+    // querySelector()메소드로 문서 객체를 추출한 뒤 textContent속성에 글자를 할당하는 코드
+    // h1태그가 없는 상황 >> 예외 발생
+    // Uncaught TypeError: Cannot set properties of null (setting 'textContent')
+    // >> 조건문으로 예외 처리 (기본 예외 처리)
+    const h1 = document.querySelector("h1");
+    if (h1) {
+      h1.textContent = "안녕하세요";
+    } else {
+      console.log("h1 태그를 추출할 수 없습니다.");
+    }
+
+    // 고급 예외 처리
+    // - try catch finally 구문
+    // >> 예외를 조금 더 쉽게 처리 가능
+    /*
+      try {
+        // 예외 발생할 가능성이 있는 코드
+      } catch(Exception e) {
+        // 예외 발생 시 실행할 코드
+      } finally {
+        // 무조건 실행할 코드
+        // finally 블록은 생략 가능
+      }
+    */
+    try {
+      willExcept.byeBye();
+      console.log("try 구문의 마지막 줄");
+    } catch (exception) {
+      console.log("catch 구문의 마지막 줄");
+    } 
+    // 예외 발생하여 "catch 구문 마지막 줄" 실행
+
+    try {
+      willExcept.byeBye();
+      console.log("try 구문의 마지막 줄");
+    } catch (exception) {
+      console.log("catch 구문의 마지막 줄");
+    } finally {
+      // 예외 발생 여부와 상관없이 무조건 실행
+      console.log("finally 구문의 마지막 줄");
+    }
+    // catch와 finally 구문 실행됨
+    
+
+
+
+
+
+  </script>
+</body>
+</html>

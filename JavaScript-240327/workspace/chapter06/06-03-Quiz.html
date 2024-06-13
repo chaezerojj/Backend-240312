@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>** 로또 추첨 **</h2>
+  <div>
+    <h4>추첨 번호는 콘솔 창에서 확인하세요.</h4>
+    <button id="lottoButton">추첨</button>
+  </div>
+  <script>
+    // 로또 추첨기
+    document.getElementById('lottoButton').addEventListener('click', function() {
+      let lotto = [];
+  
+      // 번호 6개
+      for (let i = 0; i < 6; i++) {
+        let num = Math.floor(Math.random()* 45) + 1;
+        lotto.push(num);
+      }
+      // 중복 번호 제거
+      lotto = lotto.filter((v, i, s) => s.indexOf(v) === i);
+      // 추첨 번호
+      console.log("로또 번호: ", lotto);
+
+    })
+    
+
+
+
+  </script>
+</body>
+</html>

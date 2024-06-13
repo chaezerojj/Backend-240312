@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>js - if 조건문</h1>
+  <!-- 
+    ! if 조건문
+    - if(boolean 값이 나오는 표현식) {
+      boolean값이 참일 때 실행할 문장
+    } 
+
+    ? Date 라이브러리
+    - 자바스트립트 시각와 날짜 처리 라이브러리
+
+    ! if - else 조건문
+    if (boolean 표현식) {
+      boolean값이 true일때 실행할 문장 
+    } else {
+      boolean값이 false일때 실행할 문장
+    }
+    - 실행되는 문장이 하나일 때는 중괄호 생략 가능
+    - if (true) console.log("");
+    - if (true)
+          console.log("");
+    - if-else도 중괄호 없이 작성 가능
+
+    ! 중첩 조건문
+    - 조건문 안에 조건문을 중첩하여 사용
+    if (boolean값 표현식1) {
+      if (boolean값 표현식2) {
+        ...
+      } else {
+        ...
+      }
+    }
+    - >> 가독성을 고려하여 자주 쓰이진 않는 형태
+
+    ! else-if 조건문
+    if (boolean값 표현식1) {
+      문장...
+    } else if (boolean값 표현식2) {
+      문장...
+    } else if {}...
+
+   -->
+  <script>
+    if (273<100) {
+      console.log(`273>100 is true.`);
+    }
+
+    // 현재 시각 구하기
+    const date = new Date();
+    const h = date.getHours(); // 24시 기준으로 출력됨
+    console.log(h); // 현재 시간(시) 출력됨 - 14
+    // 오전 오후 구분하기
+    if (h < 12) {
+      console.log("오전입니다.");
+    } 
+    if (h >= 12) {
+      console.log("오후입니다.");
+    }
+
+    if(true) console.log("중괄호 없는 한줄 문장");
+    if(true)
+    console.log("중괄호 없는 두줄 문장");
+  
+
+    // if-else
+    // - 오전오후 구분 예시
+    if (h<12) {
+      console.log("오전입니다")
+    } else {
+      console.log("오후입니다.")
+    }
+
+    if (h<12) console.log("오전입니다.");
+    else console.log("오후입니다.");
+
+    // else if
+    // -시간 파악
+    if (h < 11) {
+      console.log("아침시간입니다.");
+    } else if (11 < h < 15) {
+      console.log("점심시간입니다.");
+    } else {
+      console.log("저녁시간입니다.");
+    }
+
+  </script>
+</body>
+</html>

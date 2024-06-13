@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07-02.html</title>
+</head>
+<body>
+  <script>
+    // 예외 처리
+    function test() {
+      try {
+        console.log("A 위치");
+        // throw > 예외 강제로 발생시킴
+        throw "예외 강제 발생"
+      } catch (exception) {
+        console.log("B 위치");
+        return 
+      }
+      console.log("C 위치");
+    }  
+    // 함수 내부에 try catch문이 있으면서 return키워드를 사용하는 경우
+    test(); // >> A위치 B위치 
+
+    // 반복분에서 try catch문이 있으면서 break또는 continue 키워드를 사용하는 경우
+    function test1() {
+      try {
+        console.log("A 위치");
+        // throw > 예외 강제로 발생시킴
+        throw "예외 강제 발생"
+      } catch (exception) {
+        console.log("B 위치");
+        return 
+      } finally {
+        console.log("C 위치");
+      }
+    }  
+    test1(); // A위치 B위치 C위치
+
+
+
+  </script>
+</body>
+</html>

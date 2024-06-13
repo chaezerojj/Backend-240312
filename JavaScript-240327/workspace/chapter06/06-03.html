@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06-03.html</title>
+</head>
+<body>
+  <h2>js 객체 - String</h2>
+  <script>
+    //String 객체
+
+    // * trim()
+    // - 문자열 양쪽 끝의 공백(띄어쓰기, 줄바꿈) 없애는 메소드
+    const StringA = `
+    메시지 입력. 앞 줄바꿈`;
+    const StringB = `       앞과 뒤에 공백          `;
+    console.log(StringA); // 줄바꿈값 그대로 출력
+    console.log(StringB); // 앞뒤 공백 그대로 출력
+    console.log(StringA.trim()); // 줄바꿈 사라짐
+    console.log(StringB.trim()); // 앞뒤 공백 사라짐
+
+    // * split()
+    // - 문자열을 특정 기호로 자르는 메소드
+    let input = `달러,엔,유로`;
+    // 첫번재 돈의 단위를 출력
+    const mArr = input.split(",");
+    console.log(mArr); //  ['달러', '엔', '유로']
+    console.log(mArr[0]); // 달러
+    console.log(mArr[1]); // 엔
+    console.log(mArr[2]); // 유로
+
+    // Math 객체
+    // Math.random(): 랜덤 숫자 만들기
+    console.log(Math.random()); // 0과 1사이의 랜덤 숫자 가져옴
+    // Math.random()*범위를 지정하는 수 + 시작숫자
+    console.log("0~10 사이의 랜덤한 숫자: ", Math.floor(Math.random() * 10));
+    console.log("0~50 사이의 랜덤한 숫자: ", Math.floor(Math.random() * 50));
+    console.log("-5~5 사이의 랜덤한 숫자: ", Math.floor(Math.random() * 10 - 5));
+    console.log("-25~25 사이의 랜덤한 숫자: ", Math.floor(Math.random()*50 - 25));
+    // - Math.floor() >> 정수로 반환해줌
+
+
+
+
+
+  </script>
+</body>
+</html>

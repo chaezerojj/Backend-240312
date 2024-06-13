@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>callback001.html</title>
+</head>
+
+<body>
+  <script>
+    //자바스크립트 콜백함수
+
+    // 하루 걸음수 저장 프로그램
+    class WalkCount {
+      #date
+      #walkCnt
+      get date() {
+        return date
+      }
+      set date(date) {
+        console.log("set date() 함수 호출");
+        this.#date = date;
+      }
+      get walkCnt() {
+        return walkCnt;
+      }
+      set walkCnt(walkCnt) {
+        this.#walkCnt = walkCnt;
+      }
+      // 출력
+      printWC() {
+        console.log(">>>>>> 날짜 <<<<<<");
+        console.log(this.#date); 
+        console.log("------걸음수------");
+        console.log(this.#walkCnt);
+      }
+
+      // 콜백 출력 함수
+      printWithCallback(callback) {
+        callback(this.#date, this.#walkCnt);
+      }
+    }
+
+    // let data = {
+    //   "date": "4월 3일",
+    //   "walkCount": 15000,
+    // };
+
+    // 온점 찍고 속성에 직접 접근해서 사용하지만 get set 함수가 호출됨
+    // 걸음수를 날짜로 저장하는 함수
+    const wcArr= [];
+    function createWc(date, walkCnt) {
+      const wc = new WalkCount();
+      wc.date = new Date(date);
+      wc.walkCnt = walkCnt;
+      wcArr.push(wc)
+    }  
+    function getWCs() {
+      for (const wc of wcArr) {
+        wc.printWC();
+      }
+    }
+    createWc("2024-04-01", 5001);
+    createWc("2024-04-02", 12000);
+    createWc("2024-04-03", 7604);
+    getWCs();
+
+    // 콜백함수 사용
+    const wc1 = wcArr[0];
+    wc1.printWC();
+    wc1.printWithCallback((d, w) => {
+      console.log(`날짜: ${d}`);
+      console.log(`날짜: ${w}`);
+    })
+
+    const numbers = [1, 2, 3]
+    numbers.forEach(v => {
+      console.log(v);
+    })
+    wc1.printWithCallback((d, w) => {
+      console.log(`날짜:\n${d}`);
+      console.log(`걸음수:\n${w}`);
+    })
+
+    // setInterval(() => {
+    //   console.log("3초마다 실행됨");
+    // }, 3000)
+
+    // {...객체}
+    console.log(WalkCount);
+    // [...배열]
+    for (const wc of wcArr) {
+      console.log(wc);
+    }
+
+
+  </script>
+</body>
+</html>
