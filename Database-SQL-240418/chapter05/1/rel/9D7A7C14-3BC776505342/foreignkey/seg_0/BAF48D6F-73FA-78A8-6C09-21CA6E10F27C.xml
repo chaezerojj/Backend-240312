@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="BAF48D6F-73FA-78A8-6C09-21CA6E10F27C" containerWithKeyObject="A57E5E3C-9DA3-F0F6-63ED-5B359DE30025" localFKIndex="57D69C53-261D-CCCE-6809-A6585A0C3710" name="CD_트랙리스트_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:31:08 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<referredTableLongName>CD1_트랙리스트</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>53639227-88F4-7838-B17A-3DC300F917A7</referredTableID>
+<keyObject>5220632A-630E-2BF0-5F23-6BB8536C2200</keyObject>
+<referredKeyID>5220632A-630E-2BF0-5F23-6BB8536C2200</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>타이틀</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

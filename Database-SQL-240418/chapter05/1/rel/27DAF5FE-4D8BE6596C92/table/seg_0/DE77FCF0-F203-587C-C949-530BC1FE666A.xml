@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DE77FCF0-F203-587C-C949-530BC1FE666A" name="Professer">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:06:10 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ssn" id="94DD62BC-139C-5F00-AC25-D3A54FBBF7DC">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:07:52 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="C64CEA4E-D6D1-D015-FBB6-5A8ADD2C330A">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:07:52 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="age" id="4E9D8D5D-2080-3A86-C03A-EFE2E9E2E5B1">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:07:52 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rank" id="4BE22ADE-1929-CBE9-493C-A3E42AEEA4DD">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:07:52 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="speciality" id="38F7CA90-E3C4-7E28-7778-2B4C5401C47F">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:07:52 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7D53399D-B916-6B92-D995-1E54F9DD2522" name="Professer_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:07:52 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="94DD62BC-139C-5F00-AC25-D3A54FBBF7DC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

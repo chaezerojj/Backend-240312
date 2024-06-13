@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A57E5E3C-9DA3-F0F6-63ED-5B359DE30025" name="CD1">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:29:39 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="아티스트_이름" id="433466B1-BF7D-B0A1-D926-5CC0954B8AFE">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:31:29 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="870DE24D-E13C-7DC3-4F0B-78EF95D032DB" referredColumn="37F7FD7C-0AC5-3421-0A6E-C640EE41F722"/>
+</associations>
+</Column>
+<Column name="타이틀" id="355B4F59-7A67-1F30-043C-75C888196205">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:31:08 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BAF48D6F-73FA-78A8-6C09-21CA6E10F27C" referredColumn="A37D1783-EC4A-9932-10BF-5FCDEE8C70D2"/>
+</associations>
+</Column>
+<Column name="가격" id="E1E3A650-D603-5855-01DA-D0A668A9CF4C">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:30:14 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="장르" id="C432AF58-9D2E-7BAA-E8A0-C94DF869C6B5">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:30:14 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="57D69C53-261D-CCCE-6809-A6585A0C3710" name="CD_트랙리스트_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:31:08 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="355B4F59-7A67-1F30-043C-75C888196205"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CC63BA3F-C7B7-A2F3-7A44-D06578BE19D7" name="CD_아티스트_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:31:29 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="433466B1-BF7D-B0A1-D926-5CC0954B8AFE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

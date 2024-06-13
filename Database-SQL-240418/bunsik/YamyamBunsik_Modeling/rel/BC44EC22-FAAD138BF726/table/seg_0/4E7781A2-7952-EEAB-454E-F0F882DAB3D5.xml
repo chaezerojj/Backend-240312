@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4E7781A2-7952-EEAB-454E-F0F882DAB3D5" name="customer">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 06:14:32 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<ordsAlias>table_12</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="custid" id="E7A126D7-3810-BCE4-942B-5733B49923EE">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 06:18:10 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="custname" id="67964442-7C3E-EECC-7FF5-296EBD2FB3D7">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 06:19:30 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="custaddr" id="0B90B70D-A58E-6BE0-96D7-DFE593EED6C8">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 06:18:10 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="custphone" id="7F0C2FE5-50D0-024E-A189-8D9EF1FEB549">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 06:18:10 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F16E7C82-BA8C-F0A0-9552-0C757275DC1F" name="customer_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-30 06:20:56 UTC</createdTime>
+<ownerDesignName>YamyamBunsik_Modeling</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E7A126D7-3810-BCE4-942B-5733B49923EE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

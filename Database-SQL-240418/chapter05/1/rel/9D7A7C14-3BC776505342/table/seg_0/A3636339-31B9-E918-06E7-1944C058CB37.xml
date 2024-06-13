@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A3636339-31B9-E918-06E7-1944C058CB37" name="아티스트">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:15:14 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="이름" id="37F7FD7C-0AC5-3421-0A6E-C640EE41F722">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:16:44 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="나이" id="53297205-4A73-19C7-223E-D7CC3D3A4AD4">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:36:56 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="데뷔날짜" id="C6CF2D35-4CCD-AB94-F203-5381634F64D4">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:36:26 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="소속사" id="C4EEBB74-E0EC-85F4-0111-1C58D0471D66">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:36:56 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D7FF9441-C24A-90EF-CC0A-78DDCD5FAF45" name="아티스트_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:16:48 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="37F7FD7C-0AC5-3421-0A6E-C640EE41F722"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

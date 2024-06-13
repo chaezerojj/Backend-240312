@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D8CFD14B-C546-557D-EA73-587C060BE10F" containerWithKeyObject="A099AA71-F8BB-E598-FA92-D6AA26410F37" localFKIndex="DF78DFF1-50C7-4329-FDF2-3A87785FD633" name="호텔지점_고객이름">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:09:12 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<referredTableLongName>고객</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2C28A736-CA44-CCB0-12DF-CFFA9636F5EE</referredTableID>
+<keyObject>4097260C-5B59-A991-6FB1-EFE1A47EB4D7</keyObject>
+<referredKeyID>4097260C-5B59-A991-6FB1-EFE1A47EB4D7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>이름</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

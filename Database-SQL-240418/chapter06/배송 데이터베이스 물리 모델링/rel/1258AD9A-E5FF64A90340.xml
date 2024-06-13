@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="배송 데이터베이스 물리 모델링" id="1258AD9A-3240-EC82-1A3A-E5FF64A90340" mainViewID="A3965460-8BE3-A1A4-2A85-96B5F31A65AC">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:08:25 UTC</createdTime>
+<ownerDesignName>배송 데이터베이스 물리 모델링</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

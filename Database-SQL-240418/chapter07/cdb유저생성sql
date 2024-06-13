@@ -1,0 +1,9 @@
+-- system 계정으로 접속 및 실행
+-- cdb 사용자 생성
+-- cdb 사용자 생성을 위해 c##을 붙여서 만듦
+create user c##university identified by university;
+-- 접속 권한 부여
+grant connect, resource, dba to c##university;
+
+-- 변경사항 적용하기
+commit;

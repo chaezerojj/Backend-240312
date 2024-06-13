@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="391CE542-F143-CA1E-FC23-DDAD57D85ED1" containerWithKeyObject="D752C4DE-4B1B-FCA3-247D-040B91BA965F" localFKIndex="2FBB4C00-16D6-6E9E-C260-02CA3891BE65" name="partprice_supply_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:47:47 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<referredTableLongName>supply</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A718B894-96F9-321D-FE29-5A1A14482AB5</referredTableID>
+<keyObject>AA111FE8-B765-CCA6-6179-0650A9142076</keyObject>
+<referredKeyID>AA111FE8-B765-CCA6-6179-0650A9142076</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>supplier</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

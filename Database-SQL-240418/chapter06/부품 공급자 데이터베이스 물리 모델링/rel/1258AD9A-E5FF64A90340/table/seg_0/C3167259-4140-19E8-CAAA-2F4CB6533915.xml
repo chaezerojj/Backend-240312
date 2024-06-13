@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C3167259-4140-19E8-CAAA-2F4CB6533915" name="ShipData">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:12:30 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Shipping_shipname" id="0884B78C-7F84-D6E6-2722-DA5D815D367B">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:13:54 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="23A8F041-2DDC-7EB8-4F27-C91923C85E39" referredColumn="6F8E7E76-039E-7333-34AB-605AFFBB021F"/>
+</associations>
+</Column>
+<Column name="voyage_voyageID" id="E31921B2-EA2D-A838-1575-CCF70F2525DC">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:14:00 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="13174FD7-5960-6834-38C9-1AC215248092" referredColumn="7FAA19A1-63EB-7D2E-709E-BB1C2800CB14"/>
+</associations>
+</Column>
+<Column name="date" id="5BB434FC-3DEC-A43F-64C9-086BE4D5E103">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:14:23 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4A17FE6C-CD14-6420-81AF-F7E91ADA5BCC" name="ShipData_Shipping_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:13:54 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0884B78C-7F84-D6E6-2722-DA5D815D367B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E6B1FDEC-9C5C-09ED-3B76-E3218C9DA26E" name="ShipData_voyage_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 05:14:00 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E31921B2-EA2D-A838-1575-CCF70F2525DC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

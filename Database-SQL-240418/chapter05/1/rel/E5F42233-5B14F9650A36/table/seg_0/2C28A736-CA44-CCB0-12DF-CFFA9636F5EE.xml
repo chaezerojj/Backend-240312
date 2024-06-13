@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2C28A736-CA44-CCB0-12DF-CFFA9636F5EE" name="고객">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:02:43 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="이름" id="FCC5D96B-D1A6-E01B-1AED-D92186FB48D4">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:03:24 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="주소" id="7E0BD302-EFFD-49DF-31C7-A13A88F79058">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:03:24 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="전화번호" id="21923DCE-049C-ED5F-3849-CE87B13D2BBB">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:03:24 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="예약_예약일" id="2B53E330-2056-0815-F3AC-CCDBA03E8B26">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:09:44 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FEBAE05D-1E30-6EDF-8AE5-46F32B9A20B3" referredColumn="98BBCFE8-E5EF-479C-139B-5999373E004E"/>
+</associations>
+</Column>
+<Column name="예약_출발일(예약)" id="7369D823-AA0E-E18C-E72A-DCAB051469E9">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:09:44 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FEBAE05D-1E30-6EDF-8AE5-46F32B9A20B3" referredColumn="561B2BF7-B9B5-EA94-F26E-13DCF0E07309"/>
+</associations>
+</Column>
+<Column name="예약_도착일(예약)" id="86A50DD8-6BC1-91EA-130C-62564DBC8307">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:09:44 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FEBAE05D-1E30-6EDF-8AE5-46F32B9A20B3" referredColumn="9DC0BC6F-822D-6008-AF52-64B4AC81EB1A"/>
+</associations>
+</Column>
+<Column name="투숙_투숙 도착일" id="28F41897-070E-FA07-017E-76BB575BEB63">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:09:52 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="117905EA-C6B1-2074-E474-556DA6F17ABA" referredColumn="A9A4AEA8-9BEE-A8CA-6731-EF71F83DE3CB"/>
+</associations>
+</Column>
+<Column name="투숙_투숙 출발일" id="DA5A78C9-5E1C-88D3-0294-9048FD0C4DC8">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:09:52 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="117905EA-C6B1-2074-E474-556DA6F17ABA" referredColumn="6F692B7C-A19C-BCBF-F0C7-DACC5D7C101B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4097260C-5B59-A991-6FB1-EFE1A47EB4D7" name="고객_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:09:08 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FCC5D96B-D1A6-E01B-1AED-D92186FB48D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9A64D875-CFF1-AAD3-7F73-53A9A61E1112" name="고객_예약_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:09:44 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B53E330-2056-0815-F3AC-CCDBA03E8B26"/>
+<colUsage columnID="7369D823-AA0E-E18C-E72A-DCAB051469E9"/>
+<colUsage columnID="86A50DD8-6BC1-91EA-130C-62564DBC8307"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="03A53CCA-C20E-373E-9AE0-431F02524EE2" name="고객_투숙_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:09:52 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="28F41897-070E-FA07-017E-76BB575BEB63"/>
+<colUsage columnID="DA5A78C9-5E1C-88D3-0294-9048FD0C4DC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

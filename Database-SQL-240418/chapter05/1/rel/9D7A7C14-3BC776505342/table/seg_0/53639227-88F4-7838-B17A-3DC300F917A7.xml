@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="53639227-88F4-7838-B17A-3DC300F917A7" name="CD1_트랙리스트">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:27:26 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="타이틀" id="A37D1783-EC4A-9932-10BF-5FCDEE8C70D2">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:27:48 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="타이틀_러닝타임(초)" id="E86B5231-3678-D5E0-49DD-7022C0CD4A9F">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:27:48 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="트랙1" id="7BC5FFF8-8E61-F837-CB47-428753B46152">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:30:41 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="트랙2" id="E4E29543-82B0-56AA-45AC-CEF6086F256B">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:30:57 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="트랙3" id="302D0DFA-4924-34FA-9D50-AEA00A7C5B57">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:30:57 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5220632A-630E-2BF0-5F23-6BB8536C2200" name="트랙리스트_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:29:05 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A37D1783-EC4A-9932-10BF-5FCDEE8C70D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

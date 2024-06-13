@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BF14AD9F-EF5C-E36A-E19B-E9F6FE63F25C" name="조립(play)">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:53:50 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="자동차(car)_brand" id="F2C86FAC-763F-0966-170A-7DB40A220BB3">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:54:48 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6B941E27-AEE0-D8CD-41D0-B528379C0784" referredColumn="9B2D2E38-E698-1718-55C6-C9EA097E7C2A"/>
+</associations>
+</Column>
+<Column name="부품(part)_id" id="178F54A9-A4F1-B18D-3713-64A914DAF3A6">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:55:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="225BFB1A-277E-1E53-8B74-D7F7B021D008" referredColumn="0656320D-11DA-5E68-2DA0-4C5D455FA373"/>
+</associations>
+</Column>
+<Column name="부품(part)_name" id="B3D4A260-27F6-2191-326B-17ABAAFD7B75">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:55:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="225BFB1A-277E-1E53-8B74-D7F7B021D008" referredColumn="3023A147-3464-4E80-7BE2-EC5D52E3E560"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7735F908-31ED-030E-90A1-2827B440D03A" name="carbrand">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:54:48 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F2C86FAC-763F-0966-170A-7DB40A220BB3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F909EDC7-2B22-DAEB-AAF8-CD9D5C35224C" name="partid">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:55:15 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="178F54A9-A4F1-B18D-3713-64A914DAF3A6"/>
+<colUsage columnID="B3D4A260-27F6-2191-326B-17ABAAFD7B75"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

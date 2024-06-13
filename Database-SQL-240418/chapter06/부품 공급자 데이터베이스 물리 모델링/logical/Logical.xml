@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="F792B4C8-C2BB-8FE1-55B9-3FEE73060E81" mainViewID="C0BB87F3-D095-C74A-5DC7-7612CC431317">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-29 00:15:35 UTC</createdTime>
+<ownerDesignName>부품 공급자 데이터베이스 물리 모델링</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

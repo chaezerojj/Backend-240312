@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B59A2386-963C-5579-231F-405C6095BA13" name="방">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:00:44 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="방 타입" id="096037D0-AD96-B751-4543-89CE21D7DA41">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:06:23 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="방 가격" id="CA2FEE7C-E1DC-0DEA-8471-F7063476CC7B">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:01:41 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="방 수" id="181A2A68-7721-379C-FBD7-D9F2109C1E56">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:01:41 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="59952AFF-F2B9-D956-4547-639709B9AA18" name="방_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 06:06:23 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="096037D0-AD96-B751-4543-89CE21D7DA41"/>
+<colUsage columnID="CA2FEE7C-E1DC-0DEA-8471-F7063476CC7B"/>
+<colUsage columnID="181A2A68-7721-379C-FBD7-D9F2109C1E56"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D101FE4B-8990-4C73-FAC0-5D857F9A874F" name="work-in">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:20:59 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Professer_ssn" id="8D30B675-15D0-3FA0-EABE-12ACC0AFF9D6">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:21:24 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BB632092-E32F-8B18-B083-AA7EB6A4EF90" referredColumn="94DD62BC-139C-5F00-AC25-D3A54FBBF7DC"/>
+</associations>
+</Column>
+<Column name="Project_pid" id="F7F1F53B-E2B2-95AC-981D-0FB5E70FFA63">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 07:11:47 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="609B1829-BB30-CCA2-4875-5E19CAA22774" referredColumn="FC17C221-98AB-6595-C525-206052163746"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="73394367-929E-FAF5-655D-07FA4D0DADBA" name="professorssnv1">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:21:24 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8D30B675-15D0-3FA0-EABE-12ACC0AFF9D6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="43FE9301-32E8-2854-CE92-9031A120BB5F" name="work-in_Project_FK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 07:11:47 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F7F1F53B-E2B2-95AC-981D-0FB5E70FFA63"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

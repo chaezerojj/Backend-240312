@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C9B24E85-8128-C4CB-B102-FE2F3EF87E28" name="자동차회사(company)">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:51:57 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="7409B130-B092-A4A0-822E-CCE12A8D8CB0">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:53:38 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="E58CEF3B-0424-5E1A-436E-C6CC9E3B42A5">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:52:39 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="city" id="EFBDFAB5-0096-43DD-6443-39B893B17B0A">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:52:39 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nation" id="CD5721EF-3C5F-4F69-9953-B8DA9576DAC3">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:52:39 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5CDB603F-1535-B26C-D35C-23D366811A4D" name="자동차회사(company)_PK">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:53:38 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7409B130-B092-A4A0-822E-CCE12A8D8CB0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

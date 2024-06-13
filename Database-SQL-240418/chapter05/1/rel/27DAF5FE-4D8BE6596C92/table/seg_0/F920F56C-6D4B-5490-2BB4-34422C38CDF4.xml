@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F920F56C-6D4B-5490-2BB4-34422C38CDF4" name="work-prog">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:21:55 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Graduate_ssn" id="8306629C-A170-544E-1965-838768E5D12C">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:22:11 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3DAAEB1B-2E17-0BD4-C910-1567A3B57CB6" referredColumn="8CD5AF93-BE54-81C6-15CC-0B7BBC5C46B1"/>
+</associations>
+</Column>
+<Column name="Project_pid" id="C91F0606-B4FA-D93E-8D5A-45F4EDEFC642">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:22:27 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="633EC075-F7E9-4CF9-B0B7-19E3765DE901" referredColumn="FC17C221-98AB-6595-C525-206052163746"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0BB7C20C-E213-2674-E8EF-3524EDC96F12" name="graduatessn">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:22:11 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8306629C-A170-544E-1965-838768E5D12C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DBB0D42F-63ED-CCD7-9A70-2F0ABE2C3908" name="pid">
+<createdBy>ITPS</createdBy>
+<createdTime>2024-04-26 05:22:27 UTC</createdTime>
+<ownerDesignName>1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C91F0606-B4FA-D93E-8D5A-45F4EDEFC642"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
